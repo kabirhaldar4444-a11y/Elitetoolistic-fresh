@@ -369,12 +369,23 @@ nav, #navbar {
 /* ── ABOUT SECTION ── */
 .about-section {
   padding: 5rem 5%;
+  background: var(--surface);
+  border-bottom: 2px solid var(--border);
+}
+
+.about-section:has(.about-img) {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 4rem;
   align-items: center;
-  background: var(--surface);
-  border-bottom: 2px solid var(--border);
+}
+
+.about-text {
+  max-width: 900px;
+}
+
+.about-section:has(.about-img) .about-text {
+  max-width: none;
 }
 
 .about-img {
