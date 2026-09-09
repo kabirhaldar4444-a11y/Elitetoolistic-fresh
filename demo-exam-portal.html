@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trial Examination Hall Interface | ELITE TOOLISTIC</title>
+  <meta name="description" content="Trial and demonstration access for prospective candidates at ELITE TOOLISTIC (OPC) PRIVATE LIMITED." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="cart.css" />
+  <style>
+    .demo-login-container {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      padding: 5rem 5%;
+      background: var(--surface);
+      border-bottom: 2px solid var(--border);
+    }
+    
+    .demo-login-content {
+      padding: 3rem;
+      background: var(--bg);
+      border: 2px solid var(--border);
+      text-align: left;
+    }
+    
+    .demo-login-content h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: var(--black);
+      line-height: 1.15;
+      letter-spacing: -1px;
+      margin-bottom: 1.5rem;
+    }
+    
+    .demo-credentials {
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: var(--ink-muted);
+      margin-bottom: 2rem;
+      line-height: 1.8;
+      background: var(--surface);
+      padding: 1.5rem;
+      border: 1.5px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      width: 100%;
+    }
+    
+    .demo-credentials strong {
+      font-family: var(--font-mono);
+      font-weight: 700;
+      color: var(--black);
+    }
+    
+    .credential-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 0.5rem;
+      width: 100%;
+    }
+    
+    .credential-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    
+    .copy-btn {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 4px 8px;
+      cursor: pointer;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--black);
+      text-transform: uppercase;
+      transition: var(--transition);
+    }
+    
+    .copy-btn:hover {
+      background: var(--black);
+      color: var(--white);
+    }
+    
+    .login-btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 14px 32px;
+      background: var(--black);
+      border: 1.5px solid var(--black);
+      color: var(--white);
+      text-decoration: none;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    
+    .login-btn-outline:hover {
+      background: var(--white);
+      color: var(--black);
+    }
+    
+    .demo-login-image {
+      height: 480px;
+      background-image: url('images/realistic_login.png');
+      background-size: cover;
+      background-position: center;
+      border: 2px solid var(--border);
+      padding: 8px;
+      background-color: var(--bg);
+    }
+    
+    @media (max-width: 900px) {
+      .demo-login-container {
+        grid-template-columns: 1fr;
+      }
+      .demo-login-image {
+        height: 300px;
+      }
+      .demo-login-content {
+        padding: 2rem 1.5rem;
+      }
+    }
+  </style>
+  <link rel="icon" type="image/png" href="images/LOGO.png" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">
+    <img src="images/new_elite_logo_transparent.png" alt="Elite Toolistic" />
+    <div class="nav-brand-title">
+      <span class="brand-name">ELITE TOOLISTIC</span>
+      <span class="brand-sub">Academy of Certified Mastery</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="courses.html">Courses</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="persona.html">Persona</a></li>
+    <li><a href="team.html">Our Team</a></li>
+  </ul>
+  <a href="contact.html" class="nav-enroll">Contact Us <span class="arrow">→</span></a>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<section class="demo-login-container">
+  <div class="demo-login-content">
+    <p class="section-label-sm">Demo Examination Hall</p>
+    <h1>Candidate Demonstration &amp; Interface Assessment</h1>
+    
+    <div class="demo-credentials">
+      <div style="font-family:var(--font-mono); font-size:0.75rem; text-transform:uppercase; letter-spacing:1px; font-weight:700; color:var(--seal-red);">Guest Demo Credentials</div>
+      <div style="font-size:0.88rem; color:var(--ink-muted);">Inspect the candidate examination portal utilizing these authorized trial credentials:</div>
+      
+      <div class="credential-item">
+        <span>Email: <strong id="demo-email">demo@gmail.com</strong></span>
+        <button class="copy-btn" onclick="copyText('demo-email', this)" aria-label="Copy Email">Copy</button>
+      </div>
+      
+      <div class="credential-item">
+        <span>Password: <strong id="demo-password">demo@elite</strong></span>
+        <button class="copy-btn" onclick="copyText('demo-password', this)" aria-label="Copy Password">Copy</button>
+      </div>
+    </div>
+    
+    <a href="https://www.elitetoolistic.in/login" target="_blank" rel="noopener noreferrer" class="login-btn-outline">Launch Demo Exam →</a>
+  </div>
+  
+  <div class="demo-login-image"></div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img src="images/LOGO.png" alt="ELITE TOOLISTIC Logo" style="height: 38px; width: auto;" />
+      </div>
+      <p>ELITE TOOLISTIC (OPC) PRIVATE LIMITED is a registered professional e-learning academy dedicated to career growth, skill certification, and executive training.</p>
+      <div class="footer-contact">
+        <p><strong>Registered Office:</strong> 1444, Gaur City 1, Sector 4, Greater Noida, Ghaziabad, UP 201318</p>
+        <p><strong>Corporate Office:</strong> DLF Prime Towers, Okhla Industrial Estate Phase I, New Delhi 110020</p>
+        <p style="margin-top:0.5rem">Email: <a href="mailto:support@elitetoolistic.com">support@elitetoolistic.com</a></p>
+        <p>Phone: +91 7969654626 | +91 8062386662 | +91 2241507377</p>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">All Courses</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="persona.html">Persona Method</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Student Resources</h4>
+      <ul>
+        <li><a href="exam-portal.html">Exam Portal</a></li>
+        <li><a href="demo-exam-portal.html">Demo Exam</a></li>
+        <li><a href="sample-certificate.html">Sample Certificate</a></li>
+        <li><a href="sample-invoice.html">Sample Invoice</a></li>
+        <li><a href="viewmou.html">MoU - Ministry of Education</a></li>
+        <li><a href="viewmou-1.html">MoU - PMI University</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Policies &amp; Legal</h4>
+      <ul>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms-conditions.html">Terms &amp; Conditions</a></li>
+        <li><a href="refund-policy.html">Refund Policy</a></li>
+        <li><a href="service-delivery.html">Service Delivery</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 ELITE TOOLISTIC (OPC) PRIVATE LIMITED. All rights reserved.</span>
+    <span>Certified Professional E-Learning Provider</span>
+  </div>
+</footer>
+
+<script src="cart.js"></script>
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks  = document.getElementById('navLinks');
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  }
+  
+  function copyText(elementId, btn) {
+    const text = document.getElementById(elementId).innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      const orig = btn.innerText;
+      btn.innerText = "Copied!";
+      setTimeout(() => btn.innerText = orig, 1500);
+    });
+  }
+</script>
+</body>
+</html>

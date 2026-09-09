@@ -1,0 +1,1484 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Inter:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  /* ── ELITE TOOLISTIC SIGNATURE COLOR SYSTEM (DERIVED FROM NEW LOGO) ── */
+  /* Primary Signature Navy (Logo "E" & "Elitetoolistic" Wordmark) */
+  --navy-brand: #062c63;
+  --navy-dark: #031b3e;
+  --navy-deep: #02132b;
+  --navy-light: #0d3d82;
+
+  /* Accent Vivid Electric Azure Blue (Logo "T") */
+  --blue-accent: #006cfe;
+  --blue-hover: #0056cc;
+  --blue-light: #eff6ff;
+  --blue-subtle: #dbeafe;
+  --blue-border: #bfdbfe;
+
+  /* Modern Crisp Neutral Canvas */
+  --bg: #f8fafc;
+  --bg-subtle: #f1f5f9;
+  --surface: #ffffff;
+
+  /* Typography & Ink */
+  --black: #062c63;
+  --dark: #031b3e;
+  --ink: #0f172a;
+  --ink-muted: #475569;
+  --ink-faint: #94a3b8;
+
+  /* Borders & Rules */
+  --border: #062c63;
+  --border-light: #cbd5e1;
+  --border-double: 3px double #062c63;
+
+  /* Accent & Status */
+  --seal-red: #006cfe;
+  --navy-ink: #062c63;
+  --white: #ffffff;
+  
+  /* Strictly Flat System (No Rounded Bubbly Corners, No Drop Shadows) */
+  --radius: 0px;
+  --radius-sm: 0px;
+  --radius-lg: 0px;
+  --shadow: none;
+  --transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  
+  /* Typographic Stacks */
+  --font-serif: 'Playfair Display', 'Newsreader', Georgia, serif;
+  --font-mono: 'Space Mono', 'Courier New', monospace;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Cinzel', 'Playfair Display', Georgia, serif;
+}
+
+/* ── BASE RESETS ── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg);
+  color: var(--ink);
+  line-height: 1.65;
+  font-size: 15px;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Typographic Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  color: var(--navy-brand);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+/* Editorial Badges & Monospace Tags */
+.section-label-sm, .label-stamp {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--blue-accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.section-label-sm::before {
+  content: '§';
+  font-weight: bold;
+}
+
+.section-h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.section-sub {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--ink-muted);
+  line-height: 1.7;
+}
+
+/* ── TOP ANNOUNCEMENT / MASTHEAD STRIP ── */
+.masthead-strip {
+  display: none !important;
+}
+
+/* ── NAVBAR ── */
+nav, #navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--surface);
+  border-bottom: 2px solid var(--navy-brand);
+  padding: 0 4%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  height: 80px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.nav-logo img {
+  height: 52px;
+  width: auto;
+  display: block;
+  filter: none !important;
+}
+
+.nav-brand-title {
+  display: none !important; /* Standalone logo is the official brand */
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--navy-brand);
+  padding: 8px 14px;
+  white-space: nowrap !important;
+  border-radius: 0 !important;
+  display: inline-flex;
+  align-items: center;
+  transition: var(--transition);
+  line-height: 1;
+}
+
+.nav-links a:hover {
+  color: var(--blue-accent);
+  background: var(--blue-light);
+}
+
+.nav-links a.active {
+  background: var(--navy-brand);
+  color: var(--white);
+}
+
+.nav-enroll {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  white-space: nowrap !important;
+  flex-shrink: 0;
+  background: var(--navy-brand);
+  color: var(--white) !important;
+  padding: 12px 24px;
+  border: 1.5px solid var(--navy-brand);
+  line-height: 1;
+  transition: var(--transition);
+}
+
+.nav-enroll:hover {
+  background: var(--blue-accent);
+  border-color: var(--blue-accent);
+  color: var(--white) !important;
+}
+
+.nav-enroll .arrow {
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 1;
+  transition: transform 0.15s ease;
+}
+
+.nav-enroll:hover .arrow {
+  transform: translateX(3px);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.hamburger span {
+  width: 26px;
+  height: 2px;
+  background: var(--navy-brand);
+}
+
+/* ── HERO SECTION ── */
+.hero {
+  min-height: auto;
+  padding: 4.5rem 5% 4rem;
+  background: var(--bg);
+  border-bottom: 2px solid var(--border);
+  position: relative;
+}
+
+.hero-content {
+  max-width: 1100px;
+  margin-bottom: 2.5rem;
+}
+
+.hero-h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.8rem, 6vw, 5.2rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+  color: var(--black);
+  margin-bottom: 1.5rem;
+}
+
+.hero-h1 em {
+  font-style: italic;
+  font-weight: 400;
+  font-family: var(--font-serif);
+  color: var(--seal-red);
+}
+
+.hero-bottom {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 3rem;
+  align-items: start;
+  border-top: 1px solid var(--border-light);
+  padding-top: 2rem;
+}
+
+.hero-desc {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: var(--ink-muted);
+  max-width: 720px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.hero-btn, .btn-black, .explore-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--navy-brand);
+  color: var(--white);
+  padding: 14px 28px;
+  border: 1.5px solid var(--navy-brand);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.hero-btn:hover, .btn-black:hover, .explore-btn:hover {
+  background: var(--blue-accent);
+  border-color: var(--blue-accent);
+  color: var(--white);
+}
+
+.hero-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--surface);
+  color: var(--navy-brand);
+  padding: 14px 24px;
+  border: 1.5px solid var(--navy-brand);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: var(--transition);
+}
+
+.hero-btn-secondary:hover {
+  background: var(--navy-brand);
+  color: var(--white);
+}
+
+/* ── ABOUT SECTION ── */
+.about-section {
+  padding: 5rem 5%;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: center;
+  background: var(--surface);
+  border-bottom: 2px solid var(--border);
+}
+
+.about-img {
+  border: 2px solid var(--border);
+  padding: 10px;
+  background: var(--bg);
+}
+
+.about-img img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border-light);
+}
+
+.about-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: -1px;
+}
+
+.about-text p {
+  font-size: 1.02rem;
+  color: var(--ink-muted);
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+/* ── WORKSHOPS & CERTIFICATION TRACKS ── */
+.workshops-section {
+  padding: 5rem 5%;
+  background: var(--bg);
+  border-bottom: 2px solid var(--border);
+}
+
+.workshops-header {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 2rem;
+}
+
+.workshops-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.workshop-card {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--transition);
+}
+
+.workshop-card:hover {
+  background: var(--bg-subtle);
+  border-color: var(--seal-red);
+}
+
+.workshop-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 0.75rem;
+  line-height: 1.35;
+}
+
+.workshop-card p {
+  font-size: 0.92rem;
+  color: var(--ink-muted);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.workshop-card-illus {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border-light);
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.workshop-card-illus img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.workshop-level {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  align-self: flex-start;
+}
+
+/* ── MOST IN DEMAND / EXECUTIVE CURRICULUM LIST ── */
+.courses-section {
+  padding: 5rem 5%;
+  background: var(--surface);
+  border-bottom: 2px solid var(--border);
+}
+
+.courses-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  align-items: end;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 2rem;
+}
+
+.courses-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border);
+}
+
+.course-row {
+  display: grid;
+  grid-template-columns: 90px 1fr auto;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem 1rem;
+  border-bottom: 1px solid var(--border);
+  transition: var(--transition);
+}
+
+.course-row:hover {
+  background: var(--bg);
+}
+
+.course-num {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--blue-accent);
+  border: 1.5px solid var(--border);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--blue-light);
+}
+
+.course-info h3 {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--navy-brand);
+  margin-bottom: 0.35rem;
+}
+
+.course-info p {
+  font-size: 0.95rem;
+  color: var(--ink-muted);
+  line-height: 1.6;
+}
+
+.course-action-link {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 1.5px solid var(--navy-brand);
+  padding: 8px 16px;
+  background: var(--surface);
+  color: var(--navy-brand);
+  white-space: nowrap;
+  transition: var(--transition);
+}
+
+.course-action-link:hover {
+  background: var(--navy-brand);
+  color: var(--white);
+}
+
+/* ── ACADEMIC LEDGER / FIGURES ── */
+.figures-section {
+  padding: 5rem 5%;
+  background: var(--bg);
+  border-bottom: 2px solid var(--border);
+  text-align: center;
+}
+
+.figures-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--black);
+  margin-bottom: 0.75rem;
+}
+
+.figures-bento {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+  text-align: left;
+}
+
+.bento-card {
+  background: var(--surface);
+  border: 2px solid var(--border);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: relative;
+}
+
+.bento-card-large {
+  grid-column: span 1;
+}
+
+.bento-icon {
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--seal-red);
+}
+
+.figure-num {
+  font-family: var(--font-serif);
+  font-size: clamp(2.6rem, 4.5vw, 3.8rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--black);
+}
+
+.figure-lbl {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--black);
+}
+
+.bento-desc {
+  font-size: 0.92rem;
+  color: var(--ink-muted);
+  line-height: 1.65;
+}
+
+/* ── TESTIMONIALS & FELLOW COMMENDATIONS ── */
+.testimonials-section {
+  padding: 5rem 5%;
+  background: var(--surface);
+  border-bottom: 2px solid var(--border);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.testi-card {
+  background: var(--bg);
+  border: 1.5px solid var(--border);
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testi-quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: var(--dark);
+  margin-bottom: 1.75rem;
+}
+
+.testi-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-top: 1px solid var(--border-light);
+  padding-top: 1rem;
+}
+
+.testi-avatar {
+  width: 42px;
+  height: 42px;
+  border: 1.5px solid var(--navy-brand);
+  background: var(--navy-brand);
+  color: var(--white);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.testi-name {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.testi-role {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+}
+
+/* ── OFFICIAL AWARDS & ACCREDITATIONS ── */
+.awards-showcase {
+  padding: 5rem 5%;
+  background: var(--bg);
+  border-bottom: 2px solid var(--border);
+}
+
+.award-split {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  padding: 3.5rem 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.award-split:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.award-content h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.5px;
+}
+
+.award-content p {
+  font-size: 1.02rem;
+  color: var(--ink-muted);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.award-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 10px 24px;
+  border: 1.5px solid var(--navy-brand);
+  background: var(--navy-brand);
+  color: var(--white);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: var(--transition);
+}
+
+.award-btn:hover {
+  background: var(--blue-accent);
+  border-color: var(--blue-accent);
+  color: var(--white);
+}
+
+.award-img {
+  width: 100%;
+  border: 2px solid var(--border);
+  padding: 8px;
+  background: var(--surface);
+}
+
+/* ── MARATHON / INTENSIVE MASTERCLASS SECTION ── */
+.marathon-section {
+  padding: 5rem 5%;
+  background: var(--bg-subtle);
+  border-bottom: 2px solid var(--border);
+}
+
+.marathon-header {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 3rem;
+}
+
+.marathon-curriculum-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.marathon-card {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.marathon-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.marathon-card p {
+  font-size: 0.92rem;
+  color: var(--ink-muted);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.marathon-meta {
+  border-top: 1px solid var(--border-light);
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* ── WHY STUDY HERE / PEDAGOGICAL PILLARS ── */
+.features-section {
+  padding: 5rem 5%;
+  background: var(--surface);
+  border-bottom: 2px solid var(--border);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.feature-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 2rem 1.5rem;
+}
+
+.feature-icon {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--seal-red);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.feature-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  font-size: 0.88rem;
+  color: var(--ink-muted);
+  line-height: 1.6;
+}
+
+/* ── RECORD OF MERIT / STUDENTS TICKER ── */
+.students-section {
+  padding: 4rem 0;
+  background: var(--bg);
+  border-bottom: 2px solid var(--border);
+  overflow: hidden;
+}
+
+.students-header {
+  padding: 0 5%;
+  margin-bottom: 2rem;
+}
+
+.ticker-wrap {
+  overflow: hidden;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  padding: 1rem 0;
+}
+
+.ticker-track {
+  display: flex;
+  gap: 1.5rem;
+  animation: ticker 45s linear infinite;
+  width: max-content;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.student-chip {
+  flex-shrink: 0;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.chip-avatar {
+  width: 32px;
+  height: 32px;
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chip-name {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.chip-cert {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--ink-faint);
+}
+
+.chip-score {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--seal-red);
+  margin-left: 0.5rem;
+}
+
+/* ── ACADEMIC GAZETTE / NEWSLETTER ── */
+.newsletter-section {
+  padding: 4rem 5%;
+  background: var(--surface);
+  border-bottom: 2px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.newsletter-section h3 {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--navy-brand);
+}
+
+.newsletter-section p {
+  font-size: 0.95rem;
+  color: var(--ink-muted);
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 0;
+  align-items: center;
+}
+
+.newsletter-form input {
+  padding: 14px 20px;
+  border: 1.5px solid var(--border);
+  border-right: none;
+  background: var(--surface);
+  font-size: 0.9rem;
+  font-family: var(--font-sans);
+  min-width: 300px;
+  outline: none;
+}
+
+.newsletter-form input:focus {
+  background: var(--white);
+  border-color: var(--blue-accent);
+}
+
+.newsletter-form button {
+  padding: 14px 28px;
+  background: var(--navy-brand);
+  color: var(--white);
+  border: 1.5px solid var(--navy-brand);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.newsletter-form button:hover {
+  background: var(--blue-accent);
+  border-color: var(--blue-accent);
+  color: var(--white);
+}
+
+/* ── FOOTER / COLOPHON ── */
+footer {
+  background: var(--bg-subtle);
+  color: var(--ink);
+  padding: 5rem 5% 2.5rem;
+  border-top: 3px double var(--navy-brand);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.2fr;
+  gap: 3.5rem;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 3.5rem;
+}
+
+.footer-logo {
+  margin-bottom: 1.25rem;
+}
+
+.footer-logo img {
+  height: 48px;
+  width: auto;
+  filter: none !important;
+}
+
+.footer-brand p {
+  font-size: 0.92rem;
+  color: var(--ink-muted);
+  line-height: 1.75;
+}
+
+.footer-contact {
+  margin-top: 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  line-height: 1.7;
+  color: var(--ink-muted);
+}
+
+.footer-contact a {
+  color: var(--navy-brand);
+  text-decoration: underline;
+}
+
+.footer-col h4 {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--navy-brand);
+  margin-bottom: 1.25rem;
+  border-bottom: 2px solid var(--navy-brand);
+  padding-bottom: 0.5rem;
+}
+
+.footer-col ul li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-col ul li a {
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+  transition: var(--transition);
+}
+
+.footer-col ul li a:hover {
+  color: var(--blue-accent);
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ── INNER PAGE HERO STYLES ── */
+.page-hero, .about-hero, .contact-hero, .courses-page-hero, .team-hero, .persona-hero {
+  background: var(--bg);
+  border-bottom: 2px solid var(--border);
+  padding: 4rem 5% 3.5rem;
+}
+
+.page-hero-h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.8rem, 5.5vw, 4.8rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+
+.page-hero-sub {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--ink-muted);
+  max-width: 780px;
+  line-height: 1.75;
+}
+
+/* ── COURSE CATALOG PAGE & CARDS ── */
+.course-catalog {
+  padding: 5rem 5%;
+  background: var(--surface);
+  border-bottom: 2px solid var(--border);
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.catalog-card {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.catalog-card:hover {
+  background: var(--surface);
+  border-color: var(--blue-accent);
+}
+
+.catalog-card .course-image {
+  height: 200px;
+  overflow: hidden;
+  border-bottom: 1.5px solid var(--border);
+  background: var(--bg);
+}
+
+.catalog-card .course-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.catalog-card .course-content {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.course-tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.tag-beginner, .tag-intermediate, .tag-advanced {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 3px 8px;
+}
+
+.tag-beginner {
+  background: var(--blue-light);
+  color: var(--navy-brand);
+  border: 1px solid var(--blue-border);
+}
+
+.tag-intermediate {
+  background: var(--blue-subtle);
+  color: var(--navy-brand);
+  border: 1px solid var(--blue-accent);
+}
+
+.tag-advanced {
+  background: var(--navy-brand);
+  color: var(--white);
+  border: 1px solid var(--navy-brand);
+}
+
+.catalog-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 0.75rem;
+}
+
+.catalog-card .course-desc {
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.catalog-card .course-footer {
+  border-top: 1px solid var(--border-light);
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.course-price {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.course-duration {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+}
+
+/* ── INDIVIDUAL COURSE DETAIL PAGE ── */
+.course-detail-layout {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 4rem;
+  padding: 4rem 5%;
+  background: var(--surface);
+  border-bottom: 2px solid var(--border);
+}
+
+.course-detail-hero {
+  padding: 4rem 5% 3rem;
+  background: var(--bg);
+  border-bottom: 2px solid var(--border);
+}
+
+.course-meta-strip {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--border-light);
+  padding-top: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.meta-item strong {
+  color: var(--black);
+  display: block;
+  font-size: 0.95rem;
+  margin-top: 2px;
+}
+
+.course-sidebar-box {
+  background: var(--bg);
+  border: 2px solid var(--border);
+  padding: 2.25rem;
+  position: sticky;
+  top: 96px;
+}
+
+.sidebar-price-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--ink-faint);
+}
+
+.sidebar-price-val {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 1.5rem;
+}
+
+.syllabus-module {
+  border: 1px solid var(--border);
+  margin-bottom: 1rem;
+  background: var(--bg);
+}
+
+.module-header {
+  padding: 1.25rem 1.5rem;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.module-body {
+  padding: 1.25rem 1.5rem;
+  font-size: 0.92rem;
+  color: var(--ink-muted);
+  line-height: 1.7;
+}
+
+/* ── POLICY & DOCUMENT PAGES ── */
+.policy-container {
+  max-width: 880px;
+  margin: 4rem auto;
+  padding: 0 5%;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  padding: 4rem;
+}
+
+.policy-container h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  border-bottom: 3px double var(--border);
+  padding-bottom: 1.5rem;
+}
+
+.policy-container h2 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 0.5rem;
+}
+
+.policy-container p, .policy-container li {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--ink-muted);
+  margin-bottom: 1rem;
+}
+
+.policy-container ul, .policy-container ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ── RESPONSIVE RULES ── */
+@media (max-width: 1024px) {
+  .hero-bottom {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .about-section {
+    grid-template-columns: 1fr;
+  }
+  .workshops-header {
+    grid-template-columns: 1fr;
+  }
+  .workshops-grid {
+    grid-template-columns: 1fr;
+  }
+  .courses-header {
+    grid-template-columns: 1fr;
+  }
+  .course-row {
+    grid-template-columns: 60px 1fr;
+  }
+  .course-action-link {
+    display: none;
+  }
+  .figures-bento {
+    grid-template-columns: 1fr;
+  }
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  .award-split {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .marathon-curriculum-grid {
+    grid-template-columns: 1fr;
+  }
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .catalog-grid {
+    grid-template-columns: 1fr;
+  }
+  .course-detail-layout {
+    grid-template-columns: 1fr;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+  .nav-links {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background: var(--surface);
+    padding: 1.5rem 5%;
+    border-bottom: 2px solid var(--navy-brand);
+    z-index: 999;
+    box-shadow: 0 10px 25px rgba(6, 44, 99, 0.1) !important;
+  }
+  .nav-links.open li {
+    width: 100%;
+  }
+  .nav-links.open a {
+    width: 100%;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border-light);
+  }
+}
+
+@media (max-width: 600px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .policy-container {
+    padding: 2rem 1.5rem;
+  }
+  .newsletter-form {
+    flex-direction: column;
+    width: 100%;
+  }
+  .newsletter-form input {
+    border-right: 1.5px solid var(--border);
+    border-bottom: none;
+    width: 100%;
+  }
+  .newsletter-form button {
+    width: 100%;
+  }
+  .nav-logo img {
+    height: 42px;
+  }
+  .nav-enroll {
+    padding: 8px 14px;
+    font-size: 0.75rem;
+  }
+}
+

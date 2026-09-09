@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Persona Method: Individuated Curricula | ELITE TOOLISTIC</title>
+  <meta name="description" content="Discover the Persona Method at ELITE TOOLISTIC — tailored vocational roadmaps, individualized mentorship, and targeted executive certification."/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="cart.css"/>
+  <link rel="icon" type="image/png" href="images/LOGO.png" />
+  <style>
+    .persona-hero {
+      background: var(--bg);
+      border-bottom: 2px solid var(--border);
+      padding: 5rem 5% 4rem;
+    }
+    .persona-headline {
+      font-family: var(--font-serif);
+      font-size: clamp(2.8rem, 5.5vw, 4.8rem);
+      font-weight: 700;
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+      color: var(--black);
+      margin-bottom: 1.5rem;
+    }
+    .persona-headline em {
+      font-style: italic;
+      color: var(--seal-red);
+    }
+    
+    .persona-quotes-section {
+      padding: 4rem 5%; background: var(--surface);
+      border-bottom: 2px solid var(--border);
+    }
+    .persona-quotes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .persona-quote-card {
+      background: var(--bg); border: 1.5px solid var(--border);
+      padding: 2rem; display: flex; flex-direction: column;
+    }
+    .persona-quote-text {
+      font-family: var(--font-serif);
+      font-style: italic; font-size: 1rem; color: var(--dark);
+      line-height: 1.75; flex: 1; margin-bottom: 1.5rem;
+    }
+    .persona-quote-author { font-family: var(--font-serif); font-weight: 700; font-size: 1.05rem; }
+    .persona-quote-role { font-family: var(--font-mono); font-size: 0.75rem; color: var(--ink-faint); text-transform: uppercase; margin-top: 2px; }
+
+    .persona-doctrine-panel {
+      background: var(--black);
+      color: var(--white);
+      padding: 5rem 5%;
+      border-bottom: 2px solid var(--border);
+    }
+    .persona-doctrine-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.3;
+      max-width: 850px;
+      margin-bottom: 1.5rem;
+    }
+
+    .personas-section {
+      padding: 5rem 5%;
+      background: var(--bg);
+      border-bottom: 2px solid var(--border);
+    }
+    .personas-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 2.5rem; }
+    .persona-card {
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      padding: 2.25rem;
+    }
+    .persona-card-icon {
+      font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700; color: var(--seal-red); margin-bottom: 1rem;
+    }
+    .persona-card h3 { font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; margin-bottom: 0.6rem; }
+    .persona-card p { font-size: 0.92rem; color: var(--ink-muted); line-height: 1.7; }
+
+    .journey-section { padding: 5rem 5%; background: var(--surface); border-bottom: 2px solid var(--border); }
+    .journey-steps { display: flex; flex-direction: column; margin-top: 2.5rem; border-top: 1px solid var(--border); }
+    .journey-step {
+      display: grid; grid-template-columns: 100px 1fr;
+      gap: 2.5rem; padding: 2.5rem 1rem; border-bottom: 1px solid var(--border);
+      align-items: flex-start;
+    }
+    .journey-step-num {
+      font-family: var(--font-mono); font-size: 1.2rem; font-weight: 700;
+      color: var(--seal-red); border: 1px solid var(--border);
+      width: 55px; height: 55px; display: flex; align-items: center; justify-content: center;
+      background: var(--bg);
+    }
+    .journey-step h3 { font-family: var(--font-serif); font-size: 1.35rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .journey-step p { font-size: 0.95rem; color: var(--ink-muted); line-height: 1.7; }
+
+    @media(max-width:900px) {
+      .persona-quotes-grid { grid-template-columns: 1fr; }
+      .personas-grid { grid-template-columns: 1fr; }
+      .journey-step { grid-template-columns: 60px 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">
+    <img src="images/new_elite_logo_transparent.png" alt="Elite Toolistic" />
+    <div class="nav-brand-title">
+      <span class="brand-name">ELITE TOOLISTIC</span>
+      <span class="brand-sub">Academy of Certified Mastery</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="courses.html">Courses</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="persona.html" class="active">Persona</a></li>
+    <li><a href="team.html">Our Team</a></li>
+  </ul>
+  <a href="contact.html" class="nav-enroll">Contact Us <span class="arrow">→</span></a>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<section class="persona-hero">
+  <p class="section-label-sm">Pedagogical Framework</p>
+  <h1 class="persona-headline">The Persona Method:<br><em>Individuated Curricula</em> for Discerning Scholars.</h1>
+  <p class="page-hero-sub">Standardized, one-size-fits-all instruction inevitably wastes executive time on irrelevant theory. The Persona Method tailors every syllabus, examination milestone, and case-study sequence to the precise operational demands of your career.</p>
+  <div style="margin-top:2rem">
+    <a href="contact.html" class="hero-btn">[ Schedule Diagnostic Consultation <span class="arrow">→</span> ]</a>
+  </div>
+</section>
+
+<!-- TESTIMONIAL CITATIONS -->
+<section class="persona-quotes-section">
+  <p class="section-label-sm">Candidate Observations</p>
+  <div class="persona-quotes-grid">
+    <div class="persona-quote-card">
+      <p class="persona-quote-text">“The diagnostic consultation stripped away superfluous modules, curating a direct path toward my operational objectives. I achieved decisive clarity in half the expected timeframe.”</p>
+      <div class="persona-quote-author">Jitendra Rathor</div>
+      <div class="persona-quote-role">Marketing &amp; Brand Director</div>
+    </div>
+    <div class="persona-quote-card">
+      <p class="persona-quote-text">“The Persona framework respected the demands of my site coordination schedule. The customized curriculum honed my contractual negotiation and civil claims management capability.”</p>
+      <div class="persona-quote-author">Lokesh Sharma</div>
+      <div class="persona-quote-role">Senior Project Coordinator</div>
+    </div>
+    <div class="persona-quote-card">
+      <p class="persona-quote-text">“Instruction formulated precisely around institutional requirements. The mentorship was rigorous, direct, and unencumbered by superficial modern trends.”</p>
+      <div class="persona-quote-author">Narayan Prajapati</div>
+      <div class="persona-quote-role">Principal Business Consultant</div>
+    </div>
+  </div>
+</section>
+
+<!-- THE DOCTRINE PANEL -->
+<div class="persona-doctrine-panel">
+  <p class="section-label-sm" style="color:#dfd9ce;">[ THE CORE DOCTRINE ]</p>
+  <h2 class="persona-doctrine-title">“Instruction Must Be Fitted to the Practitioner, Not the Practitioner to an Arbitrary Syllabus.”</h2>
+  <p style="font-size: 1.05rem; line-height: 1.8; max-width: 800px; color: #dfd9ce;">Through an initial one-on-one diagnostic interview, our academic counselors evaluate your established technical foundation, existing operational responsibilities, and future milestones. From this evaluation, we assemble a bespoke course track, combining only the critical modules, literature, and examinations that directly expand your professional authority.</p>
+</div>
+
+<!-- WHY CHOOSE PERSONA -->
+<section class="personas-section">
+  <p class="section-label-sm">Systemic Advantages</p>
+  <h2 class="section-h2">Why the Persona Method Succeeds</h2>
+  <div class="personas-grid">
+    <div class="persona-card">
+      <div class="persona-card-icon">[ I. ELIMINATION OF TOIL ]</div>
+      <h3>Objective-Calibrated Curriculum</h3>
+      <p>Candidate effort is concentrated exclusively on competencies that produce tangible boardroom or on-ground results. No redundant chapters or generic filler.</p>
+    </div>
+    <div class="persona-card">
+      <div class="persona-card-icon">[ II. STEWARDSHIP ]</div>
+      <h3>Assigned Academic Counselor</h3>
+      <p>Continuous personal counsel from a designated faculty advisor who monitors submission quality, reviews case studies, and guides diploma preparation.</p>
+    </div>
+    <div class="persona-card">
+      <div class="persona-card-icon">[ III. RIGOROUS AUTONOMY ]</div>
+      <h3>Flexible Distance Asynchrony</h3>
+      <p>Study without disrupting senior corporate or executive commitments. The curriculum adapts to your demanding operational hours without sacrificing examination standards.</p>
+    </div>
+    <div class="persona-card">
+      <div class="persona-card-icon">[ IV. VERIFIABLE DISTINCTION ]</div>
+      <h3>Accredited Capstone Diplomas</h3>
+      <p>Upon satisfactory completion of tailored examinations, candidates receive credentials registered with our central examination ledger and recognized globally.</p>
+    </div>
+  </div>
+</section>
+
+<!-- THE 4-STAGE JOURNEY -->
+<section class="journey-section">
+  <p class="section-label-sm">Operational Protocol</p>
+  <h2 class="section-h2">The Four-Stage Candidate Journey</h2>
+  <div class="journey-steps">
+    <div class="journey-step">
+      <div class="journey-step-num">§ 01</div>
+      <div>
+        <h3>Diagnostic Evaluation &amp; Intake</h3>
+        <p>A structured academic consultation where candidates articulate their current responsibilities, technical proficiencies, and desired career transitions.</p>
+      </div>
+    </div>
+    <div class="journey-step">
+      <div class="journey-step-num">§ 02</div>
+      <div>
+        <h3>Curricular Blueprint Formulation</h3>
+        <p>Our academic board drafts a personalized syllabus incorporating targeted modules from our catalog of 51 faculties, establishing clear examination milestones.</p>
+      </div>
+    </div>
+    <div class="journey-step">
+      <div class="journey-step-num">§ 03</div>
+      <div>
+        <h3>Supervised Asynchronous Instruction</h3>
+        <p>Candidates progress through curated literature, recorded lectures, and applied case studies with continuous guidance from designated faculty mentors.</p>
+      </div>
+    </div>
+    <div class="journey-step">
+      <div class="journey-step-num">§ 04</div>
+      <div>
+        <h3>Examination &amp; Credential Conferral</h3>
+        <p>Comprehensive assessment evaluating practical capability. Successful candidates are awarded verifiable diplomas and registered in our official institutional records.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img src="images/LOGO.png" alt="ELITE TOOLISTIC Logo" style="height: 38px; width: auto;" />
+      </div>
+      <p>ELITE TOOLISTIC (OPC) PRIVATE LIMITED is a registered professional e-learning academy dedicated to career growth, skill certification, and executive training.</p>
+      <div class="footer-contact">
+        <p><strong>Registered Office:</strong> 1444, Gaur City 1, Sector 4, Greater Noida, Ghaziabad, UP 201318</p>
+        <p><strong>Corporate Office:</strong> DLF Prime Towers, Okhla Industrial Estate Phase I, New Delhi 110020</p>
+        <p style="margin-top:0.5rem">Email: <a href="mailto:support@elitetoolistic.com">support@elitetoolistic.com</a></p>
+        <p>Phone: +91 7969654626 | +91 8062386662 | +91 2241507377</p>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">All Courses</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="persona.html">Persona Method</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Student Resources</h4>
+      <ul>
+        <li><a href="exam-portal.html">Exam Portal</a></li>
+        <li><a href="demo-exam-portal.html">Demo Exam</a></li>
+        <li><a href="sample-certificate.html">Sample Certificate</a></li>
+        <li><a href="sample-invoice.html">Sample Invoice</a></li>
+        <li><a href="viewmou.html">MoU - Ministry of Education</a></li>
+        <li><a href="viewmou-1.html">MoU - PMI University</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Policies &amp; Legal</h4>
+      <ul>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms-conditions.html">Terms &amp; Conditions</a></li>
+        <li><a href="refund-policy.html">Refund Policy</a></li>
+        <li><a href="service-delivery.html">Service Delivery</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 ELITE TOOLISTIC (OPC) PRIVATE LIMITED. All rights reserved.</span>
+    <span>Certified Professional E-Learning Provider</span>
+  </div>
+</footer>
+
+<script src="cart.js"></script>
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks  = document.getElementById('navLinks');
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  }
+</script>
+</body>
+</html>
