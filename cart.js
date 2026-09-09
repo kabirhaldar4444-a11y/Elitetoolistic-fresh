@@ -170,33 +170,13 @@ async function checkoutWithPayAlma(directCourse = null) {
             btn.disabled = true;
         }
 
-        let response;
-        try {
-            response = await fetch(CHECKOUT_API_URL, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(payload)
-            });
-            if (response.status === 404) {
-                response = await fetch('/api/checkout.php', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(payload)
-                });
-            }
-        } catch (fetchErr) {
-            response = await fetch('/api/checkout.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(payload)
-            });
-        }
+        let response = await fetch(CHECKOUT_API_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(payload)
+        });
 
         const data = await response.json();
 
