@@ -1,13 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Service Delivery Protocol | ELITE TOOLISTIC</title>
-  <meta name="description" content="Official Service Delivery and Operational Fulfilment Protocol for ELITE TOOLISTIC (OPC) PRIVATE LIMITED." />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="cart.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Service Delivery | ELITE TOOLISTIC</title>
+  <meta name="description" content="Our systematic, 9-step service delivery architecture ensures end-to-end transparency and verified milestones."/>
+  <meta property="og:title" content="Service Delivery | ELITE TOOLISTIC" />
+  <meta property="og:description" content="Our systematic, 9-step service delivery architecture ensures end-to-end transparency and verified milestones." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="cart.css"/>
   <link rel="icon" type="image/png" href="images/LOGO.png" />
+  <style>
+    /* PMI Policy Styles Integration */
+    .policy-wrapper {
+      padding: 0;
+      background: var(--surface);
+      color: var(--black);
+      line-height: 1.7;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 5%;
+      box-sizing: border-box;
+    }
+    .py-xl { padding-top: 3.5rem; padding-bottom: 3.5rem; }
+    .bg-gray { background: var(--bg); border-bottom: 2px solid var(--border); }
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--blue-accent);
+      display: inline-block;
+      margin-bottom: 0.75rem;
+    }
+    .page-header h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      color: var(--navy-brand);
+      margin-bottom: 1rem;
+      line-height: 1.25;
+    }
+    .lead-p {
+      font-size: 1.1rem;
+      color: var(--ink-muted);
+      max-width: 860px;
+      line-height: 1.75;
+    }
+
+    /* Cards & layout */
+    .flex-column { display: flex; flex-direction: column; }
+    .gap-xl { gap: 2rem; }
+    
+    .terms-section, .delivery-step-card, .policy-section, .privacy-card {
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      padding: 2.25rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    }
+
+    .terms-section-header, .step-card-header, .policy-header, .privacy-card-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 1rem;
+    }
+
+    .terms-num-badge, .step-badge, .policy-badge, .section-num-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: var(--navy-brand);
+      color: var(--white);
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      font-weight: 700;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    .step-badge {
+      width: auto;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .terms-section-header h3, .step-card-header h3, .policy-header h3, .privacy-card-header h3 {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--navy-brand);
+      margin: 0;
+    }
+
+    .terms-text-body p, .step-card-body p, .policy-body p, .privacy-card-body p {
+      font-size: 0.98rem;
+      color: var(--ink-muted);
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+    }
+    .terms-text-body p:last-child, .step-card-body p:last-child, .policy-body p:last-child, .privacy-card-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    .policy-notice-box {
+      background: rgba(201,151,56,0.1);
+      border-left: 4px solid var(--blue-accent);
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .policy-notice-box .notice-title {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--navy-brand);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .policy-notice-box p {
+      margin: 0 !important;
+      font-size: 0.92rem;
+      color: var(--dark);
+    }
+
+    /* Privacy Specific */
+    .privacy-hero {
+      position: relative;
+      padding: 5rem 5% 4rem;
+      color: var(--white);
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(12,27,51,0.88);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .hero-tag {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #ffd885;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.25;
+    }
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.85);
+      max-width: 800px;
+      line-height: 1.7;
+    }
+    .privacy-notice-bar {
+      background: var(--navy-brand);
+      color: var(--white);
+      padding: 1rem 0;
+      font-size: 0.9rem;
+    }
+    .notice-inner {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .privacy-container {
+      padding: 4rem 0;
+    }
+    .header-meta {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--ink-faint);
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+    .policy-icon, .icon-info {
+      font-size: 1.2rem;
+      margin-right: 0.5rem;
+    }
+  </style>
 </head>
 <body>
 
@@ -31,61 +224,154 @@
   <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
 </nav>
 
-<section class="policy-container">
-  <p class="section-label-sm">Administrative Standards</p>
-  <h1>Service Delivery &amp; Operational Protocol</h1>
-  <p style="font-style:italic;color:var(--ink-muted);margin-bottom:2.5rem;">Official guidelines delineating candidate onboarding, instructional timeline, examination procedures, and digital/physical credential fulfillment for ELITE TOOLISTIC (OPC) PRIVATE LIMITED.</p>
-  
-  <h2>§ 01 / Candidate Registration &amp; Intake</h2>
-  <ul>
-    <li>Prospective candidates submit their enrollment dispatch via the official ELITE TOOLISTIC portal.</li>
-    <li>Upon submission, our academic registrar assigns a designated admissions counselor to verify candidate prerequisites and professional aspirations.</li>
-    <li>A formal enrollment memorandum outlining the syllabus, schedule, and fee schedule is transmitted via registered electronic correspondence. Where authorized, specialized corporate training accounts may manage tuition processing.</li>
-  </ul>
+<div class="policy-wrapper">
+  <div class="delivery-page"><section class="delivery-hero animate-fade-in" style="background-image:url(https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80);background-size:cover;background-position:center;background-repeat:no-repeat;width:100%;position:relative"></section><section class="page-header py-xl bg-gray"><div class="container animate-fade-in"><span class="section-label">Fulfillment Framework</span><h1>Service Delivery Protocol</h1><p class="lead-p">Our systematic, 9-step service delivery architecture ensures end-to-end transparency, regulatory compliance, and verified milestones across the complete learner lifecycle.</p></div></section><section class="policy-body-section " style="background:white"><div class="container"><div class="delivery-container flex-column gap-xl animate-fade-in"><div class="delivery-step-card"><div class="step-card-header"><div class="step-badge">Step 1</div><h3>Immediate Admission Confirmation After Payment</h3></div><div class="step-card-body"><p>The student onboarding journey begins instantly upon checkout. As soon as a transaction clears our secure platform gateways, our backend servers trigger an Automated Admission Confirmation Notice. Students receive a digital welcome package containing their permanent user profile IDs, platform workspace access routes, and an overview map of their target educational tracks.</p></div></div><div class="delivery-step-card"><div class="step-card-header"><div class="step-badge">Step 2</div><h3>Mandatory Document KYC Verification</h3></div><div class="step-card-body"><p>In strict compliance with structural risk management policies, all enrolled learners must verify their commercial profile data. Students are required to securely upload their valid identity documentation (such as government-issued photo IDs or institutional cards) to our encrypted verification portal. This step ensures that final completion documentation matches legal corporate profiles accurately.</p></div></div><div class="delivery-step-card"><div class="step-card-header"><div class="step-badge">Step 3</div><h3>Secure Video KYC Authentication</h3></div><div class="step-card-body"><p>To prevent platform identity theft, proxy testing, and transaction chargeback vectors, students must execute an automated Video KYC Verification step. Using an integrated web interface, learners record a brief, self-directed biometric identity check matching their uploaded documents. This establishes an unalterable audit trail for security purposes.</p></div></div><div class="delivery-step-card"><div class="step-card-header"><div class="step-badge">Step 4</div><h3>System Generation & Delivery of GST Invoice</h3></div><div class="step-card-body"><p>Accountability and fiscal transparency are foundational to our services. Within 24 hours of successful verification, our accounting systems compile a comprehensive, legally compliant Corporate GST Invoice detailing the exact service breakdown and tax identifiers. This asset is dispatched straight to the student’s billing tab for corporate tax deduction filing purposes.</p></div></div><div class="delivery-step-card"><div class="step-card-header"><div class="step-badge">Step 5</div><h3>Dissemination of Comprehensive PDF Study Material (Strict One-Time Release)</h3></div><div class="step-card-body"><p>Upon successful verification, the complete independent text registry library is unlocked. Students receive high-fidelity, comprehensive PDF Study Materials and Text Workbooks tailored strictly to their curriculum.</p><div class="security-notice-box"><span class="notice-tag">Operational Security Notice</span><p>In accordance with our digital asset protection protocols, all reading materials are shared on a strict one-time basis only. Students must securely download and save these assets immediately upon distribution, as link refreshes or secondary file dispatches will not be granted.</p></div></div></div><div class="delivery-step-card"><div class="step-card-header"><div class="step-badge">Step 6</div><h3>Issuance of Formal Training Enrollment Certificate</h3></div><div class="step-card-body"><p>Before course modules begin, our records registry generates a formal, verifiable ELITE TOOLISTIC Enrollment Certificate. This initial credential serves as an active commercial proof of status, reflecting that the individual is currently under training within an active, non-affiliated skill development boot camp.</p></div></div><div class="delivery-step-card"><div class="step-card-header"><div class="step-badge">Step 7</div><h3>Access Provisioning for Video Lecture Sessions (Strict One-Time Release)</h3></div><div class="step-card-body"><p>Learners gain access to their master collection of high-definition, pre-recorded visual walkthroughs and technical screen-shares. These professional Video Lectures contain the entirety of the execution-level core methodologies.</p><div class="security-notice-box"><span class="notice-tag">Operational Security Notice</span><p>In line with platform distribution rules, access keys to the video lecture sets are shared on a strict one-time basis only. Re-sharing, profile splitting, or secondary video deliveries are completely restricted to safeguard content parameters.</p></div></div></div><div class="delivery-step-card"><div class="step-card-header"><div class="step-badge">Step 8</div><h3>Distribution of Final Examination Login Credentials</h3></div><div class="step-card-body"><p>Once the 10-day, 20-day, or 30-day curriculum timeline has elapsed, the student workspace triggers the final evaluation phase. The platform outputs unique, encrypted Final Exam Login Credentials directly to the student portal, giving them an isolated access window to complete their timed, multiple-choice evaluation independently.</p></div></div><div class="delivery-step-card step-card-final"><div class="step-card-header"><div class="step-badge step-badge-final">Step 9</div><h3>Final Exam Result Processing & Delivery with Provisional Certificate (PC)</h3></div><div class="step-card-body"><p>Upon completing the examination, our grading engines parse the submission data against metric matrices. The comprehensive Final Exam Result Sheet is computed and displayed instantly inside the dashboard. Graduates are immediately issued their verified Provisional Certificate (PC), closing out the service lifecycle and enabling immediate skill deployment in the corporate sector.</p></div></div></div></div></section><style>
+        .delivery-page {
+          overflow-x: hidden;
+        }
 
-  <h2>§ 02 / Curricular Verification &amp; Confirmation</h2>
-  <ul>
-    <li>An academic orientation conference is conducted to detail curricular milestones, learning repositories, and examination timelines.</li>
-    <li>The candidate confirms formal acceptance of the academic schedule and institutional charter.</li>
-  </ul>
+        .delivery-hero {
+          position: relative;
+          width: 100%;
+          height: 380px;
+          margin-top: 80px;
+        }
 
-  <h2>§ 03 / Tuition Remittance &amp; Statutory GST Invoicing</h2>
-  <ul>
-    <li>Following verified tuition remittance, a statutory GST-compliant tax invoice is generated and dispatched within 6 business hours.</li>
-    <li>Preparatory study literature, syllabus dossiers, and portal credentials are provided to the candidate within 24 hours.</li>
-  </ul>
+        .page-header {
+          padding-top: 3rem;
+        }
 
-  <h2>§ 04 / Diagnostic Pre-Examination Assessment</h2>
-  <ul>
-    <li>A preliminary diagnostic evaluation is administered within 24 to 48 hours following tuition settlement.</li>
-    <li>This baseline assessment evaluates the candidate's initial domain knowledge to calibrate personalized study guidance.</li>
-    <li>An examination counselor briefs the candidate regarding platform protocols prior to the evaluation.</li>
-  </ul>
+        .lead-p {
+          font-size: 1.05rem;
+          color: #4a5568;
+          line-height: 1.65;
+          max-width: 900px;
+          margin-top: 0.5rem;
+        }
 
-  <h2>§ 05 / Interim Pre-Board Credential Conferral</h2>
-  <ul>
-    <li>Diagnostic scores and feedback are transmitted via formal electronic dispatch within 24 to 48 hours.</li>
-    <li>An interim Pre-Board Professional Certificate endorsed with <em>"Under Training Candidate"</em> status is awarded to document active matriculation.</li>
-  </ul>
+        .delivery-container {
+          max-width: 960px;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+        }
 
-  <h2>§ 06 / Curricular Instruction &amp; Coursework Delivery</h2>
-  <ul>
-    <li>The structured training program commences across designated asynchronous lecture modules, case analyses, and practical assignments.</li>
-    <li>Instructional materials remain accessible 24 hours a day throughout the candidate's active tenure.</li>
-  </ul>
+        .delivery-step-card {
+          background-color: var(--bg-primary, #ffffff);
+          padding: 2rem;
+          border-radius: 10px;
+          border: 1px solid var(--border-color, #e2e8f0);
+          box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+          border-left: 5px solid var(--primary-color, #0f2942);
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
 
-  <h2>§ 07 / Final Board Examination &amp; Merit Evaluation</h2>
-  <ul>
-    <li>Upon completion of the requisite coursework hours, the candidate undertakes the Final Comprehensive Board Examination via the examination portal.</li>
-    <li>Candidate submissions undergo rigorous evaluation against standardized grading criteria by the academic board.</li>
-  </ul>
+        .delivery-step-card:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+        }
 
-  <h2>§ 08 / Diploma Conferral &amp; Digital Credential Verification</h2>
-  <ul>
-    <li>Official examination outcomes are certified within 48 to 72 hours of examination completion.</li>
-    <li>Graduates receive verifiable cryptographic digital certificates and are entered into our official institutional registry. High-grade physical parchments are dispatched via registered courier to the candidate's address.</li>
-  </ul>
-</section>
+        .step-card-final {
+          border-left: 5px solid #059669;
+          background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);
+        }
+
+        .step-card-header {
+          display: flex;
+          align-items: center;
+          gap: 14px;
+          margin-bottom: 1rem;
+        }
+
+        .step-badge {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          background-color: var(--primary-color, #0f2942);
+          color: #ffffff;
+          font-weight: 700;
+          font-size: 0.85rem;
+          padding: 6px 14px;
+          border-radius: 20px;
+          letter-spacing: 0.5px;
+          flex-shrink: 0;
+        }
+
+        .step-badge-final {
+          background-color: #059669;
+        }
+
+        .step-card-header h3 {
+          font-size: 1.25rem;
+          color: var(--primary-color, #0f2942);
+          margin: 0;
+          font-weight: 700;
+          line-height: 1.4;
+        }
+
+        .step-card-body {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          color: #334155;
+          line-height: 1.7;
+          font-size: 0.96rem;
+        }
+
+        .step-card-body p {
+          margin: 0;
+        }
+
+        .security-notice-box {
+          background-color: #fffbeb;
+          border: 1px solid #fde68a;
+          border-left: 4px solid #d97706;
+          border-radius: 6px;
+          padding: 12px 16px;
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+          margin-top: 0.5rem;
+        }
+
+        .notice-tag {
+          font-size: 0.8rem;
+          font-weight: 700;
+          color: #b45309;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+
+        .security-notice-box p {
+          font-size: 0.9rem;
+          color: #78350f;
+          line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+          .delivery-hero {
+            height: 220px;
+            margin-top: 70px;
+          }
+
+          .page-header {
+            padding-top: 2rem !important;
+            text-align: center;
+          }
+
+          .delivery-step-card {
+            padding: 1.35rem;
+          }
+
+          .step-card-header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+          }
+        }
+      </style></div>
+</div>
 
 <!-- FOOTER -->
 <footer>
@@ -102,7 +388,6 @@
         <p>Phone: +91 7969654626 | +91 8062386662 | +91 2241507377</p>
       </div>
     </div>
-
     <div class="footer-col">
       <h4>Quick Links</h4>
       <ul>
@@ -114,7 +399,6 @@
         <li><a href="contact.html">Contact Us</a></li>
       </ul>
     </div>
-
     <div class="footer-col">
       <h4>Student Resources</h4>
       <ul>
@@ -123,10 +407,8 @@
         <li><a href="sample-certificate.html">Sample Certificate</a></li>
         <li><a href="sample-invoice.html">Sample Invoice</a></li>
         <li><a href="viewmou.html">MoU - Ministry of Education</a></li>
-        <li><a href="viewmou-1.html">MoU - PMI University</a></li>
       </ul>
     </div>
-
     <div class="footer-col">
       <h4>Policies &amp; Legal</h4>
       <ul>
@@ -137,7 +419,6 @@
       </ul>
     </div>
   </div>
-
   <div class="footer-bottom">
     <span>© 2026 ELITE TOOLISTIC (OPC) PRIVATE LIMITED. All rights reserved.</span>
     <span>Certified Professional E-Learning Provider</span>

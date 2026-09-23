@@ -1,0 +1,837 @@
+[
+  {
+    "name": "Construction Project Management",
+    "slug": "construction-project-management",
+    "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Energy Management Certification",
+    "slug": "energy-management-certification",
+    "image": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Certified Commercial Contracts Manager",
+    "slug": "certified-commercial-contracts-manager",
+    "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Advanced Civil Execution",
+    "slug": "advanced-civil-execution",
+    "image": "https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Projects IN Controlled Environments",
+    "slug": "projects-in-controlled-environments",
+    "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Contract and Claims Management",
+    "slug": "contract-and-claims-management",
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Self-Confidence Building Training",
+    "slug": "self-confidence-building-training",
+    "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Body Language Expert Training",
+    "slug": "body-language-expert-training",
+    "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Relationship Coaching Training",
+    "slug": "relationship-coaching-training",
+    "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "AI Productivity Power-Up",
+    "slug": "ai-productivity-power-up",
+    "image": "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Resilience Coach Training",
+    "slug": "resilience-coach-training",
+    "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Personal Branding Strategist Training",
+    "slug": "personal-branding-strategist-training",
+    "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Decision Making Mastery Training",
+    "slug": "decision-making-mastery-training",
+    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "The Everyday AI Toolkit",
+    "slug": "the-everyday-ai-toolkit",
+    "image": "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Motivational Speaker Training",
+    "slug": "motivational-speaker-training",
+    "image": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Mindset Mastery Training",
+    "slug": "mindset-mastery-training",
+    "image": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Adaptive Leadership Training",
+    "slug": "adaptive-leadership-training",
+    "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Confidence and Charisma Training",
+    "slug": "confidence-and-charisma-training",
+    "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Professional Development Certification",
+    "slug": "professional-development-certification",
+    "image": "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Advanced Career Skills Certification",
+    "slug": "advanced-career-skills-certification",
+    "image": "https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Workplace Excellence Certification",
+    "slug": "workplace-excellence-certification",
+    "image": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Professional Skills Enhancement Certificate",
+    "slug": "professional-skills-enhancement-certificate",
+    "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Corporate Skills Certification",
+    "slug": "corporate-skills-certification",
+    "image": "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Professional Growth Certification",
+    "slug": "professional-growth-certification",
+    "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Career Development Certification",
+    "slug": "career-development-certification",
+    "image": "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Workplace Readiness Certification",
+    "slug": "workplace-readiness-certification",
+    "image": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Certificate in Business Management",
+    "slug": "certificate-in-business-management",
+    "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Certificate in Project Coordination",
+    "slug": "certificate-in-project-coordination",
+    "image": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Certificate in Office Administration",
+    "slug": "certificate-in-office-administration",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Certificate in Team Leadership",
+    "slug": "certificate-in-team-leadership",
+    "image": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Certificate in Business Operations",
+    "slug": "certificate-in-business-operations",
+    "image": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Certificate in Supervisory Skills",
+    "slug": "certificate-in-supervisory-skills",
+    "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Advanced MS Excel Certification",
+    "slug": "advanced-ms-excel-certification",
+    "image": "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Business Communication Certification",
+    "slug": "business-communication-certification",
+    "image": "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Professional Email Writing Certification",
+    "slug": "professional-email-writing-certification",
+    "image": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Office Productivity Certification",
+    "slug": "office-productivity-certification",
+    "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Workplace Efficiency Certification",
+    "slug": "workplace-efficiency-certification",
+    "image": "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Data Handling Certification",
+    "slug": "data-handling-certification",
+    "image": "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Digital Marketing Certification",
+    "slug": "digital-marketing-certification",
+    "image": "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Social Media Management Certification",
+    "slug": "social-media-management-certification",
+    "image": "https://images.unsplash.com/photo-1611926653458-09294b3142bf?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Content Writing Certification",
+    "slug": "content-writing-certification",
+    "image": "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Customer Relationship Management Certification",
+    "slug": "customer-relationship-management-certification",
+    "image": "https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Brand Communication Certification",
+    "slug": "brand-communication-certification",
+    "image": "https://images.unsplash.com/photo-1493612276216-ee3925520721?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Online Marketing Certification",
+    "slug": "online-marketing-certification",
+    "image": "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Public Relations Certification",
+    "slug": "public-relations-certification",
+    "image": "https://images.unsplash.com/photo-1520333789090-1afc82db536a?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Web Development Certification",
+    "slug": "web-development-certification",
+    "image": "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Computer Applications Certification",
+    "slug": "computer-applications-certification",
+    "image": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "IT Skills Certification",
+    "slug": "it-skills-certification",
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Software Proficiency Certification",
+    "slug": "software-proficiency-certification",
+    "image": "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Customer Service Certification",
+    "slug": "customer-service-certification",
+    "image": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Website Management Certification",
+    "slug": "website-management-certification",
+    "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Generative AI Prompt Engineering for Enterprise Workflows",
+    "slug": "generative-ai-prompt-engineering-for-enterprise-workflows",
+    "image": "https://www.pmiservices.org/assets/1_generative-ai-prompt-engineering-for-enterprise-workflows-Bv5vu_RA.png"
+  },
+  {
+    "name": "AI-Powered Automation for Small Business Operations",
+    "slug": "ai-powered-automation-for-small-business-operations",
+    "image": "https://www.pmiservices.org/assets/2_ai-powered-automation-for-small-business-operations-Dte_mGGA.png"
+  },
+  {
+    "name": "AI-Driven Copywriting & Marketing Content Generation",
+    "slug": "ai-driven-copywriting-marketing-content-generation",
+    "image": "https://www.pmiservices.org/assets/3_ai-driven-copywriting-marketing-content-generation-C6j6HtH6.png"
+  },
+  {
+    "name": "Using AI Tools for Market Research & Data Synthesis",
+    "slug": "using-ai-tools-for-market-research-data-synthesis",
+    "image": "https://www.pmiservices.org/assets/4_using-ai-tools-for-market-research-data-synthesis-BP708hIt.png"
+  },
+  {
+    "name": "AI-Enhanced Video Editing & Creative Media Production",
+    "slug": "ai-enhanced-video-editing-creative-media-production",
+    "image": "https://www.pmiservices.org/assets/5_ai-enhanced-video-editing-creative-media-production-DK4pKeic.png"
+  },
+  {
+    "name": "No-Code AI Agent & Custom Chatbot Architecture",
+    "slug": "no-code-ai-agent-custom-chatbot-architecture",
+    "image": "https://www.pmiservices.org/assets/6_no-code-ai-agent-custom-chatbot-architecture-xpyzWXq_.png"
+  },
+  {
+    "name": "AI Productivity Hacks for Microsoft Office & Google Workspace",
+    "slug": "ai-productivity-hacks-for-microsoft-office-google-workspace",
+    "image": "https://www.pmiservices.org/assets/7_ai-productivity-hacks-for-microsoft-office-google-workspace-CUlfMMvZ.png"
+  },
+  {
+    "name": "Using Midjourney & DALL-E for Commercial Graphic Design",
+    "slug": "using-midjourney-dall-e-for-commercial-graphic-design",
+    "image": "https://www.pmiservices.org/assets/8_using-midjourney-dall-e-for-commercial-graphic-design-DpLCtyDj.png"
+  },
+  {
+    "name": "AI for Human Resource Operations & Talent Sourcing",
+    "slug": "ai-for-human-resource-operations-talent-sourcing",
+    "image": "https://www.pmiservices.org/assets/9_ai-for-human-resource-operations-talent-sourcing-g5vUC_kS.png"
+  },
+  {
+    "name": "Financial Analysis & Budgeting Using AI Assistance",
+    "slug": "financial-analysis-budgeting-using-ai-assistance",
+    "image": "https://www.pmiservices.org/assets/10_financial-analysis-budgeting-using-ai-assistance-DE2QBH1E.png"
+  },
+  {
+    "name": "AI-Powered Sales Scraping & Cold Email Automation",
+    "slug": "ai-powered-sales-scraping-cold-email-automation",
+    "image": "https://www.pmiservices.org/assets/11_ai-powered-sales-scraping-cold-email-automation-DqnWsDel.png"
+  },
+  {
+    "name": "Using AI for Supply Chain Optimization & Inventory Planning",
+    "slug": "using-ai-for-supply-chain-optimization-inventory-planning",
+    "image": "https://www.pmiservices.org/assets/12_using-ai-for-supply-chain-optimization-inventory-planning-COp25vtp.png"
+  },
+  {
+    "name": "AI Coding Assistants (GitHub Copilot) for Rapid Development",
+    "slug": "ai-coding-assistants-github-copilot-for-rapid-development",
+    "image": "https://www.pmiservices.org/assets/13_ai-coding-assistants-github-copilot-for-rapid-development-CINZ3zcl.png"
+  },
+  {
+    "name": "Customer Support Automation Using AI Helpdesk Tools",
+    "slug": "customer-support-automation-using-ai-helpdesk-tools",
+    "image": "https://www.pmiservices.org/assets/14_customer-support-automation-using-ai-helpdesk-tools-CTfOBdtx.png"
+  },
+  {
+    "name": "AI Prompt Engineering for Legal & Compliance Documentation",
+    "slug": "ai-prompt-engineering-for-legal-compliance-documentation",
+    "image": "https://www.pmiservices.org/assets/15_ai-prompt-engineering-for-legal-compliance-documentation-BaHNq2yv.png"
+  },
+  {
+    "name": "Construction Project Scheduling & Basic Estimation",
+    "slug": "construction-project-scheduling-basic-estimation",
+    "image": "https://www.pmiservices.org/assets/16_construction-project-scheduling-basic-estimation-BsSvyLgs.png"
+  },
+  {
+    "name": "Construction Cost Estimation & Quantity Surveying Basics",
+    "slug": "construction-cost-estimation-quantity-surveying-basics",
+    "image": "https://www.pmiservices.org/assets/17_construction-cost-estimation-quantity-surveying-basics-xNs3RVK2.png"
+  },
+  {
+    "name": "Contract Administration & Procurement in Construction",
+    "slug": "contract-administration-procurement-in-construction",
+    "image": "https://www.pmiservices.org/assets/18_contract-administration-procurement-in-construction-Bslzoh-N.png"
+  },
+  {
+    "name": "Construction Bill Checking & Contractor Invoice Verification",
+    "slug": "construction-bill-checking-contractor-invoice-verification",
+    "image": "https://www.pmiservices.org/assets/19_construction-bill-checking-contractor-invoice-verification-B40Hig42.png"
+  },
+  {
+    "name": "Rate Analysis & Construction Material Price Forecasting",
+    "slug": "rate-analysis-construction-material-price-forecasting",
+    "image": "https://www.pmiservices.org/assets/20_rate-analysis-construction-material-price-forecasting-Dc9HL5pz.png"
+  },
+  {
+    "name": "Construction Risk Assessment & Hazard Mitigation Strategies",
+    "slug": "construction-risk-assessment-hazard-mitigation-strategies",
+    "image": "https://www.pmiservices.org/assets/21_construction-risk-assessment-hazard-mitigation-strategies-DvTWEtJv.png"
+  },
+  {
+    "name": "Tendering, Bidding & Commercial Bid Evaluation Frameworks",
+    "slug": "tendering-bidding-commercial-bid-evaluation-frameworks",
+    "image": "https://www.pmiservices.org/assets/22_tendering-bidding-commercial-bid-evaluation-frameworks-ZK0oc5uG.png"
+  },
+  {
+    "name": "Real Estate Project Cost Control & Budget Management",
+    "slug": "real-estate-project-cost-control-budget-management",
+    "image": "https://www.pmiservices.org/assets/23_real-estate-project-cost-control-budget-management-BmEbXXO2.png"
+  },
+  {
+    "name": "Construction Claim Management & Dispute Resolution Prep",
+    "slug": "construction-claim-management-dispute-resolution-prep",
+    "image": "https://www.pmiservices.org/assets/24_construction-claim-management-dispute-resolution-prep-D2aOtRjm.png"
+  },
+  {
+    "name": "Agile Frameworks & Scrum for Construction Management",
+    "slug": "agile-frameworks-scrum-for-construction-management",
+    "image": "https://www.pmiservices.org/assets/25_agile-frameworks-scrum-for-construction-management-BlSWACFs.png"
+  },
+  {
+    "name": "Subcontractor Management & Site Logistics Mastery",
+    "slug": "subcontractor-management-site-logistics-mastery",
+    "image": "https://www.pmiservices.org/assets/26_subcontractor-management-site-logistics-mastery-DuZZpcYF.png"
+  },
+  {
+    "name": "Construction Micro-Scheduling & Daily Work Progress Tracking",
+    "slug": "construction-micro-scheduling-daily-work-progress-tracking",
+    "image": "https://www.pmiservices.org/assets/27_construction-micro-scheduling-daily-work-progress-tracking-BIpL-gU5.png"
+  },
+  {
+    "name": "Cash Flow Management & Capital Allocation for Builders",
+    "slug": "cash-flow-management-capital-allocation-for-builders",
+    "image": "https://www.pmiservices.org/assets/28_cash-flow-management-capital-allocation-for-builders-B8WQWMgx.png"
+  },
+  {
+    "name": "Construction Site Operations & Supervisor Foundations",
+    "slug": "construction-site-operations-supervisor-foundations",
+    "image": "https://www.pmiservices.org/assets/29_construction-site-operations-supervisor-foundations-Cv8DfHWr.png"
+  },
+  {
+    "name": "Heavy Equipment Fleet Management Operations",
+    "slug": "heavy-equipment-fleet-management-operations",
+    "image": "https://www.pmiservices.org/assets/30_heavy-equipment-fleet-management-operations-CaMDp4R9.png"
+  },
+  {
+    "name": "Construction Quality Control & Site Inspection Frameworks",
+    "slug": "construction-quality-control-site-inspection-frameworks",
+    "image": "https://www.pmiservices.org/assets/31_construction-quality-control-site-inspection-frameworks-CYlfrJHd.png"
+  },
+  {
+    "name": "Site Layout, Land Surveying Tools & Levelling Operations",
+    "slug": "site-layout-land-surveying-tools-levelling-operations",
+    "image": "https://www.pmiservices.org/assets/32_site-layout-land-surveying-tools-levelling-operations-CqE3aj99.png"
+  },
+  {
+    "name": "Construction Material Storage, Waste Reduction & Storekeeping",
+    "slug": "construction-material-storage-waste-reduction-storekeeping",
+    "image": "https://www.pmiservices.org/assets/33_construction-material-storage-waste-reduction-storekeeping-CXeifNSm.png"
+  },
+  {
+    "name": "Excavation, Shoring & Deep Foundation Site Coordination",
+    "slug": "excavation-shoring-deep-foundation-site-coordination",
+    "image": "https://www.pmiservices.org/assets/34_excavation-shoring-deep-foundation-site-coordination-CQ6mMUxJ.png"
+  },
+  {
+    "name": "Scaffolding Safety, Erection Control & High-Rise Access Planning",
+    "slug": "scaffolding-safety-erection-control-high-rise-access-planning",
+    "image": "https://www.pmiservices.org/assets/35_scaffolding-safety-erection-control-high-rise-access-planning-CYmKxnJ_.png"
+  },
+  {
+    "name": "Construction Site Water Management & Dewatering Systems",
+    "slug": "construction-site-water-management-dewatering-systems",
+    "image": "https://www.pmiservices.org/assets/36_construction-site-water-management-dewatering-systems-DgFrjBSb.png"
+  },
+  {
+    "name": "Demolition Planning, Structural Dismantling & Salvage Management",
+    "slug": "demolition-planning-structural-dismantling-salvage-management",
+    "image": "https://www.pmiservices.org/assets/37_demolition-planning-structural-dismantling-salvage-management-DsBcLLQ5.png"
+  },
+  {
+    "name": "Labour Productivity Management & On-Site Performance Tracking",
+    "slug": "labour-productivity-management-on-site-performance-tracking",
+    "image": "https://www.pmiservices.org/assets/38_labour-productivity-management-on-site-performance-tracking-BuvuojMM.png"
+  },
+  {
+    "name": "Temporary Structures & Site Infrastructure Layout Planning",
+    "slug": "temporary-structures-site-infrastructure-layout-planning",
+    "image": "https://www.pmiservices.org/assets/39_temporary-structures-site-infrastructure-layout-planning-BDND2zKX.png"
+  },
+  {
+    "name": "Construction Site Utilities & Temporary Power/Water Setup",
+    "slug": "construction-site-utilities-temporary-power-water-setup",
+    "image": "https://www.pmiservices.org/assets/40_construction-site-utilities-temporary-power-water-setup-C_GUNhz6.png"
+  },
+  {
+    "name": "BIM (Building Information Modeling) Software Coordination",
+    "slug": "bim-building-information-modeling-software-coordination",
+    "image": "https://www.pmiservices.org/assets/41_bim-building-information-modeling-software-coordination-CUc4_mQH.png"
+  },
+  {
+    "name": "Advanced Blueprint & Architectural Drawing Interpretation",
+    "slug": "advanced-blueprint-architectural-drawing-interpretation",
+    "image": "https://www.pmiservices.org/assets/42_advanced-blueprint-architectural-drawing-interpretation-CGv44yrO.png"
+  },
+  {
+    "name": "Pre-Engineered Building (PEB) Design and Assembly Principles",
+    "slug": "pre-engineered-building-peb-design-and-assembly-principles",
+    "image": "https://www.pmiservices.org/assets/43_pre-engineered-building-peb-design-and-assembly-principles-5VxSp1Pw.png"
+  },
+  {
+    "name": "Structural Drawing Verification for Site Engineers",
+    "slug": "structural-drawing-verification-for-site-engineers",
+    "image": "https://www.pmiservices.org/assets/44_structural-drawing-verification-for-site-engineers-ChYCALE5.png"
+  },
+  {
+    "name": "MEP (Mechanical, Electrical, Plumbing) Drawing Coordination",
+    "slug": "mep-mechanical-electrical-plumbing-drawing-coordination",
+    "image": "https://www.pmiservices.org/assets/45_mep-mechanical-electrical-plumbing-drawing-coordination-BscVgFfU.png"
+  },
+  {
+    "name": "As-Built Drawing Documentation & Handover Report Drafting",
+    "slug": "as-built-drawing-documentation-handover-report-drafting",
+    "image": "https://www.pmiservices.org/assets/46_as-built-drawing-documentation-handover-report-drafting-DGUTtan4.png"
+  },
+  {
+    "name": "Construction Standard Operating Procedure (SOP) Writing",
+    "slug": "construction-standard-operating-procedure-sop-writing",
+    "image": "https://www.pmiservices.org/assets/47_construction-standard-operating-procedure-sop-writing-HyKrQNwK.png"
+  },
+  {
+    "name": "Digital Document Control & Daily Progress Report (DPR) Systems",
+    "slug": "digital-document-control-daily-progress-report-dpr-systems",
+    "image": "https://www.pmiservices.org/assets/48_digital-document-control-daily-progress-report-dpr-systems-AeDW0oOe.png"
+  },
+  {
+    "name": "Using Excel for Construction Bar Bending Schedules (BBS)",
+    "slug": "using-excel-for-construction-bar-bending-schedules-bbs",
+    "image": "https://www.pmiservices.org/assets/49_using-excel-for-construction-bar-bending-schedules-bbs-CUSpTioz.png"
+  },
+  {
+    "name": "Revit Architecture Foundations for Project Managers",
+    "slug": "revit-architecture-foundations-for-project-managers",
+    "image": "https://www.pmiservices.org/assets/50_revit-architecture-foundations-for-project-managers-1IIsE_mv.png"
+  },
+  {
+    "name": "AutoCAD Basics for Construction Site Supervisors",
+    "slug": "autocad-basics-for-construction-site-supervisors",
+    "image": "https://www.pmiservices.org/assets/51_autocad-basics-for-construction-site-supervisors-C6EfauD1.png"
+  },
+  {
+    "name": "Concrete Technology & Modern Formwork Applications",
+    "slug": "concrete-technology-modern-formwork-applications",
+    "image": "https://www.pmiservices.org/assets/52_concrete-technology-modern-formwork-applications-DeBvoBzF.png"
+  },
+  {
+    "name": "Interior Fit-Out & Commercial Finishing Project Coordination",
+    "slug": "interior-fit-out-commercial-finishing-project-coordination",
+    "image": "https://www.pmiservices.org/assets/53_interior-fit-out-commercial-finishing-project-coordination-Cftqb4qm.png"
+  },
+  {
+    "name": "Sustainable Building Materials & Green Construction Intro",
+    "slug": "sustainable-building-materials-green-construction-intro",
+    "image": "https://www.pmiservices.org/assets/54_sustainable-building-materials-green-construction-intro-VCZk9H_j.png"
+  },
+  {
+    "name": "Residential Property Development Foundations",
+    "slug": "residential-property-development-foundations",
+    "image": "https://www.pmiservices.org/assets/55_residential-property-development-foundations-t-H6evMH.png"
+  },
+  {
+    "name": "Waterproofing Technology: Materials, Selection & Application",
+    "slug": "waterproofing-technology-materials-selection-application",
+    "image": "https://www.pmiservices.org/assets/56_waterproofing-technology-materials-selection-application-4mDNPGeH.png"
+  },
+  {
+    "name": "Advanced Flooring Systems & Tiling Project Inspection",
+    "slug": "advanced-flooring-systems-tiling-project-inspection",
+    "image": "https://www.pmiservices.org/assets/57_advanced-flooring-systems-tiling-project-inspection-C_nWczYi.png"
+  },
+  {
+    "name": "Façade Engineering & Commercial Glazing Installation Systems",
+    "slug": "fa-ade-engineering-commercial-glazing-installation-systems",
+    "image": "https://www.pmiservices.org/assets/58_fa-ade-engineering-commercial-glazing-installation-systems-DNaZZCqv.png"
+  },
+  {
+    "name": "Precast Concrete Elements: Manufacturing & Erection Control",
+    "slug": "precast-concrete-elements-manufacturing-erection-control",
+    "image": "https://www.pmiservices.org/assets/59_precast-concrete-elements-manufacturing-erection-control-DICcrVGk.png"
+  },
+  {
+    "name": "Drywall Partitioning & Acoustic Insulation Project Coordination",
+    "slug": "drywall-partitioning-acoustic-insulation-project-coordination",
+    "image": "https://www.pmiservices.org/assets/60_drywall-partitioning-acoustic-insulation-project-coordination-m8IRJCVv.png"
+  },
+  {
+    "name": "Road & Pavement Construction Materials & Field Execution",
+    "slug": "road-pavement-construction-materials-field-execution",
+    "image": "https://www.pmiservices.org/assets/61_road-pavement-construction-materials-field-execution-BKiJ43Ta.png"
+  },
+  {
+    "name": "Building Structural Repair, Retrofitting & Rehabilitation Basics",
+    "slug": "building-structural-repair-retrofitting-rehabilitation-basics",
+    "image": "https://www.pmiservices.org/assets/62_building-structural-repair-retrofitting-rehabilitation-basics-DnsqmNNh.png"
+  },
+  {
+    "name": "Landscape Construction Engineering & External Site Works",
+    "slug": "landscape-construction-engineering-external-site-works",
+    "image": "https://www.pmiservices.org/assets/63_landscape-construction-engineering-external-site-works-GXoc1CpI.png"
+  },
+  {
+    "name": "Smart Home Automation & IoT Hardware Site Integration",
+    "slug": "smart-home-automation-iot-hardware-site-integration",
+    "image": "https://www.pmiservices.org/assets/64_smart-home-automation-iot-hardware-site-integration-DKPAGImU.png"
+  },
+  {
+    "name": "Modular Kitchen & Wardrobe Joinery Project Management",
+    "slug": "modular-kitchen-wardrobe-joinery-project-management",
+    "image": "https://www.pmiservices.org/assets/65_modular-kitchen-wardrobe-joinery-project-management-B5Bs0GXB.png"
+  },
+  {
+    "name": "Advanced Microsoft Excel & Data Dashboarding for Operations",
+    "slug": "advanced-microsoft-excel-data-dashboarding-for-operations",
+    "image": "https://www.pmiservices.org/assets/66_advanced-microsoft-excel-data-dashboarding-for-operations-BxEhJjdG.png"
+  },
+  {
+    "name": "Supply Chain Logistics & Warehouse Inventory Management",
+    "slug": "supply-chain-logistics-warehouse-inventory-management",
+    "image": "https://www.pmiservices.org/assets/67_supply-chain-logistics-warehouse-inventory-management-BQuYLn2s.png"
+  },
+  {
+    "name": "Vendor Management & Strategic Procurement Operations",
+    "slug": "vendor-management-strategic-procurement-operations",
+    "image": "https://www.pmiservices.org/assets/68_vendor-management-strategic-procurement-operations-CL-kRJEw.png"
+  },
+  {
+    "name": "Agile Frameworks & Scrum Basics for Non-Tech Operations",
+    "slug": "agile-frameworks-scrum-basics-for-non-tech-operations",
+    "image": "https://www.pmiservices.org/assets/69_agile-frameworks-scrum-basics-for-non-tech-operations-bxMVb4hk.png"
+  },
+  {
+    "name": "Business Process Mapping & Workflow Optimization Blueprint",
+    "slug": "business-process-mapping-workflow-optimization-blueprint",
+    "image": "https://www.pmiservices.org/assets/70_business-process-mapping-workflow-optimization-blueprint-B8viM7wL.png"
+  },
+  {
+    "name": "Lean Six Sigma Foundations for Operational Excellence",
+    "slug": "lean-six-sigma-foundations-for-operational-excellence",
+    "image": "https://www.pmiservices.org/assets/71_lean-six-sigma-foundations-for-operational-excellence-GDyvZRJc.png"
+  },
+  {
+    "name": "Customer Success Operations & Account Retention Strategies",
+    "slug": "customer-success-operations-account-retention-strategies",
+    "image": "https://www.pmiservices.org/assets/72_customer-success-operations-account-retention-strategies-DC80BfcK.png"
+  },
+  {
+    "name": "Key Account Management & Client Relations Frameworks",
+    "slug": "key-account-management-client-relations-frameworks",
+    "image": "https://www.pmiservices.org/assets/73_key-account-management-client-relations-frameworks-wLvpYflh.png"
+  },
+  {
+    "name": "Project Management Essentials for Operational Teams",
+    "slug": "project-management-essentials-for-operational-teams",
+    "image": "https://www.pmiservices.org/assets/74_project-management-essentials-for-operational-teams-BxEnxaD6.png"
+  },
+  {
+    "name": "Enterprise Resource Planning (ERP) Software Navigation Basics",
+    "slug": "enterprise-resource-planning-erp-software-navigation-basics",
+    "image": "https://www.pmiservices.org/assets/75_enterprise-resource-planning-erp-software-navigation-basics-DiLekqIw.png"
+  },
+  {
+    "name": "Data Analytics for Operations Using PowerBI and Tableau",
+    "slug": "data-analytics-for-operations-using-powerbi-and-tableau",
+    "image": "https://www.pmiservices.org/assets/76_data-analytics-for-operations-using-powerbi-and-tableau-B6XUwnCA.png"
+  },
+  {
+    "name": "Quality Assurance (QA) and Process Control Frameworks",
+    "slug": "quality-assurance-qa-and-process-control-frameworks",
+    "image": "https://www.pmiservices.org/assets/77_quality-assurance-qa-and-process-control-frameworks-Ds1qyVTb.png"
+  },
+  {
+    "name": "Change Management Frameworks for Operational Restructuring",
+    "slug": "change-management-frameworks-for-operational-restructuring",
+    "image": "https://www.pmiservices.org/assets/78_change-management-frameworks-for-operational-restructuring-CVm3Zfyn.png"
+  },
+  {
+    "name": "Business Continuity Planning & Disaster Recovery Workflows",
+    "slug": "business-continuity-planning-disaster-recovery-workflows",
+    "image": "https://www.pmiservices.org/assets/79_business-continuity-planning-disaster-recovery-workflows-CgPh4NnG.png"
+  },
+  {
+    "name": "Cross-Border Trade Logistics & Custom Clearance Operations",
+    "slug": "cross-border-trade-logistics-custom-clearance-operations",
+    "image": "https://www.pmiservices.org/assets/80_cross-border-trade-logistics-custom-clearance-operations-CUKHc6XV.png"
+  },
+  {
+    "name": "Corporate Retail Operations & Store Management Systems",
+    "slug": "corporate-retail-operations-store-management-systems",
+    "image": "https://www.pmiservices.org/assets/81_corporate-retail-operations-store-management-systems-Ba40sqHX.png"
+  },
+  {
+    "name": "B2B Service Operations Management & Client SLA Tracking",
+    "slug": "b2b-service-operations-management-client-sla-tracking",
+    "image": "https://www.pmiservices.org/assets/82_b2b-service-operations-management-client-sla-tracking-6Vxi8dZk.png"
+  },
+  {
+    "name": "Digital Product Operations & Lifecycle Coordination",
+    "slug": "digital-product-operations-lifecycle-coordination",
+    "image": "https://www.pmiservices.org/assets/83_digital-product-operations-lifecycle-coordination-DX-u6qJR.png"
+  },
+  {
+    "name": "E-Commerce Operations & Supply Chain Fulfillment Tactics",
+    "slug": "e-commerce-operations-supply-chain-fulfillment-tactics",
+    "image": "https://www.pmiservices.org/assets/84_e-commerce-operations-supply-chain-fulfillment-tactics-Bn_0vesN.png"
+  },
+  {
+    "name": "Risk Mitigation & Internal Control Audit for Operations Managers",
+    "slug": "risk-mitigation-internal-control-audit-for-operations-managers",
+    "image": "https://www.pmiservices.org/assets/85_risk-mitigation-internal-control-audit-for-operations-managers-wD5ZigcI.png"
+  },
+  {
+    "name": "Strategic Facility Optimization & Resource Budgeting",
+    "slug": "strategic-facility-optimization-resource-budgeting",
+    "image": "https://www.pmiservices.org/assets/86_strategic-facility-optimization-resource-budgeting-Dpf2tgox.png"
+  },
+  {
+    "name": "Root-Cause Analysis & Operational Bottleneck Troubleshooting",
+    "slug": "root-cause-analysis-operational-bottleneck-troubleshooting",
+    "image": "https://www.pmiservices.org/assets/87_root-cause-analysis-operational-bottleneck-troubleshooting-CLU8Vko5.png"
+  },
+  {
+    "name": "Operational Dashboard Design & Performance KPI Mapping",
+    "slug": "operational-dashboard-design-performance-kpi-mapping",
+    "image": "https://www.pmiservices.org/assets/88_operational-dashboard-design-performance-kpi-mapping-DF3zq-8S.png"
+  },
+  {
+    "name": "B2B Client Onboarding & Service Delivery Workflows",
+    "slug": "b2b-client-onboarding-service-delivery-workflows",
+    "image": "https://www.pmiservices.org/assets/89_b2b-client-onboarding-service-delivery-workflows-BZFiPDN8.png"
+  },
+  {
+    "name": "Fleet Logistics Optimization & Last-Mile Delivery Planning",
+    "slug": "fleet-logistics-optimization-last-mile-delivery-planning",
+    "image": "https://www.pmiservices.org/assets/90_fleet-logistics-optimization-last-mile-delivery-planning-BRx4Krm_.png"
+  },
+  {
+    "name": "Corporate Standard Operating Procedure (SOP) Deployment",
+    "slug": "corporate-standard-operating-procedure-sop-deployment",
+    "image": "https://www.pmiservices.org/assets/91_corporate-standard-operating-procedure-sop-deployment-bsva0Dcc.png"
+  },
+  {
+    "name": "Incident Management & Operational Escalation Engineering",
+    "slug": "incident-management-operational-escalation-engineering",
+    "image": "https://www.pmiservices.org/assets/92_incident-management-operational-escalation-engineering-BWeelF_w.png"
+  },
+  {
+    "name": "Agile Scaling Frameworks for Cross-Departmental Work",
+    "slug": "agile-scaling-frameworks-for-cross-departmental-work",
+    "image": "https://www.pmiservices.org/assets/93_agile-scaling-frameworks-for-cross-departmental-work-DDlRMyly.png"
+  },
+  {
+    "name": "Third-Party Logistics (3PL) & Vendor Performance Auditing",
+    "slug": "third-party-logistics-3pl-vendor-performance-auditing",
+    "image": "https://www.pmiservices.org/assets/94_third-party-logistics-3pl-vendor-performance-auditing-Ddl6hsDV.png"
+  },
+  {
+    "name": "Enterprise Assets & Inventory Valuation Methodologies",
+    "slug": "enterprise-assets-inventory-valuation-methodologies",
+    "image": "https://www.pmiservices.org/assets/95_enterprise-assets-inventory-valuation-methodologies-HnXoDW3x.png"
+  },
+  {
+    "name": "Predictive Capacity Planning & Workforce Operations",
+    "slug": "predictive-capacity-planning-workforce-operations",
+    "image": "https://www.pmiservices.org/assets/96_predictive-capacity-planning-workforce-operations-B6NHZRTg.png"
+  },
+  {
+    "name": "Green Supply Chain & Carbon-Neutral Operations Basics",
+    "slug": "green-supply-chain-carbon-neutral-operations-basics",
+    "image": "https://www.pmiservices.org/assets/97_green-supply-chain-carbon-neutral-operations-basics-B9HI7uca.png"
+  },
+  {
+    "name": "Corporate Relocation Logistics & Infrastructure Set Up",
+    "slug": "corporate-relocation-logistics-infrastructure-set-up",
+    "image": "https://www.pmiservices.org/assets/98_corporate-relocation-logistics-infrastructure-set-up-gasCI3hu.png"
+  },
+  {
+    "name": "Digital Workspace Optimization: Automation for Admin Teams",
+    "slug": "digital-workspace-optimization-automation-for-admin-teams",
+    "image": "https://www.pmiservices.org/assets/99_digital-workspace-optimization-automation-for-admin-teams-D2aLz88l.png"
+  },
+  {
+    "name": "Crisis Operations Management & Business Stabilization",
+    "slug": "crisis-operations-management-business-stabilization",
+    "image": "https://www.pmiservices.org/assets/100_crisis-operations-management-business-stabilization-C9NMVBdt.png"
+  },
+  {
+    "name": "Certificate in Leadership & Team Management",
+    "slug": "certificateinleadershipteammanagement",
+    "image": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Time Management & Productivity Certification",
+    "slug": "timemanagementproductivitycertification",
+    "image": "https://images.unsplash.com/photo-1508962914676-134849a727f0?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Digital Skills Certification",
+    "slug": "digitalskillscertification",
+    "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Basic Programming Certification",
+    "slug": "basicprogrammingcertification",
+    "image": "https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Career Advancement Certification",
+    "slug": "careeradvancementcertification",
+    "image": "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Professional Excellence Certification",
+    "slug": "professionalexcellencecertification",
+    "image": "https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Corporate Readiness Certification",
+    "slug": "corporatereadinesscertification",
+    "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Industry Readiness Certification",
+    "slug": "industryreadinesscertification",
+    "image": "https://images.unsplash.com/photo-1568992687947-868a62a9f521?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Employability Skills Certification",
+    "slug": "employabilityskillscertification",
+    "image": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Workplace Success Certification",
+    "slug": "workplacesuccesscertification",
+    "image": "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Sales Skills Certification",
+    "slug": "salesskillscertification",
+    "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Business Etiquette Certification",
+    "slug": "businessetiquettecertification",
+    "image": "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Problem Solving Certification",
+    "slug": "problemsolvingcertification",
+    "image": "https://images.unsplash.com/photo-1503551723145-6c040742065b?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Decision Making Certification",
+    "slug": "decisionmakingcertification",
+    "image": "https://images.unsplash.com/photo-1533073526757-2c8ca1df9f1c?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Leadership Essentials Certification",
+    "slug": "leadershipessentialscertification",
+    "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    "name": "Communication Skills Certification",
+    "slug": "communicationskillscertification",
+    "image": "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=1920&q=80"
+  }
+]

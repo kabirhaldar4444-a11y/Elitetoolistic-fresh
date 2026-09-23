@@ -1,120 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Business Communication Certification Certification | ELITE TOOLISTIC</title>
-  <meta name="description" content="Enroll in Business Communication Certification Certification at ELITE TOOLISTIC. Master corporate presentation pitching, executive client scripts, structured brief drafting, and active mediation. Structured 15 to 25 hours certification program with industry-relevant case studies." />
-  <meta name="keywords" content="Business Communication Certification, professional certification, ELITE TOOLISTIC, online course, career training, business management" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Business Communication Certification | ELITE TOOLISTIC</title>
+  <meta name="description" content="Master corporate presentation pitching, executive client scripts, structured brief drafting, and active mediation."/>
+  <meta name="keywords" content="Business Communication Certification, professional certification, ELITE TOOLISTIC, online course, career growth" />
   
-  <meta property="og:title" content="Business Communication Certification Certification | ELITE TOOLISTIC" />
-  <meta property="og:description" content="Master corporate presentation pitching, executive client scripts, structured brief drafting, and active mediation. structured 15 to 25 hours coaching." />
-  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Business Communication Certification | ELITE TOOLISTIC" />
+  <meta property="og:description" content="Master corporate presentation pitching, executive client scripts, structured brief drafting, and active mediation." />
+  <meta property="og:type" content="article" />
   <meta property="og:url" content="https://www.elitetoolistic.com/business-communication-certification.html" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=1920&q=80" />
   
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="cart.css" />
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="cart.css"/>
   <style>
     .course-detail-hero {
-      position: relative;
-      background-image: url('https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=1920&q=80');
-      background-size: cover;
-      background-position: center;
-      padding: 9rem 5% 5rem;
-      text-align: center;
-      color: white;
+      background: linear-gradient(135deg, rgba(12,27,51,0.92) 0%, rgba(12,27,51,0.98) 100%),
+                  url('https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      color: var(--white);
+      padding: 5rem 5% 4rem;
       border-bottom: 2px solid var(--border);
-    }
-    .course-detail-hero::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(6, 44, 99, 0.88);
-    }
-    .course-detail-hero > * {
       position: relative;
-      z-index: 2;
     }
-    .course-detail-hero-badge {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #ffffff;
-      margin-bottom: 1rem;
-      display: inline-block;
-      padding: 4px 14px;
-      border: 1px solid rgba(0, 108, 254, 0.7);
-      background: rgba(0, 108, 254, 0.25);
-    }
-    .course-detail-hero h1 {
-      font-family: var(--font-serif);
-      font-size: clamp(2.2rem, 4.5vw, 3.8rem);
-      font-weight: 700;
-      letter-spacing: -1px;
-      margin-bottom: 1.25rem;
-      line-height: 1.15;
-      color: #ffffff;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .course-detail-hero .subtitle {
-      font-family: var(--font-serif);
-      font-style: italic;
-      font-size: 1.15rem;
-      line-height: 1.6;
-      max-width: 750px;
-      margin: 0 auto;
-      color: #e0edfd;
-    }
-
     .hero-nav-arrow {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      padding: 8px 14px;
-      background: rgba(6, 44, 99, 0.9);
-      border: 1.5px solid rgba(255, 255, 255, 0.4);
-      color: white;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: var(--white);
+      padding: 10px 18px;
       font-family: var(--font-mono);
-      font-size: 0.75rem;
-      text-decoration: none;
-      z-index: 10;
-      cursor: pointer;
+      font-size: 0.78rem;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      text-decoration: none;
       transition: var(--transition);
+      z-index: 10;
     }
     .hero-nav-arrow:hover {
       background: var(--blue-accent);
-      color: var(--white);
+      color: var(--navy-brand);
       border-color: var(--blue-accent);
     }
-    .hero-nav-arrow.arrow-left { left: 2%; }
-    .hero-nav-arrow.arrow-right { right: 2%; }
+    .arrow-left { left: 5%; }
+    .arrow-right { right: 5%; }
+
+    .course-detail-hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 1.25rem;
+      max-width: 900px;
+    }
+    .course-detail-hero .subtitle {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.7;
+      max-width: 800px;
+      margin-bottom: 2rem;
+    }
+    .course-detail-hero-badge {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      background: rgba(201,151,56,0.25);
+      border: 1px solid rgba(201,151,56,0.6);
+      color: #ffd885;
+      padding: 5px 12px;
+      margin-bottom: 1.5rem;
+    }
 
     .course-content-section {
-      background: var(--surface);
-      padding: 5rem 5%;
+      padding: 4rem 5%;
       display: grid;
-      grid-template-columns: 1.3fr 0.7fr;
-      gap: 4rem;
-      align-items: start;
+      grid-template-columns: 2fr 1fr;
+      gap: 3.5rem;
+      background: var(--surface);
       border-bottom: 2px solid var(--border);
     }
-    
     .about-course h2 {
       font-family: var(--font-serif);
-      font-size: 1.8rem;
+      font-size: 1.55rem;
       font-weight: 700;
-      color: var(--black);
-      margin-top: 2.5rem;
-      margin-bottom: 1rem;
-      letter-spacing: -0.5px;
-      border-bottom: 1px solid var(--border-light);
-      padding-bottom: 0.5rem;
+      margin: 2.25rem 0 1rem;
+      color: var(--navy-brand);
     }
     .about-course h2:first-of-type {
       margin-top: 0;
@@ -177,45 +153,35 @@
       font-family: var(--font-mono);
       font-size: 0.95rem;
       font-weight: 700;
-      text-decoration: none;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      border: 1.5px solid var(--navy-brand);
+      letter-spacing: 0.5px;
+      text-decoration: none;
       transition: var(--transition);
+      cursor: pointer;
+      border: none;
     }
     .enroll-btn-large:hover {
       background: var(--blue-accent);
-      border-color: var(--blue-accent);
-      color: var(--white);
+      color: var(--navy-brand);
     }
 
     .reviews-section {
-      margin-top: 4rem;
+      margin-top: 3.5rem;
       border-top: 2px solid var(--border);
       padding-top: 2.5rem;
     }
     .review-card {
       background: var(--bg);
-      padding: 1.75rem;
+      border: 1.5px solid var(--border);
+      padding: 1.5rem;
       margin-bottom: 1.25rem;
-      border: 1px solid var(--border);
-      border-left: 4px solid var(--seal-red);
     }
-    .review-card h4 {
-      font-family: var(--font-serif);
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--black);
-      margin-bottom: 0.2rem;
+    .review-stars {
+      color: #f59e0b;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
     }
-    .review-card .location {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      color: var(--ink-faint);
-      margin-bottom: 0.75rem;
-      text-transform: uppercase;
-    }
-    .review-card p {
+    .review-text {
       font-family: var(--font-serif);
       font-style: italic;
       font-size: 0.98rem;
@@ -239,7 +205,7 @@
 <!-- NAVBAR -->
 <nav id="navbar">
   <a href="index.html" class="nav-logo">
-    <img src="../images/new_elite_logo_transparent.png" alt="Elite Toolistic" />
+    <img src="images/new_elite_logo_transparent.png" alt="Elite Toolistic" />
     <div class="nav-brand-title">
       <span class="brand-name">ELITE TOOLISTIC</span>
       <span class="brand-sub">Academy of Certified Mastery</span>
@@ -259,7 +225,7 @@
 <header class="course-detail-hero">
   <a href="advanced-ms-excel-certification.html" class="hero-nav-arrow arrow-left" aria-label="Previous Course">← Previous Course</a>
   
-  <span class="course-detail-hero-badge">Certification Syllabus</span>
+  <span class="course-detail-hero-badge">Certification Syllabus • Business & Management</span>
   <h1>Business Communication Certification</h1>
   <p class="subtitle">Master corporate presentation pitching, executive client scripts, structured brief drafting, and active mediation.</p>
 
@@ -274,13 +240,13 @@
     <h2>Core Competency Modules</h2>
     <ul>
       <li>Drafting clear, concise corporate proposal documents</li>
-<li>Structuring persuasive client presentation pitch scripts</li>
-<li>Adopting non-verbal presence cues in boardrooms</li>
-<li>Mediating cross-department disputes and differences</li>
-<li>Running brief, action-oriented corporate team meetings</li>
-<li>Tailoring corporate messages for diverse client circles</li>
-<li>Understanding negotiation psychology and dynamic offers</li>
-<li>Writing structured corporate update briefs for directors</li>
+      <li>Structuring persuasive client presentation pitch scripts</li>
+      <li>Adopting non-verbal presence cues in boardrooms</li>
+      <li>Mediating cross-department disputes and differences</li>
+      <li>Running brief, action-oriented corporate team meetings</li>
+      <li>Tailoring corporate messages for diverse client circles</li>
+      <li>Understanding negotiation psychology and dynamic offers</li>
+      <li>Writing structured corporate update briefs for directors</li>
     </ul>
 
     <h2>Candidate Profile &amp; Prerequisites</h2>
@@ -294,31 +260,40 @@
     <p>This comprehensive tuition covers:</p>
     <ul>
       <li>Proposal drafting template kits and structural slide maps</li>
-<li>Client dialogue negotiation script files and directories</li>
-<li>Non-verbal communication postures quick reference cards</li>
-<li>Live presentation evaluations from veteran corporate PR advisors</li>
-<li>Certified Executive Communicator Credentials</li>
+      <li>Client dialogue negotiation script files and directories</li>
+      <li>Non-verbal communication postures quick reference cards</li>
+      <li>Live presentation evaluations from veteran corporate PR advisors</li>
+      <li>Certified Executive Communicator Credentials</li>
     </ul>
-    <p><strong>Curricular Duration:</strong> Structured 15 to 25 hours certification curriculum designed for rigorous practical capability acquisition, organizational leadership, and industry-oriented standards.</p>
+    <p><strong>Curricular Duration:</strong> Structured 20 Days (Self-Paced) curriculum designed for rigorous practical capability acquisition, organizational leadership, and industry-oriented standards.</p>
 
     <div class="reviews-section">
       <h2>Candidate Commendations &amp; Evaluations</h2>
       <p style="margin-bottom: 2rem; color: var(--ink-muted);">Reflections from verified professionals who have completed this curriculum track:</p>
       
       <div class="review-card">
-        <h4>Amit Sharma</h4>
-        <div class="location">New Delhi, DL</div>
-        <p>"The proposal writing structures transformed our sales conversion rates immediately."</p>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"The proposal writing structures transformed our sales conversion rates immediately."</p>
+        <div class="reviewer-meta">
+          <span class="reviewer-name">Amit Sharma</span>
+          <span class="reviewer-loc">New Delhi, DL</span>
+        </div>
       </div>
       <div class="review-card">
-        <h4>Priya Pillai</h4>
-        <div class="location">Kochi, KL</div>
-        <p>"Brilliant vocal pacing exercises. Significantly increased my boardroom presence."</p>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Brilliant vocal pacing exercises. Significantly increased my boardroom presence."</p>
+        <div class="reviewer-meta">
+          <span class="reviewer-name">Priya Pillai</span>
+          <span class="reviewer-loc">Kochi, KL</span>
+        </div>
       </div>
       <div class="review-card">
-        <h4>Rahul Verma</h4>
-        <div class="location">Pune, MH</div>
-        <p>"Excellent conflict mediation guides. Wonderfully practical team tips."</p>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Excellent conflict mediation guides. Wonderfully practical team tips."</p>
+        <div class="reviewer-meta">
+          <span class="reviewer-name">Rahul Verma</span>
+          <span class="reviewer-loc">Pune, MH</span>
+        </div>
       </div>
     </div>
   </div>
@@ -331,7 +306,7 @@
       </div>
       <div class="info-box">
         <h3>Program Cadence</h3>
-        <p>15 to 25 hours of speech coaching and corporate drafting labs.</p>
+        <p>20 Days of comprehensive technical execution strategies and case study reviews (Self-Paced).</p>
       </div>
       <div class="info-box">
         <h3>Candidate Flexibility</h3>
@@ -347,9 +322,9 @@
 </section>
 
 <section class="enroll-action">
-  <p class="section-label-sm">Enrollment Registry</p>
-  <h2 style="font-family:var(--font-serif);font-size:2.4rem;margin-bottom:1.5rem;">Ready to Begin This Course?</h2>
-  <a href="contact.html" class="enroll-btn-large">Enquire Now →</a>
+  <h2 style="font-family: var(--font-serif); font-size: 2.2rem; font-weight: 700; margin-bottom: 1rem;">Commence Your Certification</h2>
+  <p style="font-size: 1.05rem; color: var(--ink-muted); margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">Enroll today in Business Communication Certification and accelerate your technical execution competencies under certified professional mentorship.</p>
+  <button class="enroll-btn-large checkout-payalma-btn" style="border:none; cursor:pointer;">Enroll &amp; Complete Registration →</button>
 </section>
 
 <!-- FOOTER -->
@@ -386,7 +361,6 @@
         <li><a href="sample-certificate.html">Sample Certificate</a></li>
         <li><a href="sample-invoice.html">Sample Invoice</a></li>
         <li><a href="viewmou.html">MoU - Ministry of Education</a></li>
-        <li><a href="viewmou-1.html">MoU - PMI University</a></li>
       </ul>
     </div>
     <div class="footer-col">

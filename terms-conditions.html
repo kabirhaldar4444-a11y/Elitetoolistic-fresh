@@ -1,13 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Institutional Terms &amp; Academic Conditions | ELITE TOOLISTIC</title>
-  <meta name="description" content="Official Institutional Terms and Academic Conditions governing student matriculation and certification at ELITE TOOLISTIC (OPC) PRIVATE LIMITED." />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="cart.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Terms & Conditions | ELITE TOOLISTIC</title>
+  <meta name="description" content="Service Fulfillment & No-Refund Policy. Read our comprehensive terms of enrollment and service framework."/>
+  <meta property="og:title" content="Terms & Conditions | ELITE TOOLISTIC" />
+  <meta property="og:description" content="Service Fulfillment & No-Refund Policy. Read our comprehensive terms of enrollment and service framework." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="cart.css"/>
   <link rel="icon" type="image/png" href="images/LOGO.png" />
+  <style>
+    /* PMI Policy Styles Integration */
+    .policy-wrapper {
+      padding: 0;
+      background: var(--surface);
+      color: var(--black);
+      line-height: 1.7;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 5%;
+      box-sizing: border-box;
+    }
+    .py-xl { padding-top: 3.5rem; padding-bottom: 3.5rem; }
+    .bg-gray { background: var(--bg); border-bottom: 2px solid var(--border); }
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--blue-accent);
+      display: inline-block;
+      margin-bottom: 0.75rem;
+    }
+    .page-header h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      color: var(--navy-brand);
+      margin-bottom: 1rem;
+      line-height: 1.25;
+    }
+    .lead-p {
+      font-size: 1.1rem;
+      color: var(--ink-muted);
+      max-width: 860px;
+      line-height: 1.75;
+    }
+
+    /* Cards & layout */
+    .flex-column { display: flex; flex-direction: column; }
+    .gap-xl { gap: 2rem; }
+    
+    .terms-section, .delivery-step-card, .policy-section, .privacy-card {
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      padding: 2.25rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    }
+
+    .terms-section-header, .step-card-header, .policy-header, .privacy-card-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 1rem;
+    }
+
+    .terms-num-badge, .step-badge, .policy-badge, .section-num-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: var(--navy-brand);
+      color: var(--white);
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      font-weight: 700;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    .step-badge {
+      width: auto;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .terms-section-header h3, .step-card-header h3, .policy-header h3, .privacy-card-header h3 {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--navy-brand);
+      margin: 0;
+    }
+
+    .terms-text-body p, .step-card-body p, .policy-body p, .privacy-card-body p {
+      font-size: 0.98rem;
+      color: var(--ink-muted);
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+    }
+    .terms-text-body p:last-child, .step-card-body p:last-child, .policy-body p:last-child, .privacy-card-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    .policy-notice-box {
+      background: rgba(201,151,56,0.1);
+      border-left: 4px solid var(--blue-accent);
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .policy-notice-box .notice-title {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--navy-brand);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .policy-notice-box p {
+      margin: 0 !important;
+      font-size: 0.92rem;
+      color: var(--dark);
+    }
+
+    /* Privacy Specific */
+    .privacy-hero {
+      position: relative;
+      padding: 5rem 5% 4rem;
+      color: var(--white);
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(12,27,51,0.88);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .hero-tag {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #ffd885;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.25;
+    }
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.85);
+      max-width: 800px;
+      line-height: 1.7;
+    }
+    .privacy-notice-bar {
+      background: var(--navy-brand);
+      color: var(--white);
+      padding: 1rem 0;
+      font-size: 0.9rem;
+    }
+    .notice-inner {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .privacy-container {
+      padding: 4rem 0;
+    }
+    .header-meta {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--ink-faint);
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+    .policy-icon, .icon-info {
+      font-size: 1.2rem;
+      margin-right: 0.5rem;
+    }
+  </style>
 </head>
 <body>
 
@@ -31,47 +224,225 @@
   <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
 </nav>
 
-<section class="policy-container">
-  <p class="section-label-sm">Academic Regulations</p>
-  <h1>Institutional Terms &amp; Conditions</h1>
-  <p style="font-style:italic;color:var(--ink-muted);margin-bottom:2.5rem;">Document Ref: TERMS-2026 • Revised for the academic year 2026. The compact between ELITE TOOLISTIC (OPC) PRIVATE LIMITED and registered candidate scholars.</p>
+<div class="policy-wrapper">
+  <div class="terms-page"><section class="terms-hero animate-fade-in" style="background-image:url(https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1920&q=80);background-size:cover;background-position:center;background-repeat:no-repeat;width:100%;position:relative"></section><section class="page-header py-xl bg-gray"><div class="container animate-fade-in"><span class="section-label">Legal Agreement</span><h1>Terms & Conditions</h1><p class="lead-p">Service Fulfillment & No-Refund Policy. Please read these Terms & Conditions carefully before enrolling in our vocational training programs. Your enrollment implies full, legally binding acceptance of all terms, guidelines, and company policies outlined below.</p></div></section><section class="policy-body-section " style="background:white"><div class="container"><div class="terms-container flex-column gap-xl animate-fade-in"><div class="terms-section"><div class="terms-section-header"><span class="terms-num-badge">1</span><h3>Scope of Independent Vocational Services</h3></div><div class="terms-text-body"><p>By completing a commercial transaction and registering for any training program on ELITE TOOLISTIC (<a href="https://www.elitetoolistic.com">https://www.elitetoolistic.com</a>), the user (hereinafter referred to as the <strong>"Student"</strong> or <strong>"Client"</strong>) explicitly acknowledges and agrees that all services rendered are independent, skill-based vocational training programs.</p><p>ELITE TOOLISTIC functions strictly as an asynchronous educational infrastructure platform. Our programs are non-degree, non-diploma courses and explicitly do not require or maintain any affiliation, accreditation, or licensing from any university, government institute, or private educational board. ELITE TOOLISTIC grants institutional "Certificates of Completion" and "Provisional Certificates" based solely on independent competency assessments.</p></div></div><div class="terms-section"><div class="terms-section-header"><span class="terms-num-badge">2</span><h3>Asynchronous Delivery Model & Anti-Interactive Clauses</h3></div><div class="terms-text-body"><p>The Client explicitly understands and accepts that ELITE TOOLISTIC operates on a static digital distribution model:</p><ul class="terms-bullet-list"><li><strong>Exclusivity of Medium:</strong> Training is delivered solely and exclusively via pre-recorded, asynchronous video lecture modules and downloadable PDF text study workbooks.</li><li><strong>Prohibition of Live Training:</strong> ELITE TOOLISTIC never offers, promises, or provides any person-to-person instruction, live classroom training, group webinars, real-time mentorship, or interactive tutor sessions.</li><li><strong>Self-Directed Operational Responsibility:</strong> The Student bears absolute responsibility for navigating the course materials independently within the platform’s self-contained hosting framework. No claims for refunds based on the lack of live human interaction will be entertained under any circumstances, as the platform explicitly disclaims interactive training.</li></ul></div></div><div class="terms-section"><div class="terms-section-header"><span class="terms-num-badge">3</span><h3>Strict 9-Step Service Delivery Protocol & Binding Benchmarks</h3></div><div class="terms-text-body"><p>Fulfillment of the purchase contract is systematically tracked and verified by our backend architecture across nine sequential milestones. By enrolling, the Student agrees to comply with the operational conditions of each step:</p><div class="protocol-steps-grid"><div class="protocol-step-item"><div class="protocol-step-num">Step 1</div><div class="protocol-step-content"><strong>Admission Confirmation After Payment:</strong> Triggered instantly upon payment gateway clearance. This marks the commencement of the digital contractual relationship.</div></div><div class="protocol-step-item"><div class="protocol-step-num">Step 2</div><div class="protocol-step-content"><strong>Mandatory Document KYC:</strong> The Student must securely upload valid government-issued photo identification to verify their profile. Failure to provide legitimate documentation within the course timeframe will result in account suspension without a refund.</div></div><div class="protocol-step-item"><div class="protocol-step-num">Step 3</div><div class="protocol-step-content"><strong>Mandatory Video KYC Authentication:</strong> A biometric video check must be recorded by the student to verify identity, eliminate fraud, and prevent proxy test-taking. Accounts failing the security profile checks are immediately locked to preserve system integrity.</div></div><div class="protocol-step-item"><div class="protocol-step-num">Step 4</div><div class="protocol-step-content"><strong>GST Invoice Delivery:</strong> A legally compliant Corporate GST Invoice is compiled and posted to the student's dashboard within 24 hours of successful validation.</div></div><div class="protocol-step-item"><div class="protocol-step-num">Step 5</div><div class="protocol-step-content"><strong>PDF Study Material Dissemination (Strict One-Time Release Clauses):</strong> Comprehensive text materials are unlocked inside the student portal. The Client acknowledges that files are shared on a strict one-time basis only. The Student bears the full legal and technical responsibility to securely save, download, and backup these digital assets immediately upon distribution. ELITE TOOLISTIC completely denies any liability for file loss, hardware failure, or requests for link refreshes post-distribution.</div></div><div class="protocol-step-item"><div class="protocol-step-num">Step 6</div><div class="protocol-step-content"><strong>Enrollment Certificate Issuance:</strong> A digital record reflecting that the individual is actively under training within our independent boot camp is instantly generated and delivered.</div></div><div class="protocol-step-item"><div class="protocol-step-num">Step 7</div><div class="protocol-step-content"><strong>Video Lecture Access Provisioning (Strict One-Time Release Clauses):</strong> Pre-recorded training paths are made accessible to the profile workspace. Like the text files, access keys to the video streams are delivered on a strict one-time basis only. Account sharing, profile splitting, or data scraping are prohibited and will trigger automated account bans without a refund.</div></div><div class="protocol-step-item"><div class="protocol-step-num">Step 8</div><div class="protocol-step-content"><strong>Final Examination Login Credentials:</strong> Upon expiration of the designated course duration (10, 20, or 30 days maximum), encrypted examination keys are assigned to the portal.</div></div><div class="protocol-step-item"><div class="protocol-step-num">Step 9</div><div class="protocol-step-content"><strong>Final Exam Grading & Provisional Certificate (PC) Delivery:</strong> Upon submission, grading engines compute results instantly, and a provisional credential is issued to close the service loop.</div></div></div></div></div><div class="terms-section"><div class="terms-section-header"><span class="terms-num-badge">4</span><h3>Defatigability of Services & Definitive "No-Refund" Policy</h3></div><div class="terms-text-body"><p>ELITE TOOLISTIC distributes high-value, proprietary digital intellectual property. Due to the digital nature of these assets—which can be instantly viewed, saved, or downloaded upon release—all transactions executed on <a href="https://www.elitetoolistic.com">https://www.elitetoolistic.com</a> are strictly <strong>FINAL, NON-CANCELLABLE, AND NON-REFUNDABLE</strong>.</p><ul class="terms-bullet-list"><li><strong>Instant Fulfillment Waiver:</strong> The moment Step 1 (Admission Confirmation) is triggered and Step 5 (PDF Study Material Dissemination) is executed, the platform has fully performed its digital delivery obligations. The Client explicitly waives any right to an operational "cooling-off period" or transaction cancellation.</li><li><strong>The "One-Time Sharing" Indemnification:</strong> The Client agrees that the execution of the "Strict One-Time Release" protocols for reading materials and video access provides definitive structural proof of service completion. The platform is completely indemnified against student complaints regarding data loss, user error, or platform lockouts resulting from a breach of user rules.</li><li><strong>KYC Refusal Forfeiture:</strong> If a user refuses to complete Step 2 (Document KYC) or Step 3 (Video KYC), or if they deliberately upload false data to bypass identification, the account will be permanently banned for a security breach. In such scenarios, all paid registration fees are entirely forfeited to cover administrative processing costs, and no refund claims will be honored.</li><li><strong>Chargeback & Dispute Mitigation:</strong> Any attempt by the Client to file an unauthorized transaction dispute, credit card chargeback, or digital payment reversal claim by misrepresenting our 9-step process will be legally treated as a breach of contract. ELITE TOOLISTIC will immediately submit this binding Terms and Conditions policy, along with backend server log data tracking successful file distribution, to the relevant financial institution to aggressively deny the claim.</li></ul><div class="policy-table-wrapper"><table class="policy-matrix-table"><thead><tr><th style="width:25%">Policy Provision</th><th style="width:35%">Description & Execution Threshold</th><th style="width:40%">Legal Impact on Client</th></tr></thead><tbody><tr><td><strong>Instant Fulfillment Waiver</strong></td><td>Triggered immediately upon Step 1 (Payment Clearance) and Step 5 (PDF Study Material Dissemination).</td><td>The Client <strong>explicitly waives any right to an operational "cooling-off period"</strong> or transaction cancellation once assets are deployed.</td></tr><tr><td><strong>One-Time Sharing Indemnification</strong></td><td>Established upon execution of the "Strict One-Time Release" protocols in Step 5 and Step 7.</td><td>The platform is <strong>completely indemnified</strong> against student complaints regarding data loss, user error, device incompatibility, or platform lockouts resulting from a breach of user rules.</td></tr><tr><td><strong>KYC Refusal Forfeiture</strong></td><td>Triggered if a user refuses or fails Step 2 (Document KYC) or Step 3 (Video KYC).</td><td>The user's account will be permanently banned for a security breach. <strong>All paid registration fees are entirely forfeited</strong> to cover administrative processing costs.</td></tr><tr><td><strong>Dispute & Chargeback Mitigation</strong></td><td>Triggered when a client files a dispute, credit card chargeback, or payment reversal claim.</td><td>Treated legally as a <strong>breach of contract</strong>. The platform will submit this policy and server logs to banks to <strong>aggressively deny the claim</strong>.</td></tr></tbody></table></div></div></div><div class="terms-section terms-acceptance-card"><div class="terms-section-header"><span class="terms-num-badge terms-num-accent">5</span><h3>Acceptance of Terms</h3></div><div class="terms-text-body"><p style="font-weight:600;color:#0f2942">By scrolling past this screen, clicking "I Agree," or processing a training fee payment on our network domains, you explicitly declare that you have read, understood, and agreed to be legally bound by this Service Delivery Framework and No-Refund Policy. If you do not accept these asynchronous, un-affiliated delivery constraints, you must exit our platform immediately and refrain from purchasing any services.</p></div></div></div></div></section><style>
+        .terms-page {
+          overflow-x: hidden;
+        }
 
-  <h2>§ 01 / Acceptance of Academic Compact</h2>
-  <p>By registering, remitting tuition, or undertaking course instruction provided by ELITE TOOLISTIC (OPC) PRIVATE LIMITED, the candidate expressly agrees to be bound by the terms, codes of conduct, and evaluation criteria articulated in this institutional charter.</p>
+        .terms-hero {
+          position: relative;
+          width: 100%;
+          height: 380px;
+          margin-top: 80px;
+        }
 
-  <h2>§ 02 / Admission &amp; Candidate Prerequisites</h2>
-  <ul>
-    <li>Enrollment into advanced diplomas and executive masterclasses requires verified technical background or professional domain experience as described in individual course prospectuses.</li>
-    <li>The academy reserves the administrative authority to request verification of credentials prior to formal admission.</li>
-  </ul>
+        .page-header {
+          padding-top: 3rem;
+        }
 
-  <h2>§ 03 / Course Access &amp; Intellectual Property Protections</h2>
-  <ul>
-    <li>All syllabi, video lectures, proprietary methodologies, and evaluation question banks remain the exclusive intellectual property of ELITE TOOLISTIC (OPC) PRIVATE LIMITED.</li>
-    <li>Candidate access is granted on a strictly non-transferable, single-user basis for personal professional development. Unauthorized distribution, copying, or commercial exploitation constitutes a breach of copyright and results in immediate forfeiture of credentials.</li>
-  </ul>
+        .lead-p {
+          font-size: 1.05rem;
+          color: #4a5568;
+          line-height: 1.65;
+          max-width: 900px;
+          margin-top: 0.5rem;
+        }
 
-  <h2>§ 04 / Examination Integrity &amp; Academic Honesty</h2>
-  <ul>
-    <li>Candidates must complete all diagnostic pre-examinations and final board assessments through independent, unassisted effort.</li>
-    <li>Any evidence of unauthorized collaboration, automated answer derivation, or plagiarism results in immediate disqualification without entitlement to fee remission.</li>
-  </ul>
+        .terms-container {
+          max-width: 960px;
+          margin: 0 auto;
+        }
 
-  <h2>§ 05 / Tuition Remittances &amp; Taxes</h2>
-  <ul>
-    <li>Tuition amounts are quoted in Indian National Rupees (INR) and are subject to statutory Goods and Services Tax (GST).</li>
-    <li>Official GST invoices are generated upon settlement and transmitted via registered electronic correspondence.</li>
-  </ul>
+        .terms-section {
+          background-color: var(--bg-primary, #ffffff);
+          padding: 2rem;
+          border-radius: 10px;
+          border: 1px solid var(--border-color, #e2e8f0);
+          box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+          border-left: 5px solid var(--primary-color, #0f2942);
+        }
 
-  <h2>§ 06 / Certification &amp; Registry Validity</h2>
-  <ul>
-    <li>Credentials are awarded strictly upon achieving passing merit thresholds established by the examination senate.</li>
-    <li>Conferred certificates are registered in our permanent institutional archive for third-party corporate verification.</li>
-  </ul>
+        .terms-acceptance-card {
+          border-left: 5px solid #d97706;
+          background-color: #fffbeb;
+          border-color: #fde68a;
+        }
 
-  <h2>§ 07 / Dispute Resolution &amp; Jurisdiction</h2>
-  <p>This compact is governed in all respects by the laws of the Republic of India. Any controversy, claim, or legal proceedings arising hereunder shall be subject to the exclusive jurisdiction of the civil courts located in New Delhi, India.</p>
-</section>
+        .terms-section-header {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          margin-bottom: 1.25rem;
+        }
+
+        .terms-num-badge {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 32px;
+          height: 32px;
+          background-color: var(--primary-color, #0f2942);
+          color: #ffffff;
+          border-radius: 50%;
+          font-weight: 700;
+          font-size: 0.95rem;
+          flex-shrink: 0;
+        }
+
+        .terms-num-accent {
+          background-color: #d97706;
+        }
+
+        .terms-section-header h3 {
+          font-size: 1.25rem;
+          color: var(--primary-color, #0f2942);
+          margin: 0;
+          font-weight: 700;
+          line-height: 1.4;
+        }
+
+        .terms-text-body {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          color: #334155;
+          line-height: 1.7;
+          font-size: 0.96rem;
+        }
+
+        .terms-text-body p {
+          margin: 0;
+        }
+
+        .terms-text-body a {
+          color: #1d4ed8;
+          text-decoration: underline;
+        }
+
+        .terms-bullet-list {
+          display: flex;
+          flex-direction: column;
+          gap: 0.85rem;
+          padding-left: 1.25rem;
+          margin: 0;
+        }
+
+        .terms-bullet-list li {
+          line-height: 1.65;
+          color: #334155;
+        }
+
+        .protocol-steps-grid {
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+          margin-top: 0.5rem;
+        }
+
+        .protocol-step-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 12px;
+          background: #f8fafc;
+          border: 1px solid #e2e8f0;
+          border-radius: 8px;
+          padding: 12px 16px;
+        }
+
+        .protocol-step-num {
+          background: #0f2942;
+          color: #ffffff;
+          font-size: 0.75rem;
+          font-weight: 700;
+          padding: 3px 8px;
+          border-radius: 4px;
+          white-space: nowrap;
+          margin-top: 2px;
+        }
+
+        .protocol-step-content {
+          font-size: 0.92rem;
+          line-height: 1.6;
+          color: #334155;
+        }
+
+        .policy-table-wrapper {
+          overflow-x: auto;
+          margin-top: 1.25rem;
+          border-radius: 8px;
+          border: 1px solid #fecaca;
+          background: #ffffff;
+          box-shadow: 0 2px 8px rgba(220, 38, 38, 0.05);
+        }
+
+        .policy-matrix-table {
+          width: 100%;
+          min-width: 600px;
+          border-collapse: collapse;
+          font-size: 0.92rem;
+          text-align: left;
+        }
+
+        .policy-matrix-table th {
+          background-color: #fef2f2;
+          color: #991b1b;
+          font-weight: 700;
+          padding: 12px 16px;
+          border-bottom: 2px solid #fecaca;
+          border-right: 1px solid #fee2e2;
+          font-size: 0.88rem;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+
+        .policy-matrix-table th:last-child {
+          border-right: none;
+        }
+
+        .policy-matrix-table td {
+          padding: 14px 16px;
+          border-bottom: 1px solid #fee2e2;
+          border-right: 1px solid #fee2e2;
+          vertical-align: top;
+          color: #334155;
+          line-height: 1.6;
+        }
+
+        .policy-matrix-table td:last-child {
+          border-right: none;
+        }
+
+        .policy-matrix-table tr:last-child td {
+          border-bottom: none;
+        }
+
+        .policy-matrix-table tr:hover td {
+          background-color: #fffaf0;
+        }
+
+        @media (max-width: 768px) {
+          .terms-hero {
+            height: 220px;
+            margin-top: 70px;
+          }
+
+          .page-header {
+            padding-top: 2rem !important;
+            text-align: center;
+          }
+
+          .terms-section {
+            padding: 1.35rem;
+          }
+
+          .protocol-step-item {
+            flex-direction: column;
+            gap: 6px;
+          }
+        }
+      </style></div>
+</div>
 
 <!-- FOOTER -->
 <footer>
@@ -88,7 +459,6 @@
         <p>Phone: +91 7969654626 | +91 8062386662 | +91 2241507377</p>
       </div>
     </div>
-
     <div class="footer-col">
       <h4>Quick Links</h4>
       <ul>
@@ -100,7 +470,6 @@
         <li><a href="contact.html">Contact Us</a></li>
       </ul>
     </div>
-
     <div class="footer-col">
       <h4>Student Resources</h4>
       <ul>
@@ -109,10 +478,8 @@
         <li><a href="sample-certificate.html">Sample Certificate</a></li>
         <li><a href="sample-invoice.html">Sample Invoice</a></li>
         <li><a href="viewmou.html">MoU - Ministry of Education</a></li>
-        <li><a href="viewmou-1.html">MoU - PMI University</a></li>
       </ul>
     </div>
-
     <div class="footer-col">
       <h4>Policies &amp; Legal</h4>
       <ul>
@@ -123,7 +490,6 @@
       </ul>
     </div>
   </div>
-
   <div class="footer-bottom">
     <span>© 2026 ELITE TOOLISTIC (OPC) PRIVATE LIMITED. All rights reserved.</span>
     <span>Certified Professional E-Learning Provider</span>

@@ -1,13 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Charter &amp; Data Stewardship | ELITE TOOLISTIC</title>
-  <meta name="description" content="Official Privacy Charter and Candidate Data Protection Standards for ELITE TOOLISTIC (OPC) PRIVATE LIMITED." />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="cart.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy | ELITE TOOLISTIC</title>
+  <meta name="description" content="Comprehensive Legal Framework for Data Collection, Biometric Verification, Storage, and Processing Practices."/>
+  <meta property="og:title" content="Privacy Policy | ELITE TOOLISTIC" />
+  <meta property="og:description" content="Comprehensive Legal Framework for Data Collection, Biometric Verification, Storage, and Processing Practices." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="cart.css"/>
   <link rel="icon" type="image/png" href="images/LOGO.png" />
+  <style>
+    /* PMI Policy Styles Integration */
+    .policy-wrapper {
+      padding: 0;
+      background: var(--surface);
+      color: var(--black);
+      line-height: 1.7;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 5%;
+      box-sizing: border-box;
+    }
+    .py-xl { padding-top: 3.5rem; padding-bottom: 3.5rem; }
+    .bg-gray { background: var(--bg); border-bottom: 2px solid var(--border); }
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--blue-accent);
+      display: inline-block;
+      margin-bottom: 0.75rem;
+    }
+    .page-header h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      color: var(--navy-brand);
+      margin-bottom: 1rem;
+      line-height: 1.25;
+    }
+    .lead-p {
+      font-size: 1.1rem;
+      color: var(--ink-muted);
+      max-width: 860px;
+      line-height: 1.75;
+    }
+
+    /* Cards & layout */
+    .flex-column { display: flex; flex-direction: column; }
+    .gap-xl { gap: 2rem; }
+    
+    .terms-section, .delivery-step-card, .policy-section, .privacy-card {
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      padding: 2.25rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    }
+
+    .terms-section-header, .step-card-header, .policy-header, .privacy-card-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 1rem;
+    }
+
+    .terms-num-badge, .step-badge, .policy-badge, .section-num-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: var(--navy-brand);
+      color: var(--white);
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      font-weight: 700;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    .step-badge {
+      width: auto;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .terms-section-header h3, .step-card-header h3, .policy-header h3, .privacy-card-header h3 {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--navy-brand);
+      margin: 0;
+    }
+
+    .terms-text-body p, .step-card-body p, .policy-body p, .privacy-card-body p {
+      font-size: 0.98rem;
+      color: var(--ink-muted);
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+    }
+    .terms-text-body p:last-child, .step-card-body p:last-child, .policy-body p:last-child, .privacy-card-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    .policy-notice-box {
+      background: rgba(201,151,56,0.1);
+      border-left: 4px solid var(--blue-accent);
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .policy-notice-box .notice-title {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--navy-brand);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .policy-notice-box p {
+      margin: 0 !important;
+      font-size: 0.92rem;
+      color: var(--dark);
+    }
+
+    /* Privacy Specific */
+    .privacy-hero {
+      position: relative;
+      padding: 5rem 5% 4rem;
+      color: var(--white);
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(12,27,51,0.88);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .hero-tag {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #ffd885;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.25;
+    }
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.85);
+      max-width: 800px;
+      line-height: 1.7;
+    }
+    .privacy-notice-bar {
+      background: var(--navy-brand);
+      color: var(--white);
+      padding: 1rem 0;
+      font-size: 0.9rem;
+    }
+    .notice-inner {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .privacy-container {
+      padding: 4rem 0;
+    }
+    .header-meta {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--ink-faint);
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+    .policy-icon, .icon-info {
+      font-size: 1.2rem;
+      margin-right: 0.5rem;
+    }
+  </style>
 </head>
 <body>
 
@@ -31,26 +224,369 @@
   <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
 </nav>
 
-<section class="policy-container">
-  <p class="section-label-sm">Privacy Policy</p>
-  <h1>Privacy Policy &amp; Data Protection</h1>
-  <p style="font-style:italic;color:var(--ink-muted);margin-bottom:2.5rem;">Revised for 2026. Governing the collection, storage, and protection of personal and student data at ELITE TOOLISTIC (OPC) PRIVATE LIMITED.</p>
+<div class="policy-wrapper">
+  <div class="privacy-page"><section class="privacy-hero animate-fade-in" style="background-image:url(https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1400&q=80);background-size:cover;background-position:center;background-repeat:no-repeat;width:100%;position:relative"><div class="hero-overlay"></div><div class="container hero-content"><span class="hero-tag">Data Governance & Platform Security</span><h1 class="hero-title">Privacy Policy</h1><p class="hero-subtitle">Comprehensive Legal Framework for Data Collection, Biometric Verification, Storage, and Processing Practices</p></div></section><section class="privacy-notice-bar"><div class="container"><div class="notice-inner"><span class="policy-icon">📋</span><span><strong>Platform Notice:</strong> ELITE TOOLISTIC operates strictly as an asynchronous educational infrastructure platform. Data collection and KYC verification protocols are deployed to safeguard platform security and uphold transaction compliance.</span></div></div></section><section class="policy-body-section " style="background:white"><div class="container"><div class="privacy-container"><div class="privacy-card"><div class="privacy-card-header"><span class="section-num-badge">1</span><div><h3>Introduction & Scope</h3><span class="header-meta">Platform Governance & Mandatory Consent</span></div></div><div class="privacy-card-body"><p>This Privacy Policy governs the data collection, storage, processing, and security practices of <strong>ELITE TOOLISTIC</strong> (operating through its asynchronous educational infrastructure platform at <a href="https://www.elitetoolistic.com">https://www.elitetoolistic.com</a>).</p><p>To deliver independent vocational training programs, identity verification services, and verifiable institutional credentials, ELITE TOOLISTIC must handle specific personal and biometric data. By registering an account, making a purchase, or completing the security verification steps, you <strong>explicitly consent</strong> to the collection, processing, and retention practices outlined in this policy.</p></div></div><div class="privacy-card"><div class="privacy-card-header"><span class="section-num-badge">2</span><div><h3>Information We Collect</h3><span class="header-meta">Data Processing Stages Across User Lifecycle</span></div></div><div class="privacy-card-body"><p>ELITE TOOLISTIC processes information through various stages of your onboarding, verification, and educational journey:</p><div class="data-sub-block"><div class="sub-block-header"><span class="sub-tag">A</span><h4>Personal Identification Data</h4></div><ul class="styled-list"><li><strong>Registration & Contact Information:</strong> Full legal name, billing address, phone number, and corporate email address collected during checkout or sign-up.</li><li><strong>Fiscal Identity:</strong> Information required to generate corporate accounts, including corporate entity names and specific tax identifiers.</li></ul></div><div class="data-sub-block highlight-sub-block"><div class="sub-block-header"><span class="sub-tag tag-warning">B</span><h4>Mandatory KYC & Security Verification Data</h4></div><ul class="styled-list"><li><div class="list-item-title"><span class="policy-icon">📋</span><strong>Documentary Identity (Document KYC):</strong></div><p>Images or digital files of valid government-issued photo identification cards or institutional credential badges uploaded securely to our portal.</p></li><li><div class="list-item-title"><span class="policy-icon">📋</span><strong>Biometric Identity (Video KYC):</strong></div><p>Self-directed, brief video records processed through an integrated web interface to execute facial matching against submitted documentation and to eliminate proxy testing.</p></li></ul></div><div class="data-sub-block"><div class="sub-block-header"><span class="sub-tag">C</span><h4>Academic & Technical Workspace Logs</h4></div><ul class="styled-list"><li><strong>Evaluation Records:</strong> Answers, responses, submission timestamps, and performance metrics parsed by our grading matrices during automated final examinations.</li><li><strong>System & Backend Server Logs:</strong> Unique workspace access keys, internet protocol (IP) address mapping, browser data, and precise file-download timestamps related to the release of text libraries and video lecture elements.</li></ul></div></div></div><div class="privacy-card"><div class="privacy-card-header"><span class="section-num-badge">3</span><div><h3>How We Use Your Data</h3><span class="header-meta">Structural Service Loop & Platform Safety</span></div></div><div class="privacy-card-body"><p>Your information is processed strictly to maintain platform safety and complete the structural service loop:</p><div class="use-grid"><div class="use-item"><div class="use-icon-wrap"><span class="policy-icon">📋</span></div><div><h5>Identity Verification & Anti-Fraud</h5><p>Cross-referencing your biometric Video KYC data with your submitted physical document profile to establish an unalterable audit trail, eliminating proxy test-taking and financial transaction theft.</p></div></div><div class="use-item"><div class="use-icon-wrap"><span class="policy-icon">📋</span></div><div><h5>Service Fulfillment</h5><p>Provisioning individual profiles with unique access keys to streaming lecture workspaces, digital text repositories, and encrypted final examination modules.</p></div></div><div class="use-item"><div class="use-icon-wrap"><span class="policy-icon">📋</span></div><div><h5>Credential Issuance</h5><p>Generating accurate legal profiles for formal, verifiable documents, including initial Enrollment Certificates and final Provisional Certificates (PC).</p></div></div><div class="use-item"><div class="use-icon-wrap"><span class="policy-icon">📋</span></div><div><h5>Compliance & Legal Accountability</h5><p>Compiling and posting legally compliant Corporate GST Invoices straight to your workspace within 24 hours of successful validation.</p></div></div></div></div></div><div class="privacy-card"><div class="privacy-card-header"><span class="section-num-badge">4</span><div><h3>Data Protection, Sharing, and Disclosure</h3><span class="header-meta">Strict Isolation & Conditional Disclosure Framework</span></div></div><div class="privacy-card-body"><div class="data-sub-block"><div class="sub-block-header"><span class="sub-tag">A</span><h4>Strict Third-Party Restrictions</h4></div><p>ELITE TOOLISTIC treats proprietary and personal data with high security. <strong>We do not sell, rent, trade, or share</strong> your personal, documentary, or biometric data with external third-party marketing networks or unrelated data brokers.</p></div><div class="data-sub-block"><div class="sub-block-header"><span class="sub-tag tag-warning">B</span><h4>Conditional Sharing Framework</h4></div><p>Data is shared exclusively under the following strict conditions:</p><ul class="styled-list"><li><strong>Payment Processing:</strong> Financial details are managed securely via encrypted, external payment gateways during checkout to clear transactions safely.</li><li><strong>Dispute and Chargeback Defense:</strong> In alignment with our Terms and Conditions, if a user files a transaction dispute, credit card chargeback, or payment reversal claim, ELITE TOOLISTIC will submit backend server logs (such as download metrics and KYC verification markers) to the involved financial institutions to defend against the claim.</li><li><strong>Legal Enforcement:</strong> Data may be disclosed if required by an official court order, applicable government statutory body, or prevailing regulatory legal framework.</li></ul></div></div></div><div class="privacy-card"><div class="privacy-card-header"><span class="section-num-badge">5</span><div><h3>Security & Technical Safeguards</h3><span class="header-meta">Multi-Layered Protection & Automated Enforcement</span></div></div><div class="privacy-card-body"><p>We implement a multi-layered security infrastructure to shield your files and identity profiles:</p><div class="safeguards-grid"><div class="safeguard-card"><div class="safeguard-icon"><span class="policy-icon">📋</span></div><div><h5>Data Encryption</h5><p>Document uploads, video files, and financial invoice generation are processed and stored over secure, encrypted network connections.</p></div></div><div class="safeguard-card"><div class="safeguard-icon text-danger"><span class="policy-icon">📋</span></div><div><h5>Workspace Automated Bans</h5><p>Automated behavioral system parameters track multi-location concurrent logins. Profiles attempting unauthorized concurrent access, scraping attempts via scripts, or distributing video access streams are banned to ensure ecosystem security.</p></div></div></div></div></div><div class="privacy-card"><div class="privacy-card-header"><span class="section-num-badge">6</span><div><h3>Data Retention Policies</h3><span class="header-meta">Audit Trails & Legal Archiving</span></div></div><div class="privacy-card-body"><ul class="styled-list"><li><strong>Operational Files:</strong> Personal profile structures, exam transcripts, and credential verification links are kept for as long as your workspace account remains active or to fulfill tax, corporate accounting, or institutional tracking standards.</li><li><strong>KYC Security Profiles:</strong> Biometric checks and government identification logs are preserved securely to maintain an unalterable transaction audit trail, serving as definitive evidence of contractual compliance.</li></ul></div></div><div class="privacy-card"><div class="privacy-card-header"><span class="section-num-badge">7</span><div><h3>Acceptance & Acknowledgement</h3><span class="header-meta">Binding Execution Notice</span></div></div><div class="privacy-card-body"><p>Interacting with the platform, completing registrations, or inputting identity vectors implies explicit and dynamic acknowledgement of this Privacy Policy. If you do not accept these data handling rules, you must immediately halt data submission and exit the platform.</p></div></div></div></div></section><style>
+        .privacy-page {
+          overflow-x: hidden;
+          background: #f8fafc;
+        }
 
-  <h2>1. Information We Collect</h2>
-  <p>We collect information you provide directly to us when you enroll in courses, register for examinations, request information, or contact our support team. This information may include your name, email address, phone number, billing address, professional background, and identification details necessary for candidate certification.</p>
+        .privacy-hero {
+          position: relative;
+          width: 100%;
+          height: 340px;
+          margin-top: 80px;
+          display: flex;
+          align-items: center;
+        }
 
-  <h2>2. Use of Information</h2>
-  <p>The information collected is utilized to process candidate admissions, deliver curriculum materials, administer examinations, issue accredited certificates, provide customer support, and communicate essential administrative notices regarding course schedules.</p>
+        .hero-overlay {
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(135deg, rgba(15, 41, 66, 0.92) 0%, rgba(15, 23, 42, 0.85) 100%);
+        }
 
-  <h2>3. Data Security &amp; Protection</h2>
-  <p>We implement industry-standard encryption, strict access controls, and secure server configurations to prevent unauthorized access, alteration, disclosure, or destruction of student personal information.</p>
+        .hero-content {
+          position: relative;
+          z-index: 2;
+          color: #ffffff;
+          max-width: 900px;
+          padding: 0 1.5rem;
+        }
 
-  <h2>4. Disclosure to Third Parties</h2>
-  <p>We do not sell, rent, or trade your personal data. Data is shared exclusively with accredited examination partners, statutory authorities where legally mandated, and secure payment processing services strictly required to fulfill transactions.</p>
+        .hero-tag {
+          display: inline-block;
+          background: rgba(218, 41, 28, 0.2);
+          border: 1px solid rgba(218, 41, 28, 0.4);
+          color: #fca5a5;
+          font-size: 0.82rem;
+          font-weight: 700;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          padding: 4px 12px;
+          border-radius: 20px;
+          margin-bottom: 0.75rem;
+        }
 
-  <h2>5. Your Rights &amp; Inquiries</h2>
-  <p>You have the right to request access to, correction of, or deletion of your personal records held in our registry. For questions or requests regarding your data, please contact our privacy desk at <a href="mailto:support@elitetoolistic.com">support@elitetoolistic.com</a>.</p>
-</section>
+        .hero-title {
+          font-size: 2.4rem;
+          font-weight: 800;
+          color: #ffffff;
+          margin: 0 0 0.5rem 0;
+          letter-spacing: -0.5px;
+        }
+
+        .hero-subtitle {
+          font-size: 1.05rem;
+          color: #cbd5e1;
+          margin: 0;
+          line-height: 1.5;
+          max-width: 720px;
+        }
+
+        .privacy-notice-bar {
+          background: #0f2942;
+          border-bottom: 2px solid #da291c;
+          padding: 12px 0;
+          color: #f1f5f9;
+          font-size: 0.9rem;
+        }
+
+        .notice-inner {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          max-width: 920px;
+          margin: 0 auto;
+          padding: 0 1.5rem;
+        }
+
+        .notice-icon {
+          color: #da291c;
+          font-size: 1.25rem;
+          flex-shrink: 0;
+        }
+
+        .privacy-container {
+          max-width: 960px;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          gap: 1.75rem;
+          padding: 2.5rem 1.5rem;
+        }
+
+        .privacy-card {
+          background: #ffffff;
+          border: 1px solid #e2e8f0;
+          border-radius: 10px;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+          overflow: hidden;
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .privacy-card:hover {
+          box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+        }
+
+        .privacy-card-header {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          background: #f8fafc;
+          padding: 16px 24px;
+          border-bottom: 1px solid #e2e8f0;
+        }
+
+        .section-num-badge {
+          background: #0f2942;
+          color: #ffffff;
+          font-size: 1rem;
+          font-weight: 800;
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+        }
+
+        .privacy-card-header h3 {
+          font-size: 1.25rem;
+          color: #0f2942;
+          margin: 0;
+          font-weight: 700;
+        }
+
+        .header-meta {
+          font-size: 0.8rem;
+          color: #64748b;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          font-weight: 600;
+        }
+
+        .privacy-card-body {
+          padding: 24px;
+          color: #334155;
+          font-size: 0.95rem;
+          line-height: 1.65;
+        }
+
+        .privacy-card-body p {
+          margin-top: 0;
+          margin-bottom: 1rem;
+          color: #334155;
+        }
+
+        .privacy-card-body p:last-child {
+          margin-bottom: 0;
+        }
+
+        .data-sub-block {
+          background: #f8fafc;
+          border: 1px solid #e2e8f0;
+          border-radius: 8px;
+          padding: 16px 20px;
+          margin-top: 1.25rem;
+        }
+
+        .highlight-sub-block {
+          background: #fffbeb;
+          border-color: #fde68a;
+        }
+
+        .sub-block-header {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 12px;
+        }
+
+        .sub-tag {
+          background: #0f2942;
+          color: #ffffff;
+          font-size: 0.75rem;
+          font-weight: 700;
+          width: 24px;
+          height: 24px;
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .sub-tag.tag-warning {
+          background: #d97706;
+        }
+
+        .sub-block-header h4 {
+          font-size: 1.02rem;
+          color: #0f2942;
+          margin: 0;
+          font-weight: 700;
+        }
+
+        .styled-list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .styled-list li {
+          position: relative;
+          padding-left: 20px;
+          font-size: 0.92rem;
+          line-height: 1.6;
+          color: #334155;
+        }
+
+        .styled-list li::before {
+          content: '▪';
+          position: absolute;
+          left: 4px;
+          top: -1px;
+          color: #da291c;
+          font-size: 1.1rem;
+        }
+
+        .list-item-title {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          margin-bottom: 4px;
+        }
+
+        .list-icon {
+          color: #d97706;
+        }
+
+        .use-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 1rem;
+          margin-top: 1rem;
+        }
+
+        .use-item {
+          display: flex;
+          gap: 14px;
+          background: #f8fafc;
+          border: 1px solid #e2e8f0;
+          border-radius: 8px;
+          padding: 16px;
+        }
+
+        .use-icon-wrap {
+          background: #0f2942;
+          color: #ffffff;
+          width: 38px;
+          height: 38px;
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.1rem;
+          flex-shrink: 0;
+        }
+
+        .use-item h5 {
+          font-size: 0.95rem;
+          color: #0f2942;
+          margin: 0 0 6px 0;
+          font-weight: 700;
+        }
+
+        .use-item p {
+          font-size: 0.88rem;
+          color: #475569;
+          margin: 0;
+          line-height: 1.5;
+        }
+
+        .safeguards-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 1rem;
+          margin-top: 1rem;
+        }
+
+        .safeguard-card {
+          display: flex;
+          gap: 14px;
+          background: #f8fafc;
+          border: 1px solid #e2e8f0;
+          border-radius: 8px;
+          padding: 16px;
+        }
+
+        .safeguard-icon {
+          background: #ffffff;
+          color: #0f2942;
+          border: 1px solid #cbd5e1;
+          width: 38px;
+          height: 38px;
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.1rem;
+          flex-shrink: 0;
+        }
+
+        .safeguard-icon.text-danger {
+          color: #dc2626;
+          border-color: #fca5a5;
+          background: #fef2f2;
+        }
+
+        .safeguard-card h5 {
+          font-size: 0.95rem;
+          color: #0f2942;
+          margin: 0 0 6px 0;
+          font-weight: 700;
+        }
+
+        .safeguard-card p {
+          font-size: 0.88rem;
+          color: #475569;
+          margin: 0;
+          line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+          .privacy-hero {
+            height: 240px;
+            margin-top: 70px;
+          }
+
+          .hero-title {
+            font-size: 1.75rem;
+          }
+
+          .hero-subtitle {
+            font-size: 0.92rem;
+          }
+
+          .use-grid,
+          .safeguards-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .privacy-card-header {
+            padding: 14px 18px;
+          }
+
+          .privacy-card-body {
+            padding: 18px;
+          }
+        }
+      </style></div>
+</div>
 
 <!-- FOOTER -->
 <footer>
@@ -67,7 +603,6 @@
         <p>Phone: +91 7969654626 | +91 8062386662 | +91 2241507377</p>
       </div>
     </div>
-
     <div class="footer-col">
       <h4>Quick Links</h4>
       <ul>
@@ -79,7 +614,6 @@
         <li><a href="contact.html">Contact Us</a></li>
       </ul>
     </div>
-
     <div class="footer-col">
       <h4>Student Resources</h4>
       <ul>
@@ -88,10 +622,8 @@
         <li><a href="sample-certificate.html">Sample Certificate</a></li>
         <li><a href="sample-invoice.html">Sample Invoice</a></li>
         <li><a href="viewmou.html">MoU - Ministry of Education</a></li>
-        <li><a href="viewmou-1.html">MoU - PMI University</a></li>
       </ul>
     </div>
-
     <div class="footer-col">
       <h4>Policies &amp; Legal</h4>
       <ul>
@@ -102,7 +634,6 @@
       </ul>
     </div>
   </div>
-
   <div class="footer-bottom">
     <span>© 2026 ELITE TOOLISTIC (OPC) PRIVATE LIMITED. All rights reserved.</span>
     <span>Certified Professional E-Learning Provider</span>
