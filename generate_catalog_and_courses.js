@@ -436,7 +436,6 @@ function generateDetailPage(course, prevFile, nextFile) {
     <li><a href="index.html">Home</a></li>
     <li><a href="courses.html" class="active">Courses</a></li>
     <li><a href="about.html">About Us</a></li>
-    <li><a href="persona.html">Persona</a></li>
     <li><a href="team.html">Our Team</a></li>
   </ul>
   <a href="courses.html" class="nav-enroll">All Courses <span class="arrow">→</span></a>
@@ -535,7 +534,6 @@ function generateDetailPage(course, prevFile, nextFile) {
         <li><a href="courses.html">All Courses</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="team.html">Our Team</a></li>
-        <li><a href="persona.html">Persona Method</a></li>
         <li><a href="contact.html">Contact Us</a></li>
       </ul>
     </div>
@@ -873,7 +871,6 @@ const courses_page_html = `<!DOCTYPE html>
     <li><a href="index.html">Home</a></li>
     <li><a href="courses.html" class="active">Courses</a></li>
     <li><a href="about.html">About Us</a></li>
-    <li><a href="persona.html">Persona</a></li>
     <li><a href="team.html">Our Team</a></li>
   </ul>
   <a href="contact.html" class="nav-enroll">Contact Us <span class="arrow">→</span></a>
@@ -977,7 +974,6 @@ const courses_page_html = `<!DOCTYPE html>
         <li><a href="courses.html">All Courses</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="team.html">Our Team</a></li>
-        <li><a href="persona.html">Persona Method</a></li>
         <li><a href="contact.html">Contact Us</a></li>
       </ul>
     </div>

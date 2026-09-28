@@ -954,7 +954,6 @@ template = """<!DOCTYPE html>
     <li><a href="index.html">Home</a></li>
     <li><a href="courses.html">Courses</a></li>
     <li><a href="about.html">About Us</a></li>
-    <li><a href="persona.html">Persona</a></li>
     <li><a href="team.html">Our Team</a></li>
   </ul>
   <a href="contact.html" class="nav-enroll">
@@ -1065,7 +1064,6 @@ template = """<!DOCTYPE html>
         <li><a href="index.html">Home</a></li>
         <li><a href="courses.html">Courses</a></li>
         <li><a href="about.html">About Us</a></li>
-        <li><a href="persona.html">Persona</a></li>
         <li><a href="team.html">Our Team</a></li>
       </ul>
     </div>
@@ -1242,7 +1240,6 @@ courses_page_html = f"""<!DOCTYPE html>
     <li><a href="index.html">Home</a></li>
     <li><a href="courses.html" class="active">Courses</a></li>
     <li><a href="about.html">About Us</a></li>
-    <li><a href="persona.html">Persona</a></li>
     <li><a href="team.html">Our Team</a></li>
   </ul>
   <a href="contact.html" class="nav-enroll">ENROLL NOW <span class="arrow">→</span></a>
@@ -1300,7 +1297,6 @@ courses_page_html = f"""<!DOCTYPE html>
         <li><a href="index.html">Home</a></li>
         <li><a href="courses.html">Courses</a></li>
         <li><a href="about.html">About Us</a></li>
-        <li><a href="persona.html">Persona</a></li>
         <li><a href="team.html">Our Team</a></li>
       </ul>
     </div>

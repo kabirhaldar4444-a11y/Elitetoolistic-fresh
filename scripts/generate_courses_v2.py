@@ -183,7 +183,6 @@ template = """<!DOCTYPE html>
     <li><a href="index.html">Home</a></li>
     <li><a href="courses.html">Courses</a></li>
     <li><a href="about.html">About Us</a></li>
-    <li><a href="persona.html">Persona</a></li>
     <li><a href="team.html">Our Team</a></li>
     
   </ul>
@@ -283,7 +282,6 @@ template = """<!DOCTYPE html>
         <li><a href="index.html">Home</a></li>
         <li><a href="courses.html">Courses</a></li>
         <li><a href="about.html">About Us</a></li>
-        <li><a href="persona.html">Persona</a></li>
         <li><a href="team.html">Our Team</a></li>
       </ul>
     </div>

@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const files = fs.readdirSync('.').filter(f => f.endsWith('.html') && f !== 'index.html' && f !== 'courses.html' && f !== 'about.html' && f !== 'contact.html' && f !== 'persona.html' && f !== 'team.html' && f !== 'privacy-policy.html' && f !== 'terms-conditions.html' && f !== 'refund-policy.html' && f !== 'service-delivery.html' && f !== 'sample-certificate.html' && f !== 'sample-invoice.html' && f !== 'demo-exam-portal.html' && f !== 'exam-portal.html' && f !== 'viewmou.html' && f !== 'viewmou-1.html' && f !== 'scratch.html');
+const files = fs.readdirSync('.').filter(f => f.endsWith('.html') && f !== 'index.html' && f !== 'courses.html' && f !== 'about.html' && f !== 'contact.html'  && f !== 'team.html' && f !== 'privacy-policy.html' && f !== 'terms-conditions.html' && f !== 'refund-policy.html' && f !== 'service-delivery.html' && f !== 'sample-certificate.html' && f !== 'sample-invoice.html' && f !== 'demo-exam-portal.html' && f !== 'exam-portal.html' && f !== 'viewmou.html' && f !== 'viewmou-1.html' && f !== 'scratch.html');
 
 console.log(`Scanning ${files.length} course detail pages for content duplication...`);
 

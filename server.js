@@ -140,6 +140,13 @@ const server = http.createServer((req, res) => {
         return handleCheckout(req, res);
     }
 
+    // Redirect removed persona page
+    if (pathname === '/persona' || pathname === '/persona.html') {
+        res.writeHead(301, { 'Location': '/about.html' });
+        res.end();
+        return;
+    }
+
     // Static file serving
     const filePath = resolveFile(pathname);
 

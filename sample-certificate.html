@@ -3,36 +3,269 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sample Parchment Certificate | ELITE TOOLISTIC</title>
-  <meta name="description" content="Specimen Diploma and Parchment Certificate awarded by ELITE TOOLISTIC (OPC) PRIVATE LIMITED." />
+  <title>Sample Certificates &amp; Credentials | ELITE TOOLISTIC</title>
+  <meta name="description" content="View official specimen certificates awarded by ELITE TOOLISTIC: Certificate of Enrollment (Step 6) and Certificate of Completion (Step 9)." />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="cart.css" />
+  <link rel="icon" type="image/png" href="images/LOGO.png" />
   <style>
-    .document-container {
-      max-width: 960px;
-      margin: 4rem auto 5rem;
-      padding: 0 5%;
+    .cert-page-header {
+      background: var(--bg);
+      border-bottom: 2px solid var(--border);
+      padding: 4.5rem 5% 3.5rem;
       text-align: center;
     }
-    .document-container h1 {
+    .cert-page-header h1 {
       font-family: var(--font-serif);
-      font-size: clamp(2rem, 4vw, 3rem);
+      font-size: clamp(2.2rem, 4.5vw, 3.2rem);
       font-weight: 700;
       letter-spacing: -1px;
       margin-bottom: 1rem;
       color: var(--black);
     }
-    .document-viewer {
-      background: var(--surface);
-      padding: 1.5rem;
-      border: 2px solid var(--border);
-      margin-bottom: 2.5rem;
+    .cert-page-header .section-sub {
+      max-width: 760px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+      line-height: 1.7;
     }
-    .document-viewer img {
+
+    .cert-grid-section {
+      max-width: 1200px;
+      margin: 3.5rem auto 5rem;
+      padding: 0 5%;
+    }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem;
+      margin-bottom: 4rem;
+    }
+
+    @media (max-width: 900px) {
+      .cert-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+    }
+
+    .cert-card {
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cert-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .cert-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--navy-brand, #0f2942);
+      background: rgba(15, 41, 66, 0.08);
+      padding: 6px 14px;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+      width: fit-content;
+    }
+
+    .cert-badge-accent {
+      color: #92400e;
+      background: #fef3c7;
+    }
+
+    .cert-card h2 {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 0.75rem;
+    }
+
+    .cert-card p.cert-intro {
+      font-size: 0.95rem;
+      color: var(--ink-muted);
+      line-height: 1.65;
+      margin-bottom: 1.5rem;
+      min-height: 50px;
+    }
+
+    .cert-image-frame {
+      position: relative;
+      background: #0b1523;
+      padding: 10px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      margin-bottom: 1.5rem;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .cert-image-frame img {
       width: 100%;
       height: auto;
-      border: 1px solid var(--border);
+      display: block;
+      border-radius: 4px;
+      transition: transform 0.3s ease;
     }
+
+    .cert-image-frame:hover img {
+      transform: scale(1.02);
+    }
+
+    .cert-overlay-hint {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+      background: rgba(15, 23, 42, 0.85);
+      color: white;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 4px;
+      backdrop-filter: blur(4px);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      pointer-events: none;
+    }
+
+
+    .cert-card-actions {
+      margin-top: auto;
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .btn-view-full {
+      flex: 1;
+      text-align: center;
+      padding: 12px 18px;
+      background: var(--navy-brand, #0f2942);
+      color: white;
+      text-decoration: none;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: 1.5px solid var(--navy-brand, #0f2942);
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .btn-view-full:hover {
+      background: var(--white);
+      color: var(--navy-brand, #0f2942);
+    }
+
+    .features-panel {
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      padding: 3rem;
+      margin-top: 3rem;
+    }
+
+    .features-panel h3 {
+      font-family: var(--font-serif);
+      font-size: 1.7rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--navy-brand, #0f2942);
+    }
+
+    .features-panel-sub {
+      color: var(--ink-muted);
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+
+    .feature-pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 800px) {
+      .feature-pillars-grid {
+        grid-template-columns: 1fr;
+      }
+      .features-panel {
+        padding: 2rem 1.5rem;
+      }
+    }
+
+    .pillar-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 1.5rem;
+    }
+
+    .pillar-box .pillar-num {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--blue-accent, #2563eb);
+      margin-bottom: 0.5rem;
+    }
+
+    .pillar-box h4 {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .pillar-box p {
+      font-size: 0.88rem;
+      color: var(--ink-muted);
+      line-height: 1.6;
+    }
+
+    .page-nav-actions {
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      margin-top: 3.5rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-secondary-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 14px 28px;
+      background: transparent;
+      color: var(--black);
+      text-decoration: none;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: 1.5px solid var(--border);
+      transition: var(--transition);
+    }
+
+    .btn-secondary-link:hover {
+      background: var(--surface);
+      border-color: var(--black);
+    }
+
     .back-btn {
       display: inline-flex;
       align-items: center;
@@ -53,8 +286,64 @@
       background: var(--white);
       color: var(--black);
     }
+
+    /* Fullscreen Lightbox Modal */
+    .lightbox-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(10, 15, 25, 0.92);
+      backdrop-filter: blur(8px);
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .lightbox-modal.active {
+      display: flex;
+    }
+
+    .lightbox-content {
+      position: relative;
+      max-width: 900px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .lightbox-content img {
+      max-width: 100%;
+      max-height: 82vh;
+      object-fit: contain;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      border: 2px solid rgba(255,255,255,0.2);
+      border-radius: 6px;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: -45px;
+      right: 0;
+      background: transparent;
+      color: white;
+      border: none;
+      font-size: 2.2rem;
+      cursor: pointer;
+      line-height: 1;
+      padding: 5px;
+    }
+
+    .lightbox-caption {
+      color: white;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      margin-top: 1rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
   </style>
-  <link rel="icon" type="image/png" href="images/LOGO.png" />
 </head>
 <body>
 
@@ -71,26 +360,104 @@
     <li><a href="index.html">Home</a></li>
     <li><a href="courses.html">Courses</a></li>
     <li><a href="about.html">About Us</a></li>
-    <li><a href="persona.html">Persona</a></li>
     <li><a href="team.html">Our Team</a></li>
   </ul>
   <a href="courses.html" class="nav-enroll">All Courses <span class="arrow">→</span></a>
   <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
 </nav>
 
-<section class="document-container">
-  <p class="section-label-sm">Official Certificate Specimen</p>
-  <h1>Sample Certificate of Completion</h1>
-  <p class="section-sub" style="margin-bottom:2.5rem;max-width:700px;margin-left:auto;margin-right:auto;">Every graduate completing our 51 specialized curriculum tracks receives this formal credential, featuring unique verification and institutional certification.</p>
-  
-  <div class="document-viewer">
-    <img src="images/sample_certificate.png" alt="Official ELITE TOOLISTIC Sample Certificate" />
+<!-- PAGE HEADER -->
+<header class="cert-page-header">
+  <p class="section-label-sm">Official Institutional Registry</p>
+  <h1>Sample Certificates &amp; Credentials</h1>
+  <p class="section-sub">ELITE TOOLISTIC (OPC) PRIVATE LIMITED issues two tamper-evident credentials during a candidate's academic progression: the formal <strong>Certificate of Enrollment</strong> (Step 6) and the conclusive <strong>Certificate of Completion</strong> (Step 9).</p>
+</header>
+
+<!-- CERTIFICATES GRID -->
+<main class="cert-grid-section">
+  <div class="cert-grid">
+
+    <!-- CERTIFICATE 1: ENROLLMENT -->
+    <article class="cert-card">
+      <div class="cert-badge">Step 6 / Matriculation Credential</div>
+      <h2>Certificate of Enrollment</h2>
+      <p class="cert-intro">Dispatched automatically upon payment clearance and mandatory biometric KYC completion. Validates active candidate registration within our independent vocational framework.</p>
+      
+      <div class="cert-image-frame" onclick="openLightbox('images/sample_certificate_enrollment.png', 'Official Certificate of Enrollment Specimen')">
+        <img src="images/sample_certificate_enrollment.png" alt="Official ELITE TOOLISTIC Certificate of Enrollment Specimen" />
+        <div class="cert-overlay-hint">
+          <span>🔍 Click to Enlarge</span>
+        </div>
+      </div>
+
+      <div class="cert-card-actions">
+        <button type="button" class="btn-view-full" onclick="openLightbox('images/sample_certificate_enrollment.png', 'Official Certificate of Enrollment Specimen')">View Full Resolution</button>
+        <a href="images/sample_certificate_enrollment.png" target="_blank" class="btn-secondary-link" style="padding:12px 18px;font-size:0.82rem">Open Tab ↗</a>
+      </div>
+    </article>
+
+    <!-- CERTIFICATE 2: COMPLETION -->
+    <article class="cert-card">
+      <div class="cert-badge cert-badge-accent">Step 9 / Final Award Credential</div>
+      <h2>Certificate of Completion</h2>
+      <p class="cert-intro">Formally conferred following course completion and merit examination. Features permanent institutional verification, 10-year validity period, and authorized executive seal.</p>
+      
+      <div class="cert-image-frame" onclick="openLightbox('images/sample_certificate_completion.png', 'Official Certificate of Completion Specimen')">
+        <img src="images/sample_certificate_completion.png" alt="Official ELITE TOOLISTIC Certificate of Completion Specimen" />
+        <div class="cert-overlay-hint">
+          <span>🔍 Click to Enlarge</span>
+        </div>
+      </div>
+
+      <div class="cert-card-actions">
+        <button type="button" class="btn-view-full" onclick="openLightbox('images/sample_certificate_completion.png', 'Official Certificate of Completion Specimen')">View Full Resolution</button>
+        <a href="images/sample_certificate_completion.png" target="_blank" class="btn-secondary-link" style="padding:12px 18px;font-size:0.82rem">Open Tab ↗</a>
+      </div>
+    </article>
+
   </div>
-  
-  <div>
-    <a href="courses.html" class="back-btn">← Back to Courses</a>
+
+  <!-- SECURITY & VERIFICATION PROTOCOL -->
+  <section class="features-panel">
+    <h3>Institutional Credential Integrity &amp; Verification Protocols</h3>
+    <p class="features-panel-sub">Every credential issued by ELITE TOOLISTIC incorporates multiple layers of authentication to prevent counterfeiting and provide employers and academic boards with verifiable proof of competency.</p>
+
+    <div class="feature-pillars-grid">
+      <div class="pillar-box">
+        <div class="pillar-num">01 / IDENTIFICATION</div>
+        <h4>Unique Registry Serial</h4>
+        <p>Each credential contains an encrypted, alphanumeric record number permanently stored in our central student registry database.</p>
+      </div>
+
+      <div class="pillar-box">
+        <div class="pillar-num">02 / AUTHENTICITY</div>
+        <h4>Institutional Seal &amp; Signature</h4>
+        <p>Credentials carry the circular high-relief institutional seal and official signature of the academy's authorized academic registrar.</p>
+      </div>
+
+      <div class="pillar-box">
+        <div class="pillar-num">03 / VERIFICATION</div>
+        <h4>Online Registry Lookup</h4>
+        <p>Recruiters and corporate partners can verify credential validity and examination scores directly at www.elitetoolistic.org.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NAVIGATION BUTTONS -->
+  <div class="page-nav-actions">
+    <a href="courses.html" class="back-btn">← Explore All Courses</a>
+    <a href="exam-portal.html" class="btn-secondary-link">Candidate Exam Portal →</a>
   </div>
-</section>
+</main>
+
+<!-- LIGHTBOX MODAL -->
+<div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox(event)">
+  <div class="lightbox-content">
+    <button type="button" class="lightbox-close" onclick="closeLightbox(event, true)">&times;</button>
+    <img id="lightboxImg" src="" alt="Enlarged Certificate" />
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+</div>
 
 <!-- FOOTER -->
 <footer>
@@ -115,7 +482,6 @@
         <li><a href="courses.html">All Courses</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="team.html">Our Team</a></li>
-        <li><a href="persona.html">Persona Method</a></li>
         <li><a href="contact.html">Contact Us</a></li>
       </ul>
     </div>
@@ -155,6 +521,30 @@
   if (hamburger && navLinks) {
     hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
   }
+
+  function openLightbox(src, caption) {
+    const modal = document.getElementById('lightboxModal');
+    const img = document.getElementById('lightboxImg');
+    const cap = document.getElementById('lightboxCaption');
+    img.src = src;
+    cap.textContent = caption || '';
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox(e, force) {
+    if (force || e.target.id === 'lightboxModal' || e.target.classList.contains('lightbox-close')) {
+      const modal = document.getElementById('lightboxModal');
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeLightbox(e, true);
+    }
+  });
 </script>
 </body>
 </html>
