@@ -1,18 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Terms &amp; Conditions | Code of Candidate Engagement | ELITE TOOLISTIC</title>
-  <meta name="description" content="The contractual standards for enrolment, scholarly access, evaluation and private certification."/>
-  <meta property="og:title" content="Terms &amp; Conditions | Code of Candidate Engagement | ELITE TOOLISTIC"/>
-  <meta property="og:description" content="The contractual standards for enrolment, scholarly access, evaluation and private certification."/>
-  <meta property="og:type" content="website"/>
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="stylesheet" href="cart.css"/>
-  <link rel="icon" type="image/png" href="images/LOGO.png"/>
-  <style>
+const fs = require('fs');
+const path = require('path');
 
+const ROOT_DIR = path.resolve(__dirname, '..');
+const appJsPath = path.join(ROOT_DIR, 'elite-toolistic-policy-set', 'app.js');
+const appJsContent = fs.readFileSync(appJsPath, 'utf8');
+const script = appJsContent.slice(0, appJsContent.indexOf('(function clientApp()')) + '; ({CONFIG, DATA});';
+const { CONFIG, DATA } = eval(script);
+
+const escapeHtml = (str) => {
+  if (!str) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+};
+
+const optionBStyles = `
   /* ── OPTION B: ELITE TOOLISTIC WEBSITE INTEGRATED POLICY STYLES ── */
   body {
     background-color: #f8fafc;
@@ -479,7 +483,42 @@
       font-size: 0.85rem;
     }
   }
+`;
 
+function generateOptionBPage(key) {
+  const p = DATA[key];
+  if (!p) throw new Error('Unknown policy: ' + key);
+
+  const sectionsHTML = p.sections
+    .map(
+      (sec, idx) => `
+          <section class="policy-section-card" id="section-${idx + 1}">
+            <div class="section-card-header">
+              <span class="section-card-num">${String(idx + 1).padStart(2, '0')}</span>
+              <h2>${escapeHtml(sec.title)}</h2>
+            </div>
+            <div class="section-card-body">
+              ${sec.html}
+            </div>
+          </section>`
+    )
+    .join('\n');
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>${escapeHtml(p.label)} | ${escapeHtml(p.title)} | ELITE TOOLISTIC</title>
+  <meta name="description" content="${escapeHtml(p.subtitle)}"/>
+  <meta property="og:title" content="${escapeHtml(p.label)} | ${escapeHtml(p.title)} | ELITE TOOLISTIC"/>
+  <meta property="og:description" content="${escapeHtml(p.subtitle)}"/>
+  <meta property="og:type" content="website"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="cart.css"/>
+  <link rel="icon" type="image/png" href="images/LOGO.png"/>
+  <style>
+${optionBStyles}
   </style>
 </head>
 <body>
@@ -510,11 +549,11 @@
     <div class="policy-b-container">
       <div class="policy-b-hero-inner">
         <div class="policy-b-badge-wrap">
-          <span class="policy-b-charter-badge">Charter I</span>
-          <span class="policy-b-category-badge">Terms &amp; Conditions</span>
+          <span class="policy-b-charter-badge">${escapeHtml(p.number)}</span>
+          <span class="policy-b-category-badge">${escapeHtml(p.label)}</span>
         </div>
-        <h1 class="policy-b-h1">Code of Candidate Engagement</h1>
-        <p class="policy-b-sub">The contractual standards for enrolment, scholarly access, evaluation and private certification.</p>
+        <h1 class="policy-b-h1">${escapeHtml(p.title)}</h1>
+        <p class="policy-b-sub">${escapeHtml(p.subtitle)}</p>
       </div>
     </div>
   </header>
@@ -529,10 +568,10 @@
           <div class="policy-ss-card">
             <div class="policy-ss-title">POLICIES &amp; LEGAL</div>
             <ul class="policy-ss-list">
-              <li><a href="privacy-policy.html" class="policy-ss-link ">Privacy Policy</a></li>
-              <li><a href="terms-conditions.html" class="policy-ss-link active">Terms &amp; Conditions</a></li>
-              <li><a href="refund-policy.html" class="policy-ss-link ">Refund Policy</a></li>
-              <li><a href="service-delivery.html" class="policy-ss-link ">Service Delivery</a></li>
+              <li><a href="privacy-policy.html" class="policy-ss-link ${key === 'privacy' ? 'active' : ''}">Privacy Policy</a></li>
+              <li><a href="terms-conditions.html" class="policy-ss-link ${key === 'terms' ? 'active' : ''}">Terms &amp; Conditions</a></li>
+              <li><a href="refund-policy.html" class="policy-ss-link ${key === 'refund' ? 'active' : ''}">Refund Policy</a></li>
+              <li><a href="service-delivery.html" class="policy-ss-link ${key === 'delivery' ? 'active' : ''}">Service Delivery</a></li>
             </ul>
           </div>
         </aside>
@@ -544,93 +583,14 @@
           <div class="policy-summary-callout">
             <div class="summary-top">
               <span class="summary-badge">IN BRIEF</span>
-              <span class="summary-charter">Charter I Summary</span>
+              <span class="summary-charter">${escapeHtml(p.number)} Summary</span>
             </div>
-            <p class="summary-quote">A candidate receives personal access to the curriculum described at enrolment. Self-paced study is the default; counsel or live review exists only when the chosen program expressly grants it.</p>
+            <p class="summary-quote">${escapeHtml(p.summary)}</p>
           </div>
 
           <!-- POLICY SECTIONS LIST -->
           <div class="policy-sections-list">
-
-          <section class="policy-section-card" id="section-1">
-            <div class="section-card-header">
-              <span class="section-card-num">01</span>
-              <h2>Constitution of the agreement</h2>
-            </div>
-            <div class="section-card-body">
-              <p>This Code forms the agreement between the candidate and <strong>ELITE TOOLISTIC (OPC) PRIVATE LIMITED</strong> ("the Academy"). It is accepted through registration, payment, an acceptance control or first use of protected academic material.</p><p>The published curriculum, fee, duration and stated inclusions for the selected program form part of this agreement.</p>
-            </div>
-          </section>
-
-          <section class="policy-section-card" id="section-2">
-            <div class="section-card-header">
-              <span class="section-card-num">02</span>
-              <h2>Institutional character</h2>
-            </div>
-            <div class="section-card-body">
-              <p>The Academy provides independent vocational, administrative and executive education through structured digital curricula. Alignment with an industry framework or international practice does not by itself mean recognition, accreditation or licensing by a university, government authority or professional regulator.</p><p>Unless a course expressly identifies an external awarding body, every certificate is an internal private credential reflecting the Academy's own assessment standards.</p>
-            </div>
-          </section>
-
-          <section class="policy-section-card" id="section-3">
-            <div class="section-card-header">
-              <span class="section-card-num">03</span>
-              <h2>Mode of study and scholarly counsel</h2>
-            </div>
-            <div class="section-card-body">
-              <p>The ordinary mode is self-paced study through recorded lectures, written material and digital evaluation. A designated counselor, live advisory session or direct review is included only where the course description or order confirmation states it.</p><p>The candidate is responsible for reading the curriculum description, maintaining suitable equipment and completing each requirement within the allotted period.</p>
-            </div>
-          </section>
-
-          <section class="policy-section-card" id="section-4">
-            <div class="section-card-header">
-              <span class="section-card-num">04</span>
-              <h2>Candidate identity and account integrity</h2>
-            </div>
-            <div class="section-card-body">
-              <p>Accurate legal, billing and contact particulars are required. The Academy may require a government photo ID and brief video verification to connect the account, evaluator and certificate to the same candidate.</p><p>Accounts are individual and non-transferable. False records, proxy examinations, shared access or deliberate evasion of verification may result in a security hold or termination.</p>
-            </div>
-          </section>
-
-          <section class="policy-section-card" id="section-5">
-            <div class="section-card-header">
-              <span class="section-card-num">05</span>
-              <h2>Custody of academic works</h2>
-            </div>
-            <div class="section-card-body">
-              <p>Lectures, papers, templates, assessments, archives, software and marks remain the property of the Academy or its licensors. The candidate receives a limited, personal licence for study during the designated period.</p><div class="callout"><b>Prohibited acts</b><p>Redistribution, resale, stream capture, automated extraction, publication of examination questions, credential sharing and circumvention of access controls are forbidden.</p></div><p>Authorised files delivered through expiring or single-use links should be preserved promptly for personal study.</p>
-            </div>
-          </section>
-
-          <section class="policy-section-card" id="section-6">
-            <div class="section-card-header">
-              <span class="section-card-num">06</span>
-              <h2>Evaluation and private credentials</h2>
-            </div>
-            <div class="section-card-body">
-              <p>Examination access follows the period and conditions stated for the curriculum. The registered candidate must complete the evaluation personally. Results may be produced by electronic grading rules and reviewed where the program provides for it.</p><p>An enrolment document records current candidature. A provisional, completion or merit credential records the relevant internal result. No award promises appointment, remuneration, promotion or acceptance by a third party.</p>
-            </div>
-          </section>
-
-          <section class="policy-section-card" id="section-7">
-            <div class="section-card-header">
-              <span class="section-card-num">07</span>
-              <h2>Fees, taxation and academic revision</h2>
-            </div>
-            <div class="section-card-body">
-              <p>The Academy states the fee and applicable tax before payment. A GST or other required invoice is placed in the candidate's record after payment and validation.</p><p>The Refund Policy governs cancellation after digital delivery. The Academy may refine sequence, examples, reading lists or evaluation tools to preserve relevance and security, without materially diminishing the purchased curriculum.</p>
-            </div>
-          </section>
-
-          <section class="policy-section-card" id="section-8">
-            <div class="section-card-header">
-              <span class="section-card-num">08</span>
-              <h2>Discipline, liability and jurisdiction</h2>
-            </div>
-            <div class="section-card-body">
-              <p>The Academy may suspend access while investigating payment fraud, identity conflict, malicious code, unlawful copying or shared accounts and may terminate for a material breach. A review route will be provided where reasonably appropriate.</p><p>Service is delivered with reasonable care, but uninterrupted availability cannot be guaranteed. These terms are governed by the laws of India, subject to mandatory rights and <mark>[confirm competent court jurisdiction]</mark>. Notices may be submitted through the official contact page or to the registered seat.</p>
-            </div>
-          </section>
+${sectionsHTML}
           </div>
 
           <!-- COMPLIANCE & LEGAL NOTICE -->
@@ -639,7 +599,7 @@
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffd885" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
               <strong>Institutional Governance &amp; Legal Notice</strong>
             </div>
-            <p>This working instrument is formally maintained by <strong>ELITE TOOLISTIC (OPC) PRIVATE LIMITED</strong>. Service delivery and academic candidature are administered in strict compliance with the contractual standards set forth herein. All inquiries, petitions for administrative review, or legal submissions should be directed through <a href="contact.html">the official contact registry</a> or served upon the registered corporate office at 1444, Gaur City 1, Sector 4, Greater Noida, Ghaziabad, Uttar Pradesh 201318.</p>
+            <p>This working instrument is formally maintained by <strong>${escapeHtml(CONFIG.company)}</strong>. Service delivery and academic candidature are administered in strict compliance with the contractual standards set forth herein. All inquiries, petitions for administrative review, or legal submissions should be directed through <a href="contact.html">the official contact registry</a> or served upon the registered corporate office at ${escapeHtml(CONFIG.address)}.</p>
           </div>
 
         </main>
@@ -713,3 +673,226 @@
 
 </body>
 </html>
+`;
+}
+
+function generateOptionBMasterSet() {
+  const chartersOrder = ['privacy', 'terms', 'refund', 'delivery'];
+  const charterBlocks = chartersOrder.map(key => {
+    const p = DATA[key];
+    const secHtml = p.sections.map((sec, idx) => `
+          <div class="policy-section-card" id="${key}-sec-${idx + 1}" style="margin-bottom:1.5rem;">
+            <div class="section-card-header">
+              <span class="section-card-num">${String(idx + 1).padStart(2, '0')}</span>
+              <h2>${escapeHtml(sec.title)}</h2>
+            </div>
+            <div class="section-card-body">
+              ${sec.html}
+            </div>
+          </div>
+    `).join('\n');
+
+    return `
+      <!-- ${p.label.toUpperCase()} -->
+      <section class="master-charter-block" id="${key}" style="margin-bottom:3.5rem;">
+        <div class="hero-badge-wrap" style="margin-bottom:0.75rem;">
+          <span class="hero-charter-badge">${escapeHtml(p.number)}</span>
+          <span class="hero-category-badge">${escapeHtml(p.label)}</span>
+        </div>
+        <h2 style="font-family:var(--font-serif,serif); font-size:clamp(1.8rem,3vw,2.3rem); color:#062c63; margin:0 0 0.5rem; font-weight:700;">${escapeHtml(p.title)}</h2>
+        <p style="color:#64748b; font-size:1.05rem; line-height:1.6; margin:0 0 1.5rem;">${escapeHtml(p.subtitle)}</p>
+
+        <div class="policy-summary-callout" style="margin-bottom:2rem;">
+          <div class="summary-top">
+            <span class="summary-badge">IN BRIEF</span>
+            <span class="summary-charter">${escapeHtml(p.number)} Summary</span>
+          </div>
+          <p class="summary-quote">${escapeHtml(p.summary)}</p>
+        </div>
+
+        <div class="policy-sections-list">
+          ${secHtml}
+        </div>
+      </section>
+    `;
+  }).join('\n');
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Master Policy Set | Institutional Governance | ELITE TOOLISTIC</title>
+  <meta name="description" content="Comprehensive institutional legal policy set for ELITE TOOLISTIC (OPC) PRIVATE LIMITED containing all four formal charters."/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="cart.css"/>
+  <link rel="icon" type="image/png" href="images/LOGO.png"/>
+  <style>
+${optionBStyles}
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR (ELITE TOOLISTIC OFFICIAL) -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">
+    <img src="images/new_elite_logo_transparent.png" alt="Elite Toolistic" />
+    <div class="nav-brand-title">
+      <span class="brand-name">ELITE TOOLISTIC</span>
+      <span class="brand-sub">Academy of Certified Mastery</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="courses.html">Courses</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="team.html">Our Team</a></li>
+  </ul>
+  <a href="courses.html" class="nav-enroll">Enroll Now <span class="arrow">→</span></a>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="policy-page-wrapper">
+
+  <!-- HERO SECTION -->
+  <header class="policy-hero-banner">
+    <div class="policy-b-container">
+      <div class="policy-b-hero-inner">
+        <div class="hero-badge-wrap">
+          <span class="policy-b-charter-badge">Master Framework</span>
+          <span class="policy-b-category-badge">Unified Policy Center</span>
+        </div>
+        <h1 class="policy-b-h1">${escapeHtml(CONFIG.headline)}</h1>
+        <p class="policy-b-sub">${escapeHtml(CONFIG.intro)}</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN TWO-COLUMN CONTENT AREA -->
+  <div class="policy-main-container">
+    <div class="policy-b-container">
+      <div class="policy-grid-layout">
+
+        <!-- LEFT SIDEBAR: ONLY THE SCREENSHOT WIDGET -->
+        <aside class="policy-sidebar-col">
+          <div class="policy-ss-card">
+            <div class="policy-ss-title">POLICIES &amp; LEGAL</div>
+            <ul class="policy-ss-list">
+              <li><a href="privacy-policy.html" class="policy-ss-link">Privacy Policy</a></li>
+              <li><a href="terms-conditions.html" class="policy-ss-link">Terms &amp; Conditions</a></li>
+              <li><a href="refund-policy.html" class="policy-ss-link">Refund Policy</a></li>
+              <li><a href="service-delivery.html" class="policy-ss-link">Service Delivery</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- RIGHT MAIN CONTENT: ALL FOUR CHARTERS -->
+        <main class="policy-content-col">
+${charterBlocks}
+
+          <!-- COMPLIANCE & LEGAL NOTICE -->
+          <div class="policy-compliance-notice">
+            <div class="compliance-notice-header">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffd885" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <strong>Institutional Governance &amp; Legal Notice</strong>
+            </div>
+            <p>This master policy instrument is formally maintained by <strong>${escapeHtml(CONFIG.company)}</strong>. Service delivery and academic candidature are administered in strict compliance with the contractual standards set forth across these four charters. All inquiries, petitions for administrative review, or legal submissions should be directed through <a href="contact.html">the official contact registry</a> or served upon the registered corporate office at ${escapeHtml(CONFIG.address)}.</p>
+          </div>
+
+        </main>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER (ELITE TOOLISTIC OFFICIAL) -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-logo">
+        <img src="images/new_elite_logo_transparent.png" alt="Elite Toolistic" />
+        <div class="footer-brand-text">
+          <span class="brand-name">ELITE TOOLISTIC</span>
+          <span class="brand-sub">Academy of Certified Mastery</span>
+        </div>
+      </div>
+      <p>Independent institutional education delivering rigorous, career-accelerating certifications in Management, Operations, Engineering &amp; Applied Technology.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">All Courses</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Student Resources</h4>
+      <ul>
+        <li><a href="exam-portal.html">Exam Portal</a></li>
+        <li><a href="demo-exam-portal.html">Demo Exam</a></li>
+        <li><a href="sample-certificate.html">Sample Certificate</a></li>
+        <li><a href="sample-invoice.html">Sample Invoice</a></li>
+        <li><a href="viewmou.html">MoU - Ministry of Education</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Policies &amp; Legal</h4>
+      <ul>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms-conditions.html">Terms &amp; Conditions</a></li>
+        <li><a href="refund-policy.html">Refund Policy</a></li>
+        <li><a href="service-delivery.html">Service Delivery</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 ELITE TOOLISTIC (OPC) PRIVATE LIMITED. All rights reserved.</span>
+    <span>Certified Professional E-Learning Provider</span>
+  </div>
+</footer>
+
+<script src="cart.js"></script>
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks  = document.getElementById('navLinks');
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  }
+</script>
+
+</body>
+</html>
+`;
+}
+
+// 1. Generate privacy-policy.html
+fs.writeFileSync(path.join(ROOT_DIR, 'privacy-policy.html'), generateOptionBPage('privacy'), 'utf8');
+console.log('✓ Created Option B privacy-policy.html');
+
+// 2. Generate terms-conditions.html and terms-and-conditions.html
+const termsContent = generateOptionBPage('terms');
+fs.writeFileSync(path.join(ROOT_DIR, 'terms-conditions.html'), termsContent, 'utf8');
+fs.writeFileSync(path.join(ROOT_DIR, 'terms-and-conditions.html'), termsContent, 'utf8');
+console.log('✓ Created Option B terms-conditions.html & terms-and-conditions.html');
+
+// 3. Generate refund-policy.html
+fs.writeFileSync(path.join(ROOT_DIR, 'refund-policy.html'), generateOptionBPage('refund'), 'utf8');
+console.log('✓ Created Option B refund-policy.html');
+
+// 4. Generate service-delivery.html
+fs.writeFileSync(path.join(ROOT_DIR, 'service-delivery.html'), generateOptionBPage('delivery'), 'utf8');
+console.log('✓ Created Option B service-delivery.html');
+
+// 5. Generate unified master elite-toolistic-policy-set.html
+fs.writeFileSync(path.join(ROOT_DIR, 'elite-toolistic-policy-set.html'), generateOptionBMasterSet(), 'utf8');
+console.log('✓ Created Option B elite-toolistic-policy-set.html');
+
+console.log('All Option B pages successfully deployed!');
