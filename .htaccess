@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# Route /api/checkout to api/checkout.php on Apache/BigRock
+RewriteRule ^api/checkout/?$ api/checkout.php [L,QSA]
+
+# Clean URLs: Serve .html files without typing .html
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# Route /courses/something to root course page if needed
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^courses/(.*)$ $1 [L]

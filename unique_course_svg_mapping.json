@@ -1,0 +1,1171 @@
+[
+  {
+    "id": "construction-project-management",
+    "name": "Construction Project Management",
+    "category": "Construction & Engineering",
+    "svg": "engineering-team.svg",
+    "score": 70
+  },
+  {
+    "id": "energy-management-certification",
+    "name": "Energy Management Certification",
+    "category": "Business & Management",
+    "svg": "business-man.svg",
+    "score": 80
+  },
+  {
+    "id": "certified-commercial-contracts-manager",
+    "name": "Certified Commercial Contracts Manager",
+    "category": "Business & Management",
+    "svg": "business-deal.svg",
+    "score": 70
+  },
+  {
+    "id": "advanced-civil-execution",
+    "name": "Advanced Civil Execution",
+    "category": "Construction & Engineering",
+    "svg": "advanced-customization.svg",
+    "score": 45
+  },
+  {
+    "id": "projects-in-controlled-environments",
+    "name": "Projects IN Controlled Environments",
+    "category": "Business & Management",
+    "svg": "business-analytics.svg",
+    "score": 45
+  },
+  {
+    "id": "contract-and-claims-management",
+    "name": "Contract and Claims Management",
+    "category": "Business & Management",
+    "svg": "business-chat.svg",
+    "score": 45
+  },
+  {
+    "id": "self-confidence-building-training",
+    "name": "Self-Confidence Building Training",
+    "category": "Construction & Engineering",
+    "svg": "building-blocks.svg",
+    "score": 70
+  },
+  {
+    "id": "body-language-expert-training",
+    "name": "Body Language Expert Training",
+    "category": "Professional Development",
+    "svg": "body-text.svg",
+    "score": 45
+  },
+  {
+    "id": "relationship-coaching-training",
+    "name": "Relationship Coaching Training",
+    "category": "Professional Development",
+    "svg": "career-development.svg",
+    "score": 45
+  },
+  {
+    "id": "ai-productivity-power-up",
+    "name": "AI Productivity Power-Up",
+    "category": "Technology & Digital Skills",
+    "svg": "dev-productivity.svg",
+    "score": 45
+  },
+  {
+    "id": "resilience-coach-training",
+    "name": "Resilience Coach Training",
+    "category": "Professional Development",
+    "svg": "development.svg",
+    "score": 45
+  },
+  {
+    "id": "personal-branding-strategist-training",
+    "name": "Personal Branding Strategist Training",
+    "category": "Marketing & Communication",
+    "svg": "personal-training.svg",
+    "score": 90
+  },
+  {
+    "id": "decision-making-mastery-training",
+    "name": "Decision Making Mastery Training",
+    "category": "Professional Development",
+    "svg": "informed-decision.svg",
+    "score": 45
+  },
+  {
+    "id": "the-everyday-ai-toolkit",
+    "name": "The Everyday AI Toolkit",
+    "category": "Technology & Digital Skills",
+    "svg": "a-day-at-the-park.svg",
+    "score": 70
+  },
+  {
+    "id": "motivational-speaker-training",
+    "name": "Motivational Speaker Training",
+    "category": "Professional Development",
+    "svg": "conference-speaker.svg",
+    "score": 45
+  },
+  {
+    "id": "mindset-mastery-training",
+    "name": "Mindset Mastery Training",
+    "category": "Professional Development",
+    "svg": "designer-mindset.svg",
+    "score": 45
+  },
+  {
+    "id": "adaptive-leadership-training",
+    "name": "Adaptive Leadership Training",
+    "category": "Business & Management",
+    "svg": "business-decisions.svg",
+    "score": 45
+  },
+  {
+    "id": "confidence-and-charisma-training",
+    "name": "Confidence and Charisma Training",
+    "category": "Professional Development",
+    "svg": "laravel-and-vue.svg",
+    "score": 45
+  },
+  {
+    "id": "professional-development-certification",
+    "name": "Professional Development Certification",
+    "category": "Professional Development",
+    "svg": "mobile-development.svg",
+    "score": 75
+  },
+  {
+    "id": "advanced-career-skills-certification",
+    "name": "Advanced Career Skills Certification",
+    "category": "Professional Development",
+    "svg": "career-progress.svg",
+    "score": 45
+  },
+  {
+    "id": "workplace-excellence-certification",
+    "name": "Workplace Excellence Certification",
+    "category": "Technology & Digital Skills",
+    "svg": "certification.svg",
+    "score": 45
+  },
+  {
+    "id": "professional-skills-enhancement-certificate",
+    "name": "Professional Skills Enhancement Certificate",
+    "category": "Professional Development",
+    "svg": "modern-professional.svg",
+    "score": 75
+  },
+  {
+    "id": "corporate-skills-certification",
+    "name": "Corporate Skills Certification",
+    "category": "Professional Development",
+    "svg": "professional-card.svg",
+    "score": 45
+  },
+  {
+    "id": "professional-growth-certification",
+    "name": "Professional Growth Certification",
+    "category": "Professional Development",
+    "svg": "growth-analytics.svg",
+    "score": 45
+  },
+  {
+    "id": "career-development-certification",
+    "name": "Career Development Certification",
+    "category": "Professional Development",
+    "svg": "dev-focus.svg",
+    "score": 35
+  },
+  {
+    "id": "workplace-readiness-certification",
+    "name": "Workplace Readiness Certification",
+    "category": "Professional Development",
+    "svg": "at-work.svg",
+    "score": 25
+  },
+  {
+    "id": "certificate-in-business-management",
+    "name": "Certificate in Business Management",
+    "category": "Business & Management",
+    "svg": "business-plan.svg",
+    "score": 75
+  },
+  {
+    "id": "certificate-in-project-coordination",
+    "name": "Certificate in Project Coordination",
+    "category": "Business & Management",
+    "svg": "business-shop.svg",
+    "score": 45
+  },
+  {
+    "id": "certificate-in-office-administration",
+    "name": "Certificate in Office Administration",
+    "category": "Professional Development",
+    "svg": "certificate.svg",
+    "score": 45
+  },
+  {
+    "id": "certificate-in-team-leadership",
+    "name": "Certificate in Team Leadership",
+    "category": "Business & Management",
+    "svg": "content-team.svg",
+    "score": 45
+  },
+  {
+    "id": "certificate-in-business-operations",
+    "name": "Certificate in Business Operations",
+    "category": "Business & Management",
+    "svg": "bus-stop.svg",
+    "score": 35
+  },
+  {
+    "id": "certificate-in-supervisory-skills",
+    "name": "Certificate in Supervisory Skills",
+    "category": "Business & Management",
+    "svg": "cat.svg",
+    "score": 25
+  },
+  {
+    "id": "advanced-ms-excel-certification",
+    "name": "Advanced MS Excel Certification",
+    "category": "Technology & Digital Skills",
+    "svg": "digital-currency.svg",
+    "score": 45
+  },
+  {
+    "id": "business-communication-certification",
+    "name": "Business Communication Certification",
+    "category": "Business & Management",
+    "svg": "playful-cat.svg",
+    "score": 35
+  },
+  {
+    "id": "professional-email-writing-certification",
+    "name": "Professional Email Writing Certification",
+    "category": "Marketing & Communication",
+    "svg": "email-campaign.svg",
+    "score": 45
+  },
+  {
+    "id": "office-productivity-certification",
+    "name": "Office Productivity Certification",
+    "category": "Productivity & Office Skills",
+    "svg": "in-the-office.svg",
+    "score": 75
+  },
+  {
+    "id": "workplace-efficiency-certification",
+    "name": "Workplace Efficiency Certification",
+    "category": "Productivity & Office Skills",
+    "svg": "office-snack.svg",
+    "score": 45
+  },
+  {
+    "id": "data-handling-certification",
+    "name": "Data Handling Certification",
+    "category": "Technology & Digital Skills",
+    "svg": "all-the-data.svg",
+    "score": 70
+  },
+  {
+    "id": "digital-marketing-certification",
+    "name": "Digital Marketing Certification",
+    "category": "Marketing & Communication",
+    "svg": "marketing.svg",
+    "score": 75
+  },
+  {
+    "id": "social-media-management-certification",
+    "name": "Social Media Management Certification",
+    "category": "Business & Management",
+    "svg": "online-media.svg",
+    "score": 70
+  },
+  {
+    "id": "content-writing-certification",
+    "name": "Content Writing Certification",
+    "category": "Marketing & Communication",
+    "svg": "content-creator.svg",
+    "score": 70
+  },
+  {
+    "id": "customer-relationship-management-certification",
+    "name": "Customer Relationship Management Certification",
+    "category": "Business & Management",
+    "svg": "customer-survey.svg",
+    "score": 45
+  },
+  {
+    "id": "brand-communication-certification",
+    "name": "Brand Communication Certification",
+    "category": "Marketing & Communication",
+    "svg": "mobile-marketing.svg",
+    "score": 45
+  },
+  {
+    "id": "online-marketing-certification",
+    "name": "Online Marketing Certification",
+    "category": "Marketing & Communication",
+    "svg": "online-posts.svg",
+    "score": 70
+  },
+  {
+    "id": "public-relations-certification",
+    "name": "Public Relations Certification",
+    "category": "Professional Development",
+    "svg": "public-discussion.svg",
+    "score": 70
+  },
+  {
+    "id": "web-development-certification",
+    "name": "Web Development Certification",
+    "category": "Technology & Digital Skills",
+    "svg": "digital-nomad.svg",
+    "score": 45
+  },
+  {
+    "id": "computer-applications-certification",
+    "name": "Computer Applications Certification",
+    "category": "Technology & Digital Skills",
+    "svg": "app-data.svg",
+    "score": 25
+  },
+  {
+    "id": "it-skills-certification",
+    "name": "IT Skills Certification",
+    "category": "Technology & Digital Skills",
+    "svg": "3d-modeling.svg",
+    "score": 0
+  },
+  {
+    "id": "software-proficiency-certification",
+    "name": "Software Proficiency Certification",
+    "category": "Technology & Digital Skills",
+    "svg": "code-review.svg",
+    "score": 25
+  },
+  {
+    "id": "customer-service-certification",
+    "name": "Customer Service Certification",
+    "category": "Professional Development",
+    "svg": "coding.svg",
+    "score": 25
+  },
+  {
+    "id": "website-management-certification",
+    "name": "Website Management Certification",
+    "category": "Technology & Digital Skills",
+    "svg": "personal-website.svg",
+    "score": 45
+  },
+  {
+    "id": "generative-ai-prompt-engineering-for-enterprise-workflows",
+    "name": "Generative AI Prompt Engineering for Enterprise Workflows",
+    "category": "AI & Modern Workflows",
+    "svg": "for-review.svg",
+    "score": 45
+  },
+  {
+    "id": "ai-powered-automation-for-small-business-operations",
+    "name": "AI-Powered Automation for Small Business Operations",
+    "category": "AI & Modern Workflows",
+    "svg": "for-sale.svg",
+    "score": 45
+  },
+  {
+    "id": "ai-driven-copywriting-marketing-content-generation",
+    "name": "AI-Driven Copywriting & Marketing Content Generation",
+    "category": "AI & Modern Workflows",
+    "svg": "add-content.svg",
+    "score": 45
+  },
+  {
+    "id": "using-ai-tools-for-market-research-data-synthesis",
+    "name": "Using AI Tools for Market Research & Data Synthesis",
+    "category": "AI & Modern Workflows",
+    "svg": "data-reports.svg",
+    "score": 70
+  },
+  {
+    "id": "ai-enhanced-video-editing-creative-media-production",
+    "name": "AI-Enhanced Video Editing & Creative Media Production",
+    "category": "AI & Modern Workflows",
+    "svg": "creative-draft.svg",
+    "score": 45
+  },
+  {
+    "id": "no-code-ai-agent-custom-chatbot-architecture",
+    "name": "No-Code AI Agent & Custom Chatbot Architecture",
+    "category": "AI & Modern Workflows",
+    "svg": "chat-bot.svg",
+    "score": 50
+  },
+  {
+    "id": "ai-productivity-hacks-for-microsoft-office-google-workspace",
+    "name": "AI Productivity Hacks for Microsoft Office & Google Workspace",
+    "category": "AI & Modern Workflows",
+    "svg": "google-docs.svg",
+    "score": 45
+  },
+  {
+    "id": "using-midjourney-dall-e-for-commercial-graphic-design",
+    "name": "Using Midjourney & DALL-E for Commercial Graphic Design",
+    "category": "AI & Modern Workflows",
+    "svg": "modern-design.svg",
+    "score": 90
+  },
+  {
+    "id": "ai-for-human-resource-operations-talent-sourcing",
+    "name": "AI for Human Resource Operations & Talent Sourcing",
+    "category": "AI & Modern Workflows",
+    "svg": "modern-art.svg",
+    "score": 45
+  },
+  {
+    "id": "financial-analysis-budgeting-using-ai-assistance",
+    "name": "Financial Analysis & Budgeting Using AI Assistance",
+    "category": "AI & Modern Workflows",
+    "svg": "financial-data.svg",
+    "score": 70
+  },
+  {
+    "id": "ai-powered-sales-scraping-cold-email-automation",
+    "name": "AI-Powered Sales Scraping & Cold Email Automation",
+    "category": "AI & Modern Workflows",
+    "svg": "email-capture.svg",
+    "score": 45
+  },
+  {
+    "id": "using-ai-for-supply-chain-optimization-inventory-planning",
+    "name": "Using AI for Supply Chain Optimization & Inventory Planning",
+    "category": "AI & Modern Workflows",
+    "svg": "modern-life.svg",
+    "score": 45
+  },
+  {
+    "id": "ai-coding-assistants-github-copilot-for-rapid-development",
+    "name": "AI Coding Assistants (GitHub Copilot) for Rapid Development",
+    "category": "AI & Modern Workflows",
+    "svg": "modern-woman.svg",
+    "score": 45
+  },
+  {
+    "id": "customer-support-automation-using-ai-helpdesk-tools",
+    "name": "Customer Support Automation Using AI Helpdesk Tools",
+    "category": "AI & Modern Workflows",
+    "svg": "active-support.svg",
+    "score": 45
+  },
+  {
+    "id": "ai-prompt-engineering-for-legal-compliance-documentation",
+    "name": "AI Prompt Engineering for Legal & Compliance Documentation",
+    "category": "AI & Modern Workflows",
+    "svg": "ready-for-waves.svg",
+    "score": 45
+  },
+  {
+    "id": "construction-project-scheduling-basic-estimation",
+    "name": "Construction Project Scheduling & Basic Estimation",
+    "category": "Construction: Project Management & Billing",
+    "svg": "project-complete.svg",
+    "score": 75
+  },
+  {
+    "id": "construction-cost-estimation-quantity-surveying-basics",
+    "name": "Construction Cost Estimation & Quantity Surveying Basics",
+    "category": "Construction: Project Management & Billing",
+    "svg": "project-completed.svg",
+    "score": 45
+  },
+  {
+    "id": "contract-administration-procurement-in-construction",
+    "name": "Contract Administration & Procurement in Construction",
+    "category": "Construction: Project Management & Billing",
+    "svg": "contract.svg",
+    "score": 45
+  },
+  {
+    "id": "construction-bill-checking-contractor-invoice-verification",
+    "name": "Construction Bill Checking & Contractor Invoice Verification",
+    "category": "Construction: Project Management & Billing",
+    "svg": "checking-boxes.svg",
+    "score": 45
+  },
+  {
+    "id": "rate-analysis-construction-material-price-forecasting",
+    "name": "Rate Analysis & Construction Material Price Forecasting",
+    "category": "Construction: Project Management & Billing",
+    "svg": "analysis.svg",
+    "score": 45
+  },
+  {
+    "id": "construction-risk-assessment-hazard-mitigation-strategies",
+    "name": "Construction Risk Assessment & Hazard Mitigation Strategies",
+    "category": "Construction: Project Management & Billing",
+    "svg": "project-feedback.svg",
+    "score": 45
+  },
+  {
+    "id": "tendering-bidding-commercial-bid-evaluation-frameworks",
+    "name": "Tendering, Bidding & Commercial Bid Evaluation Frameworks",
+    "category": "Construction: Project Management & Billing",
+    "svg": "javascript-frameworks.svg",
+    "score": 45
+  },
+  {
+    "id": "real-estate-project-cost-control-budget-management",
+    "name": "Real Estate Project Cost Control & Budget Management",
+    "category": "Construction: Project Management & Billing",
+    "svg": "project-team.svg",
+    "score": 75
+  },
+  {
+    "id": "construction-claim-management-dispute-resolution-prep",
+    "name": "Construction Claim Management & Dispute Resolution Prep",
+    "category": "Construction: Project Management & Billing",
+    "svg": "manage-chats.svg",
+    "score": 35
+  },
+  {
+    "id": "agile-frameworks-scrum-for-construction-management",
+    "name": "Agile Frameworks & Scrum for Construction Management",
+    "category": "Construction: Project Management & Billing",
+    "svg": "building-websites.svg",
+    "score": 25
+  },
+  {
+    "id": "subcontractor-management-site-logistics-mastery",
+    "name": "Subcontractor Management & Site Logistics Mastery",
+    "category": "Construction: Project Management & Billing",
+    "svg": "logistics.svg",
+    "score": 70
+  },
+  {
+    "id": "construction-micro-scheduling-daily-work-progress-tracking",
+    "name": "Construction Micro-Scheduling & Daily Work Progress Tracking",
+    "category": "Construction: Project Management & Billing",
+    "svg": "progress-tracking.svg",
+    "score": 90
+  },
+  {
+    "id": "cash-flow-management-capital-allocation-for-builders",
+    "name": "Cash Flow Management & Capital Allocation for Builders",
+    "category": "Construction: Project Management & Billing",
+    "svg": "ideas-flow.svg",
+    "score": 45
+  },
+  {
+    "id": "construction-site-operations-supervisor-foundations",
+    "name": "Construction Site Operations & Supervisor Foundations",
+    "category": "Construction: Site Operations & Safety",
+    "svg": "personal-site.svg",
+    "score": 75
+  },
+  {
+    "id": "heavy-equipment-fleet-management-operations",
+    "name": "Heavy Equipment Fleet Management Operations",
+    "category": "Construction: Site Operations & Safety",
+    "svg": "heavy-box.svg",
+    "score": 45
+  },
+  {
+    "id": "construction-quality-control-site-inspection-frameworks",
+    "name": "Construction Quality Control & Site Inspection Frameworks",
+    "category": "Construction: Site Operations & Safety",
+    "svg": "code-inspection.svg",
+    "score": 70
+  },
+  {
+    "id": "site-layout-land-surveying-tools-levelling-operations",
+    "name": "Site Layout, Land Surveying Tools & Levelling Operations",
+    "category": "Construction: Site Operations & Safety",
+    "svg": "design-tools.svg",
+    "score": 45
+  },
+  {
+    "id": "construction-material-storage-waste-reduction-storekeeping",
+    "name": "Construction Material Storage, Waste Reduction & Storekeeping",
+    "category": "Construction: Site Operations & Safety",
+    "svg": "memory-storage.svg",
+    "score": 45
+  },
+  {
+    "id": "excavation-shoring-deep-foundation-site-coordination",
+    "name": "Excavation, Shoring & Deep Foundation Site Coordination",
+    "category": "Construction: Site Operations & Safety",
+    "svg": "building.svg",
+    "score": 25
+  },
+  {
+    "id": "scaffolding-safety-erection-control-high-rise-access-planning",
+    "name": "Scaffolding Safety, Erection Control & High-Rise Access Planning",
+    "category": "Construction: Site Operations & Safety",
+    "svg": "access-account.svg",
+    "score": 45
+  },
+  {
+    "id": "construction-site-water-management-dewatering-systems",
+    "name": "Construction Site Water Management & Dewatering Systems",
+    "category": "Construction: Site Operations & Safety",
+    "svg": "city-driver.svg",
+    "score": 25
+  },
+  {
+    "id": "demolition-planning-structural-dismantling-salvage-management",
+    "name": "Demolition Planning, Structural Dismantling & Salvage Management",
+    "category": "Construction: Site Operations & Safety",
+    "svg": "conference-call.svg",
+    "score": 25
+  },
+  {
+    "id": "labour-productivity-management-on-site-performance-tracking",
+    "name": "Labour Productivity Management & On-Site Performance Tracking",
+    "category": "Construction: Site Operations & Safety",
+    "svg": "location-tracking.svg",
+    "score": 45
+  },
+  {
+    "id": "temporary-structures-site-infrastructure-layout-planning",
+    "name": "Temporary Structures & Site Infrastructure Layout Planning",
+    "category": "Construction: Site Operations & Safety",
+    "svg": "content-structure.svg",
+    "score": 35
+  },
+  {
+    "id": "construction-site-utilities-temporary-power-water-setup",
+    "name": "Construction Site Utilities & Temporary Power/Water Setup",
+    "category": "Construction: Site Operations & Safety",
+    "svg": "gdpr.svg",
+    "score": 25
+  },
+  {
+    "id": "bim-building-information-modeling-software-coordination",
+    "name": "BIM (Building Information Modeling) Software Coordination",
+    "category": "Construction: Design Coordination & BIM",
+    "svg": "design-process.svg",
+    "score": 70
+  },
+  {
+    "id": "advanced-blueprint-architectural-drawing-interpretation",
+    "name": "Advanced Blueprint & Architectural Drawing Interpretation",
+    "category": "Construction: Design Coordination & BIM",
+    "svg": "character-drawing.svg",
+    "score": 45
+  },
+  {
+    "id": "pre-engineered-building-peb-design-and-assembly-principles",
+    "name": "Pre-Engineered Building (PEB) Design and Assembly Principles",
+    "category": "Construction: Design Coordination & BIM",
+    "svg": "complete-design.svg",
+    "score": 75
+  },
+  {
+    "id": "structural-drawing-verification-for-site-engineers",
+    "name": "Structural Drawing Verification for Site Engineers",
+    "category": "Construction: Design Coordination & BIM",
+    "svg": "design-community.svg",
+    "score": 45
+  },
+  {
+    "id": "mep-mechanical-electrical-plumbing-drawing-coordination",
+    "name": "MEP (Mechanical, Electrical, Plumbing) Drawing Coordination",
+    "category": "Construction: Design Coordination & BIM",
+    "svg": "design-components.svg",
+    "score": 45
+  },
+  {
+    "id": "as-built-drawing-documentation-handover-report-drafting",
+    "name": "As-Built Drawing Documentation & Handover Report Drafting",
+    "category": "Construction: Design Coordination & BIM",
+    "svg": "data-report.svg",
+    "score": 45
+  },
+  {
+    "id": "construction-standard-operating-procedure-sop-writing",
+    "name": "Construction Standard Operating Procedure (SOP) Writing",
+    "category": "Construction: Design Coordination & BIM",
+    "svg": "design-data.svg",
+    "score": 45
+  },
+  {
+    "id": "digital-document-control-daily-progress-report-dpr-systems",
+    "name": "Digital Document Control & Daily Progress Report (DPR) Systems",
+    "category": "Construction: Design Coordination & BIM",
+    "svg": "add-document.svg",
+    "score": 45
+  },
+  {
+    "id": "using-excel-for-construction-bar-bending-schedules-bbs",
+    "name": "Using Excel for Construction Bar Bending Schedules (BBS)",
+    "category": "Construction: Design Coordination & BIM",
+    "svg": "design-feedback.svg",
+    "score": 45
+  },
+  {
+    "id": "revit-architecture-foundations-for-project-managers",
+    "name": "Revit Architecture Foundations for Project Managers",
+    "category": "Construction: Design Coordination & BIM",
+    "svg": "design-inspiration.svg",
+    "score": 45
+  },
+  {
+    "id": "autocad-basics-for-construction-site-supervisors",
+    "name": "AutoCAD Basics for Construction Site Supervisors",
+    "category": "Construction: Design Coordination & BIM",
+    "svg": "design-notes.svg",
+    "score": 45
+  },
+  {
+    "id": "concrete-technology-modern-formwork-applications",
+    "name": "Concrete Technology & Modern Formwork Applications",
+    "category": "Construction: Materials, Finishes & Tech",
+    "svg": "app-installation.svg",
+    "score": 25
+  },
+  {
+    "id": "interior-fit-out-commercial-finishing-project-coordination",
+    "name": "Interior Fit-Out & Commercial Finishing Project Coordination",
+    "category": "Construction: Materials, Finishes & Tech",
+    "svg": "hang-out.svg",
+    "score": 45
+  },
+  {
+    "id": "sustainable-building-materials-green-construction-intro",
+    "name": "Sustainable Building Materials & Green Construction Intro",
+    "category": "Construction: Materials, Finishes & Tech",
+    "svg": "artificial-intelligence.svg",
+    "score": 25
+  },
+  {
+    "id": "residential-property-development-foundations",
+    "name": "Residential Property Development Foundations",
+    "category": "Construction: Materials, Finishes & Tech",
+    "svg": "country-side.svg",
+    "score": 25
+  },
+  {
+    "id": "waterproofing-technology-materials-selection-application",
+    "name": "Waterproofing Technology: Materials, Selection & Application",
+    "category": "Construction: Materials, Finishes & Tech",
+    "svg": "asset-selection.svg",
+    "score": 45
+  },
+  {
+    "id": "advanced-flooring-systems-tiling-project-inspection",
+    "name": "Advanced Flooring Systems & Tiling Project Inspection",
+    "category": "Construction: Materials, Finishes & Tech",
+    "svg": "inspection.svg",
+    "score": 70
+  },
+  {
+    "id": "fa-ade-engineering-commercial-glazing-installation-systems",
+    "name": "Façade Engineering & Commercial Glazing Installation Systems",
+    "category": "Construction: Materials, Finishes & Tech",
+    "svg": "filing-system.svg",
+    "score": 25
+  },
+  {
+    "id": "precast-concrete-elements-manufacturing-erection-control",
+    "name": "Precast Concrete Elements: Manufacturing & Erection Control",
+    "category": "Construction: Materials, Finishes & Tech",
+    "svg": "control-panel.svg",
+    "score": 45
+  },
+  {
+    "id": "drywall-partitioning-acoustic-insulation-project-coordination",
+    "name": "Drywall Partitioning & Acoustic Insulation Project Coordination",
+    "category": "Construction: Materials, Finishes & Tech",
+    "svg": "art-lover.svg",
+    "score": 25
+  },
+  {
+    "id": "road-pavement-construction-materials-field-execution",
+    "name": "Road & Pavement Construction Materials & Field Execution",
+    "category": "Construction: Materials, Finishes & Tech",
+    "svg": "by-the-road.svg",
+    "score": 45
+  },
+  {
+    "id": "building-structural-repair-retrofitting-rehabilitation-basics",
+    "name": "Building Structural Repair, Retrofitting & Rehabilitation Basics",
+    "category": "Construction: Materials, Finishes & Tech",
+    "svg": "car-repair.svg",
+    "score": 45
+  },
+  {
+    "id": "landscape-construction-engineering-external-site-works",
+    "name": "Landscape Construction Engineering & External Site Works",
+    "category": "Construction: Materials, Finishes & Tech",
+    "svg": "landscape-mode.svg",
+    "score": 45
+  },
+  {
+    "id": "smart-home-automation-iot-hardware-site-integration",
+    "name": "Smart Home Automation & IoT Hardware Site Integration",
+    "category": "Construction: Materials, Finishes & Tech",
+    "svg": "at-home.svg",
+    "score": 45
+  },
+  {
+    "id": "modular-kitchen-wardrobe-joinery-project-management",
+    "name": "Modular Kitchen & Wardrobe Joinery Project Management",
+    "category": "Construction: Materials, Finishes & Tech",
+    "svg": "conference.svg",
+    "score": 25
+  },
+  {
+    "id": "advanced-microsoft-excel-data-dashboarding-for-operations",
+    "name": "Advanced Microsoft Excel & Data Dashboarding for Operations",
+    "category": "Corporate Operations & Logistics",
+    "svg": "dashboard.svg",
+    "score": 50
+  },
+  {
+    "id": "supply-chain-logistics-warehouse-inventory-management",
+    "name": "Supply Chain Logistics & Warehouse Inventory Management",
+    "category": "Corporate Operations & Logistics",
+    "svg": "buy-house.svg",
+    "score": 25
+  },
+  {
+    "id": "vendor-management-strategic-procurement-operations",
+    "name": "Vendor Management & Strategic Procurement Operations",
+    "category": "Corporate Operations & Logistics",
+    "svg": "calculator.svg",
+    "score": 25
+  },
+  {
+    "id": "agile-frameworks-scrum-basics-for-non-tech-operations",
+    "name": "Agile Frameworks & Scrum Basics for Non-Tech Operations",
+    "category": "Corporate Operations & Logistics",
+    "svg": "credit-card-payment.svg",
+    "score": 25
+  },
+  {
+    "id": "business-process-mapping-workflow-optimization-blueprint",
+    "name": "Business Process Mapping & Workflow Optimization Blueprint",
+    "category": "Corporate Operations & Logistics",
+    "svg": "prototyping-process.svg",
+    "score": 70
+  },
+  {
+    "id": "lean-six-sigma-foundations-for-operational-excellence",
+    "name": "Lean Six Sigma Foundations for Operational Excellence",
+    "category": "Corporate Operations & Logistics",
+    "svg": "analytics.svg",
+    "score": 25
+  },
+  {
+    "id": "customer-success-operations-account-retention-strategies",
+    "name": "Customer Success Operations & Account Retention Strategies",
+    "category": "Corporate Operations & Logistics",
+    "svg": "account.svg",
+    "score": 45
+  },
+  {
+    "id": "key-account-management-client-relations-frameworks",
+    "name": "Key Account Management & Client Relations Frameworks",
+    "category": "Corporate Operations & Logistics",
+    "svg": "key-points.svg",
+    "score": 45
+  },
+  {
+    "id": "project-management-essentials-for-operational-teams",
+    "name": "Project Management Essentials for Operational Teams",
+    "category": "Corporate Operations & Logistics",
+    "svg": "connecting-teams.svg",
+    "score": 45
+  },
+  {
+    "id": "enterprise-resource-planning-erp-software-navigation-basics",
+    "name": "Enterprise Resource Planning (ERP) Software Navigation Basics",
+    "category": "Corporate Operations & Logistics",
+    "svg": "navigation.svg",
+    "score": 45
+  },
+  {
+    "id": "data-analytics-for-operations-using-powerbi-and-tableau",
+    "name": "Data Analytics for Operations Using PowerBI and Tableau",
+    "category": "Corporate Operations & Logistics",
+    "svg": "dark-analytics.svg",
+    "score": 70
+  },
+  {
+    "id": "quality-assurance-qa-and-process-control-frameworks",
+    "name": "Quality Assurance (QA) and Process Control Frameworks",
+    "category": "Corporate Operations & Logistics",
+    "svg": "creation-process.svg",
+    "score": 45
+  },
+  {
+    "id": "change-management-frameworks-for-operational-restructuring",
+    "name": "Change Management Frameworks for Operational Restructuring",
+    "category": "Corporate Operations & Logistics",
+    "svg": "credit-card-payments.svg",
+    "score": 25
+  },
+  {
+    "id": "business-continuity-planning-disaster-recovery-workflows",
+    "name": "Business Continuity Planning & Disaster Recovery Workflows",
+    "category": "Corporate Operations & Logistics",
+    "svg": "credit-card.svg",
+    "score": 25
+  },
+  {
+    "id": "cross-border-trade-logistics-custom-clearance-operations",
+    "name": "Cross-Border Trade Logistics & Custom Clearance Operations",
+    "category": "Corporate Operations & Logistics",
+    "svg": "order-delivered.svg",
+    "score": 50
+  },
+  {
+    "id": "corporate-retail-operations-store-management-systems",
+    "name": "Corporate Retail Operations & Store Management Systems",
+    "category": "Corporate Operations & Logistics",
+    "svg": "delivery-truck.svg",
+    "score": 25
+  },
+  {
+    "id": "b2b-service-operations-management-client-sla-tracking",
+    "name": "B2B Service Operations Management & Client SLA Tracking",
+    "category": "Corporate Operations & Logistics",
+    "svg": "drone-delivery.svg",
+    "score": 25
+  },
+  {
+    "id": "digital-product-operations-lifecycle-coordination",
+    "name": "Digital Product Operations & Lifecycle Coordination",
+    "category": "Corporate Operations & Logistics",
+    "svg": "product-explainer.svg",
+    "score": 45
+  },
+  {
+    "id": "e-commerce-operations-supply-chain-fulfillment-tactics",
+    "name": "E-Commerce Operations & Supply Chain Fulfillment Tactics",
+    "category": "Corporate Operations & Logistics",
+    "svg": "drone-surveillance.svg",
+    "score": 25
+  },
+  {
+    "id": "risk-mitigation-internal-control-audit-for-operations-managers",
+    "name": "Risk Mitigation & Internal Control Audit for Operations Managers",
+    "category": "Corporate Operations & Logistics",
+    "svg": "file-manager.svg",
+    "score": 25
+  },
+  {
+    "id": "strategic-facility-optimization-resource-budgeting",
+    "name": "Strategic Facility Optimization & Resource Budgeting",
+    "category": "Corporate Operations & Logistics",
+    "svg": "finance.svg",
+    "score": 25
+  },
+  {
+    "id": "root-cause-analysis-operational-bottleneck-troubleshooting",
+    "name": "Root-Cause Analysis & Operational Bottleneck Troubleshooting",
+    "category": "Corporate Operations & Logistics",
+    "svg": "cohort-analysis.svg",
+    "score": 45
+  },
+  {
+    "id": "operational-dashboard-design-performance-kpi-mapping",
+    "name": "Operational Dashboard Design & Performance KPI Mapping",
+    "category": "Corporate Operations & Logistics",
+    "svg": "design-objectives.svg",
+    "score": 45
+  },
+  {
+    "id": "b2b-client-onboarding-service-delivery-workflows",
+    "name": "B2B Client Onboarding & Service Delivery Workflows",
+    "category": "Corporate Operations & Logistics",
+    "svg": "delivery-address.svg",
+    "score": 45
+  },
+  {
+    "id": "fleet-logistics-optimization-last-mile-delivery-planning",
+    "name": "Fleet Logistics Optimization & Last-Mile Delivery Planning",
+    "category": "Corporate Operations & Logistics",
+    "svg": "delivery.svg",
+    "score": 45
+  },
+  {
+    "id": "corporate-standard-operating-procedure-sop-deployment",
+    "name": "Corporate Standard Operating Procedure (SOP) Deployment",
+    "category": "Corporate Operations & Logistics",
+    "svg": "in-no-time.svg",
+    "score": 25
+  },
+  {
+    "id": "incident-management-operational-escalation-engineering",
+    "name": "Incident Management & Operational Escalation Engineering",
+    "category": "Corporate Operations & Logistics",
+    "svg": "goals.svg",
+    "score": 25
+  },
+  {
+    "id": "agile-scaling-frameworks-for-cross-departmental-work",
+    "name": "Agile Scaling Frameworks for Cross-Departmental Work",
+    "category": "Corporate Operations & Logistics",
+    "svg": "art-museum.svg",
+    "score": 25
+  },
+  {
+    "id": "third-party-logistics-3pl-vendor-performance-auditing",
+    "name": "Third-Party Logistics (3PL) & Vendor Performance Auditing",
+    "category": "Corporate Operations & Logistics",
+    "svg": "online-party.svg",
+    "score": 45
+  },
+  {
+    "id": "enterprise-assets-inventory-valuation-methodologies",
+    "name": "Enterprise Assets & Inventory Valuation Methodologies",
+    "category": "Corporate Operations & Logistics",
+    "svg": "enter.svg",
+    "score": 25
+  },
+  {
+    "id": "predictive-capacity-planning-workforce-operations",
+    "name": "Predictive Capacity Planning & Workforce Operations",
+    "category": "Corporate Operations & Logistics",
+    "svg": "predictive-analytics.svg",
+    "score": 45
+  },
+  {
+    "id": "green-supply-chain-carbon-neutral-operations-basics",
+    "name": "Green Supply Chain & Carbon-Neutral Operations Basics",
+    "category": "Corporate Operations & Logistics",
+    "svg": "blooming.svg",
+    "score": 25
+  },
+  {
+    "id": "corporate-relocation-logistics-infrastructure-set-up",
+    "name": "Corporate Relocation Logistics & Infrastructure Set Up",
+    "category": "Corporate Operations & Logistics",
+    "svg": "current-location.svg",
+    "score": 25
+  },
+  {
+    "id": "digital-workspace-optimization-automation-for-admin-teams",
+    "name": "Digital Workspace Optimization: Automation for Admin Teams",
+    "category": "Corporate Operations & Logistics",
+    "svg": "creative-team.svg",
+    "score": 25
+  },
+  {
+    "id": "crisis-operations-management-business-stabilization",
+    "name": "Crisis Operations Management & Business Stabilization",
+    "category": "Corporate Operations & Logistics",
+    "svg": "close-tab.svg",
+    "score": 25
+  },
+  {
+    "id": "certificateinleadershipteammanagement",
+    "name": "Certificate in Leadership & Team Management",
+    "category": "Business & Management",
+    "svg": "design-team.svg",
+    "score": 45
+  },
+  {
+    "id": "timemanagementproductivitycertification",
+    "name": "Time Management & Productivity Certification",
+    "category": "Productivity & Office Skills",
+    "svg": "coffee-time.svg",
+    "score": 45
+  },
+  {
+    "id": "digitalskillscertification",
+    "name": "Digital Skills Certification",
+    "category": "Technology & Digital Skills",
+    "svg": "a-better-world.svg",
+    "score": 0
+  },
+  {
+    "id": "basicprogrammingcertification",
+    "name": "Basic Programming Certification",
+    "category": "Technology & Digital Skills",
+    "svg": "pair-programming.svg",
+    "score": 70
+  },
+  {
+    "id": "careeradvancementcertification",
+    "name": "Career Advancement Certification",
+    "category": "Career Development",
+    "svg": "electric-car.svg",
+    "score": 35
+  },
+  {
+    "id": "professionalexcellencecertification",
+    "name": "Professional Excellence Certification",
+    "category": "Career Development",
+    "svg": "develop-app.svg",
+    "score": 25
+  },
+  {
+    "id": "corporatereadinesscertification",
+    "name": "Corporate Readiness Certification",
+    "category": "Career Development",
+    "svg": "developer-activity.svg",
+    "score": 25
+  },
+  {
+    "id": "industryreadinesscertification",
+    "name": "Industry Readiness Certification",
+    "category": "Career Development",
+    "svg": "flutter-dev.svg",
+    "score": 25
+  },
+  {
+    "id": "employabilityskillscertification",
+    "name": "Employability Skills Certification",
+    "category": "Career Development",
+    "svg": "interview.svg",
+    "score": 25
+  },
+  {
+    "id": "workplacesuccesscertification",
+    "name": "Workplace Success Certification",
+    "category": "Career Development",
+    "svg": "best-place.svg",
+    "score": 25
+  },
+  {
+    "id": "salesskillscertification",
+    "name": "Sales Skills Certification",
+    "category": "Additional Professional Skills",
+    "svg": "add-color.svg",
+    "score": 25
+  },
+  {
+    "id": "businessetiquettecertification",
+    "name": "Business Etiquette Certification",
+    "category": "Additional Professional Skills",
+    "svg": "add-file.svg",
+    "score": 25
+  },
+  {
+    "id": "problemsolvingcertification",
+    "name": "Problem Solving Certification",
+    "category": "Additional Professional Skills",
+    "svg": "problem-solving.svg",
+    "score": 90
+  },
+  {
+    "id": "decisionmakingcertification",
+    "name": "Decision Making Certification",
+    "category": "Additional Professional Skills",
+    "svg": "making-art.svg",
+    "score": 45
+  },
+  {
+    "id": "leadershipessentialscertification",
+    "name": "Leadership Essentials Certification",
+    "category": "Additional Professional Skills",
+    "svg": "add-files.svg",
+    "score": 25
+  },
+  {
+    "id": "communicationskillscertification",
+    "name": "Communication Skills Certification",
+    "category": "Additional Professional Skills",
+    "svg": "add-friends.svg",
+    "score": 25
+  }
+]
