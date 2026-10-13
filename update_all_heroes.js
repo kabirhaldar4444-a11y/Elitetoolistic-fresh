@@ -1,0 +1,629 @@
+const fs = require('fs');
+const path = require('path');
+
+// 1. Load course database
+const allCourses = JSON.parse(fs.readFileSync(path.join(__dirname, 'all_167_courses.json'), 'utf8'));
+console.log(`Loaded ${allCourses.length} courses from all_167_courses.json`);
+
+// 2. Helper to verify local image exists
+function resolveLocalImage(course) {
+    const slug = course.file ? course.file.replace(/\.html$/, '') : course.id;
+    const svgRelPath = `images/cliparts/${slug}.svg`;
+    const svgFullPath = path.join(__dirname, svgRelPath);
+    
+    if (fs.existsSync(svgFullPath)) {
+        return svgRelPath;
+    }
+
+    if (course.image && !course.image.startsWith('http') && fs.existsSync(path.join(__dirname, course.image))) {
+        return course.image;
+    }
+
+    // Default fallback to local illus_ai.png
+    return 'images/illus_ai.png';
+}
+
+// 3. Generate clean white hero detail page
+function generateDetailPage(course, prevFile, nextFile) {
+    const imageSrc = resolveLocalImage(course);
+
+    const desc_main_paragraphs = (course.desc_main || '')
+        .split('\n\n')
+        .map(p => p.trim())
+        .filter(p => p.length > 0);
+    const desc_main_html = desc_main_paragraphs.map(p => `<p>${p}</p>`).join('\n    ');
+
+    const key_learning_html = (course.key_learning || [])
+        .map(item => `<li>${item}</li>`)
+        .join('\n      ');
+
+    const investment_bullets_html = (course.investment_bullets || [])
+        .map(item => `<li>${item}</li>`)
+        .join('\n      ');
+
+    const reviews_html = (course.reviews || [])
+        .map(r => `
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"${r.text}"</p>
+        <div class="reviewer-meta">
+          <span class="reviewer-name">${r.name}</span>
+          <span class="reviewer-loc">${r.location}</span>
+        </div>
+      </div>`).join('');
+
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>${course.name} | ELITE TOOLISTIC</title>
+  <meta name="description" content="${course.desc_short}"/>
+  <meta name="keywords" content="${course.name}, professional certification, ELITE TOOLISTIC, online course, career growth" />
+  
+  <meta property="og:title" content="${course.name} | ELITE TOOLISTIC" />
+  <meta property="og:description" content="${course.desc_short}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.elitetoolistic.com/${course.file}" />
+  
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="cart.css"/>
+  <style>
+    /* ════ Course Detail Hero — Premium White Clean Layout ════ */
+    .course-detail-hero {
+      background: #ffffff;
+      border-bottom: 2px solid #e2e8f0;
+      position: relative;
+      overflow: hidden;
+      padding: 0;
+      min-height: 520px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Subtle top accent bar */
+    .course-detail-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #006cfe 0%, #3b82f6 60%, #0f172a 100%);
+      z-index: 2;
+    }
+
+    /* Hero inner layout — split: text left, visual right */
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 0;
+      flex: 1;
+      max-width: 1400px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 56px 5% 48px;
+      align-items: center;
+    }
+
+    /* Left: text content */
+    .hero-text-col {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      padding-right: 48px;
+    }
+
+    .course-detail-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-mono, monospace);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      background: rgba(0, 108, 254, 0.08);
+      border: 1.5px solid rgba(0, 108, 254, 0.25);
+      color: #006cfe;
+      padding: 5px 14px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+      width: fit-content;
+    }
+
+    .course-detail-hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.75rem, 3.5vw, 2.8rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      color: #0f172a;
+      max-width: 680px;
+      letter-spacing: -0.5px;
+    }
+
+    .course-detail-hero .subtitle {
+      font-size: 1.05rem;
+      color: #475569;
+      line-height: 1.75;
+      max-width: 600px;
+      margin-bottom: 28px;
+      font-weight: 400;
+    }
+
+    /* Meta pills row */
+    .hero-meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+    .hero-meta-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #f8fafc;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-family: var(--font-sans, sans-serif);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #334155;
+    }
+    .hero-meta-pill .pill-icon { font-size: 0.95rem; }
+
+    /* CTA enroll button */
+    .hero-enroll-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #0f172a;
+      color: #ffffff !important;
+      font-family: var(--font-sans, sans-serif);
+      font-size: 0.92rem;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 14px 30px;
+      border-radius: 12px;
+      border: 2px solid #0f172a;
+      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+      width: fit-content;
+      margin-bottom: 20px;
+      letter-spacing: 0.3px;
+    }
+    .hero-enroll-cta:hover {
+      background: #006cfe;
+      border-color: #006cfe;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(0, 108, 254, 0.3);
+    }
+    .hero-enroll-cta .cta-arrow {
+      font-size: 1.1rem;
+      transition: transform 0.2s ease;
+    }
+    .hero-enroll-cta:hover .cta-arrow { transform: translateX(4px); }
+
+    /* Previous / Next nav links */
+    .hero-nav-arrows-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .hero-nav-arrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #f1f5f9;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 999px;
+      color: #475569;
+      padding: 7px 16px;
+      font-family: var(--font-mono, monospace);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .hero-nav-arrow:hover {
+      background: #0f172a;
+      border-color: #0f172a;
+      color: #ffffff;
+    }
+    .arrow-left, .arrow-right { position: static; transform: none; }
+
+    /* Right: visual column */
+    .hero-visual-col {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #f0f7ff 0%, #e8f2ff 60%, #f5f3ff 100%);
+      border-radius: 24px;
+      border: 1.5px solid #dbeafe;
+      min-height: 340px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px -12px rgba(0, 108, 254, 0.12), 0 4px 16px rgba(15, 23, 42, 0.06);
+    }
+
+    .hero-visual-col::before {
+      content: '';
+      position: absolute;
+      width: 280px; height: 280px;
+      background: radial-gradient(circle, rgba(0, 108, 254, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .hero-visual-col img.hero-course-img {
+      width: 90%;
+      max-height: 320px;
+      object-fit: contain;
+      position: relative;
+      z-index: 1;
+      filter: drop-shadow(0 16px 32px rgba(0, 108, 254, 0.15));
+      animation: floatIllus 5s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatIllus {
+      0%   { transform: translateY(0px); }
+      100% { transform: translateY(-14px); }
+    }
+
+    /* Price tag in visual */
+    .hero-price-tag {
+      position: absolute;
+      bottom: 22px;
+      right: 22px;
+      background: #0f172a;
+      color: #ffffff;
+      border-radius: 14px;
+      padding: 10px 18px;
+      font-family: var(--font-sans, sans-serif);
+      font-size: 1.15rem;
+      font-weight: 800;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.22);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 2px;
+    }
+    .hero-price-tag small {
+      font-size: 0.68rem;
+      font-weight: 500;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* ════ Content & Sidebar Sections ════ */
+    .course-content-section {
+      padding: 4rem 5%;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 3.5rem;
+      background: var(--surface, #f8fafc);
+      border-bottom: 2px solid var(--border, #e2e8f0);
+      max-width: 1400px;
+      margin: 0 auto;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .about-course h2 {
+      font-family: var(--font-serif);
+      font-size: 1.55rem;
+      font-weight: 700;
+      margin: 2.25rem 0 1rem;
+      color: var(--navy-brand, #0f172a);
+    }
+    .about-course h2:first-of-type { margin-top: 0; }
+    .about-course p {
+      font-size: 1rem;
+      color: var(--ink-muted, #475569);
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+    }
+    .about-course ul { margin-left: 1.5rem; margin-bottom: 1.5rem; }
+    .about-course ul li {
+      font-size: 0.98rem;
+      color: var(--ink-muted, #475569);
+      line-height: 1.75;
+      margin-bottom: 0.5rem;
+    }
+
+    .info-boxes {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      position: sticky;
+      top: 96px;
+    }
+    .info-box {
+      background: var(--bg, #ffffff);
+      padding: 2rem;
+      border: 1.5px solid var(--border, #e2e8f0);
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+    }
+    .info-box h3 {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      color: var(--black, #0f172a);
+    }
+    .info-box p {
+      font-size: 0.92rem;
+      color: var(--ink-muted, #475569);
+      line-height: 1.65;
+    }
+
+    .enroll-action {
+      text-align: center;
+      padding: 5rem 5%;
+      background: var(--bg-subtle, #f1f5f9);
+      border-bottom: 2px solid var(--border, #e2e8f0);
+    }
+    .enroll-btn-large {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 16px 36px;
+      background: var(--navy-brand, #0f172a);
+      color: var(--white, #fff);
+      font-family: var(--font-mono, monospace);
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      transition: var(--transition, all 0.2s ease);
+      cursor: pointer;
+      border: none;
+      border-radius: 12px;
+    }
+    .enroll-btn-large:hover {
+      background: #006cfe;
+    }
+
+    .reviews-section {
+      margin-top: 3.5rem;
+      border-top: 2px solid var(--border, #e2e8f0);
+      padding-top: 2.5rem;
+    }
+    .review-card {
+      background: var(--bg, #ffffff);
+      border: 1.5px solid var(--border, #e2e8f0);
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+      border-radius: 12px;
+    }
+    .review-stars { color: #f59e0b; margin-bottom: 0.5rem; font-size: 0.9rem; }
+    .review-text {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 0.98rem;
+      color: var(--dark, #0f172a);
+      line-height: 1.65;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; padding: 40px 5%; gap: 32px; }
+      .hero-text-col { padding-right: 0; }
+      .hero-visual-col { min-height: 260px; }
+      .course-content-section { grid-template-columns: 1fr; }
+      .info-boxes { position: relative; top: 0; }
+      .course-detail-hero h1 { font-size: clamp(1.5rem, 6vw, 2.2rem); }
+    }
+  </style>
+  <link rel="icon" type="image/png" href="images/LOGO.png" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">
+    <img src="images/new_elite_logo_transparent.png" alt="Elite Toolistic" />
+    <div class="nav-brand-title">
+      <span class="brand-name">ELITE TOOLISTIC</span>
+      <span class="brand-sub">Academy of Certified Mastery</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="courses.html" class="active">Courses</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="team.html">Our Team</a></li>
+  </ul>
+  <a href="courses.html" class="nav-enroll">All Courses <span class="arrow">→</span></a>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<header class="course-detail-hero">
+  <div class="hero-inner">
+    <!-- Left: Text Content -->
+    <div class="hero-text-col">
+      <div class="hero-nav-arrows-row" style="margin-bottom: 18px;">
+        <a href="${prevFile}" class="hero-nav-arrow" aria-label="Previous Course">← Previous Course</a>
+        <a href="${nextFile}" class="hero-nav-arrow" aria-label="Next Course">Next Course →</a>
+      </div>
+      <span class="course-detail-hero-badge">🤖 Certification Syllabus &bull; ${course.category || 'Professional Certification'}</span>
+      <h1>${course.name}</h1>
+      <p class="subtitle">${course.desc_short}</p>
+      
+      <div class="hero-meta-row">
+        <span class="hero-meta-pill"><span class="pill-icon">⏱️</span> ${course.duration}</span>
+        <span class="hero-meta-pill"><span class="pill-icon">🎓</span> Verified Certificate</span>
+        <span class="hero-meta-pill"><span class="pill-icon">💼</span> ${course.difficulty || 'Professional'} Level</span>
+        <span class="hero-meta-pill"><span class="pill-icon">🌐</span> 100% Online Access</span>
+      </div>
+
+      <div style="display: flex; gap: 14px; align-items: center; flex-wrap: wrap;">
+        <button class="hero-enroll-cta checkout-payalma-btn" style="cursor: pointer; border: none;">
+          Enroll Now &bull; ₹${course.price} <span class="cta-arrow">→</span>
+        </button>
+        <button class="add-to-cart-btn" data-course-id="${course.file}" data-course-name="${course.name}" data-course-price="${course.price}" style="padding: 13px 22px; border-radius: 12px; border: 1.5px solid #cbd5e1; background: #fff; font-weight: 700; cursor: pointer; color: #0f172a; margin-bottom: 20px;">
+          + Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <!-- Right: Visual Card with Local Clipart -->
+    <div class="hero-visual-col">
+      <img src="${imageSrc}" alt="${course.name}" class="hero-course-img" onerror="this.onerror=null;this.src='images/illus_ai.png'" />
+      <div class="hero-price-tag">
+        <small>Tuition Investment</small>
+        <span>₹${course.price}</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="course-content-section">
+  <div class="about-course">
+    <h2>Curriculum Overview &amp; Foundations</h2>
+    ${desc_main_html}
+
+    <h2>Core Competency Modules</h2>
+    <ul>
+      ${key_learning_html}
+    </ul>
+
+    <h2>Candidate Profile &amp; Prerequisites</h2>
+    <p>${course.ideal_for}</p>
+
+    <h2>Anticipated Practical Outcomes</h2>
+    <p>${course.outcomes}</p>
+
+    <h2>Tuition &amp; Examination Investment</h2>
+    <p><strong>Standard Program Fee:</strong> ₹${course.price}/-</p>
+    <p>This comprehensive tuition covers:</p>
+    <ul>
+      ${investment_bullets_html}
+    </ul>
+    <p><strong>Curricular Duration:</strong> Structured ${course.duration} curriculum designed for rigorous practical capability acquisition, organizational leadership, and industry-oriented standards.</p>
+
+    <div class="reviews-section">
+      <h2>Candidate Commendations &amp; Evaluations</h2>
+      <p style="margin-bottom: 2rem; color: var(--ink-muted);">Reflections from verified professionals who have completed this curriculum track:</p>
+      ${reviews_html}
+    </div>
+  </div>
+  
+  <div class="info-boxes">
+    <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;">
+      <div class="info-box">
+        <h3>Tuition Assessment</h3>
+        <p>Complete professional certification program assessed at <strong>₹${course.price}/-</strong>. ${course.pricing_desc}</p>
+      </div>
+      <div class="info-box">
+        <h3>Program Cadence</h3>
+        <p>${course.duration_desc}</p>
+      </div>
+      <div class="info-box">
+        <h3>Candidate Flexibility</h3>
+        <p>${course.terms_desc}</p>
+      </div>
+
+      <div class="cart-actions" style="display: flex; gap: 10px; flex-direction: column;">
+        <button class="add-to-cart-btn" data-course-id="${course.file}" data-course-name="${course.name}" data-course-price="${course.price}">Add to Cart</button>
+        <button class="checkout-payalma-btn">Buy Now</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="enroll-action">
+  <h2 style="font-family: var(--font-serif); font-size: 2.2rem; font-weight: 700; margin-bottom: 1rem;">Commence Your Certification</h2>
+  <p style="font-size: 1.05rem; color: var(--ink-muted); margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">Enroll today in ${course.name} and accelerate your technical execution competencies under certified professional mentorship.</p>
+  <button class="enroll-btn-large checkout-payalma-btn" style="border:none; cursor:pointer;">Enroll &amp; Complete Registration →</button>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img src="images/LOGO.png" alt="ELITE TOOLISTIC Logo" style="height: 38px; width: auto;" />
+      </div>
+      <p>ELITE TOOLISTIC (OPC) PRIVATE LIMITED is a registered professional e-learning academy dedicated to career growth, skill certification, and executive training.</p>
+      <div class="footer-contact">
+        <p><strong>Registered Office:</strong> 1444, Gaur City 1, Sector 4, Greater Noida, Ghaziabad, UP 201318</p>
+        <p><strong>Corporate Office:</strong> DLF Prime Towers, Okhla Industrial Estate Phase I, New Delhi 110020</p>
+        <p style="margin-top:0.5rem">Email: <a href="mailto:support@elitetoolistic.com">support@elitetoolistic.com</a></p>
+        <p>Phone: +91 7969654626 | +91 8062386662 | +91 2241507377</p>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">All Courses</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Student Resources</h4>
+      <ul>
+        <li><a href="exam-portal.html">Exam Portal</a></li>
+        <li><a href="demo-exam-portal.html">Demo Exam</a></li>
+        <li><a href="sample-certificate.html">Sample Certificate</a></li>
+        <li><a href="sample-invoice.html">Sample Invoice</a></li>
+        <li><a href="viewmou.html">MoU - Ministry of Education</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Policies &amp; Legal</h4>
+      <ul>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms-conditions.html">Terms &amp; Conditions</a></li>
+        <li><a href="refund-policy.html">Refund Policy</a></li>
+        <li><a href="service-delivery.html">Service Delivery</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 ELITE TOOLISTIC (OPC) PRIVATE LIMITED. All rights reserved.</span>
+    <span>Certified Professional E-Learning Provider</span>
+  </div>
+</footer>
+
+<script src="cart.js"></script>
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks  = document.getElementById('navLinks');
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  }
+</script>
+</body>
+</html>`;
+}
+
+// 4. Update all files
+let updatedCount = 0;
+const totalLen = allCourses.length;
+
+allCourses.forEach((course, index) => {
+    const prev = allCourses[(index - 1 + totalLen) % totalLen];
+    const next = allCourses[(index + 1) % totalLen];
+    const html = generateDetailPage(course, prev.file, next.file);
+    
+    // Write root file
+    fs.writeFileSync(path.join(__dirname, course.file), html, 'utf-8');
+    
+    // Write courses/ file
+    const coursesDir = path.join(__dirname, 'courses');
+    if (fs.existsSync(coursesDir) && fs.statSync(coursesDir).isDirectory()) {
+        fs.writeFileSync(path.join(coursesDir, course.file), html, 'utf-8');
+    }
+    updatedCount++;
+});
+
+console.log(`Successfully updated ${updatedCount} course detail pages in both root and /courses/ directory!`);

@@ -202,11 +202,8 @@
 
         panel.addEventListener('click', e => {
           if (e.target.closest('.ag-panel__enroll-btn')) return;
-          if (i === this.active && item.link) {
-            window.location.href = item.link;
-            return;
-          }
-          this.setActive(i);
+          // Always navigate to the external course listing page on click
+          window.location.href = 'https://www.elitetoolistic.org/courses';
         });
 
         panel.addEventListener('focus', () => {
@@ -371,7 +368,6 @@
   // Auto-init helper for courses.html: All 14 Separate Category Accordions
   global.initCoursesPageAccordions = async function() {
     const accordionsContainer = document.getElementById('all14CategoryAccordionsContainer');
-    const pillsBar = document.getElementById('categoryQuickPillsBar');
     if (!accordionsContainer) return;
 
     let coursesData = [];
@@ -504,32 +500,134 @@
       }
     });
 
-    // Populate Quick-Jump Navigation Pills at the top
-    if (pillsBar) {
-      pillsBar.innerHTML = '';
+    // ── Smart Category Dropdown ──
+    const dropdownMenu = document.getElementById('coursesCatDropdownMenu');
+    const dropdownBtn = document.getElementById('coursesCatDropdownBtn');
+    const dropdownBtnText = document.getElementById('coursesCatBtnText');
+    const dropdownBtnIcon = document.getElementById('coursesCatBtnIcon');
+    const dropdownWrap = document.getElementById('coursesCatDropdownWrap');
+
+    if (dropdownMenu && dropdownBtn) {
+      // Build dropdown items
+      const allOpt = document.createElement('li');
+      allOpt.className = 'courses-cat-dropdown-item courses-cat-dropdown-item--active';
+      allOpt.setAttribute('role', 'option');
+      allOpt.setAttribute('aria-selected', 'true');
+      allOpt.innerHTML = `<span class="dd-icon">🗂️</span><span class="dd-label">All Disciplines</span><span class="dd-count">(${coursesData.length})</span>`;
+      allOpt.addEventListener('click', () => filterByCategory(null, '🗂️', 'All Disciplines'));
+      dropdownMenu.appendChild(allOpt);
+
       CATEGORY_META.forEach(meta => {
         const count = categoryMap[meta.id]?.length || 0;
-        const pill = document.createElement('a');
-        pill.className = 'category-quick-pill';
-        pill.href = `#${meta.slug}`;
-        pill.innerHTML = `<span>${meta.icon}</span> <span>${meta.short}</span> <span style="opacity:0.65; font-size:0.7rem;">(${count})</span>`;
-        pill.addEventListener('click', e => {
-          e.preventDefault();
-          const targetCard = document.getElementById(meta.slug);
-          if (targetCard) {
-            targetCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            const titleEl = targetCard.querySelector('.category-floating-title');
-            if (titleEl) {
-              titleEl.style.transition = 'color 0.3s ease';
-              titleEl.style.color = '#006cfe';
-              setTimeout(() => {
-                titleEl.style.color = '';
-              }, 1800);
-            }
-          }
-        });
-        pillsBar.appendChild(pill);
+        const li = document.createElement('li');
+        li.className = 'courses-cat-dropdown-item';
+        li.setAttribute('role', 'option');
+        li.setAttribute('aria-selected', 'false');
+        li.setAttribute('data-slug', meta.slug);
+        li.innerHTML = `<span class="dd-icon">${meta.icon}</span><span class="dd-label">${meta.id}</span><span class="dd-count">(${count})</span>`;
+        li.addEventListener('click', () => filterByCategory(meta.slug, meta.icon, meta.id));
+        dropdownMenu.appendChild(li);
       });
+
+      // Toggle open/close
+      dropdownBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = dropdownWrap.classList.toggle('is-open');
+        dropdownBtn.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      document.addEventListener('click', () => {
+        dropdownWrap.classList.remove('is-open');
+        dropdownBtn.setAttribute('aria-expanded', 'false');
+      });
+      dropdownWrap.addEventListener('click', e => e.stopPropagation());
+    }
+
+    function filterByCategory(slug, icon, label) {
+      // Update button text
+      if (dropdownBtnText) dropdownBtnText.textContent = label;
+      if (dropdownBtnIcon) dropdownBtnIcon.textContent = icon;
+      dropdownWrap?.classList.remove('is-open');
+      if (dropdownBtn) dropdownBtn.setAttribute('aria-expanded', 'false');
+
+      // Update active state
+      dropdownMenu?.querySelectorAll('.courses-cat-dropdown-item').forEach(li => {
+        const isActive = slug ? li.getAttribute('data-slug') === slug : !li.getAttribute('data-slug');
+        li.classList.toggle('courses-cat-dropdown-item--active', isActive);
+        li.setAttribute('aria-selected', String(isActive));
+      });
+
+      // Show/hide accordion cards
+      accordionsContainer.querySelectorAll('.category-floating-card').forEach(card => {
+        if (!slug || card.id === slug) {
+          card.style.display = '';
+          card.style.opacity = '1';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // ── Smart Live Search ──
+    const searchInput = document.getElementById('courseSearchInput');
+    const searchClear = document.getElementById('courseSearchClear');
+    const searchResults = document.getElementById('coursesSearchResults');
+
+    // Flatten all courses for search
+    const allSearchableCourses = coursesData.map(c => ({
+      name: c.name || '',
+      category: c.category || '',
+      link: 'https://www.elitetoolistic.org/courses',
+      price: c.price ? (c.price.startsWith('₹') ? c.price : '₹' + c.price) : '₹24,999',
+      icon: CATEGORY_META.find(m => m.id === c.category)?.icon || '📚'
+    }));
+
+    function doSearch(query) {
+      const q = query.trim().toLowerCase();
+      if (!q) {
+        searchResults.hidden = true;
+        searchResults.innerHTML = '';
+        accordionsContainer.style.display = '';
+        if (searchClear) searchClear.style.opacity = '0';
+        return;
+      }
+      if (searchClear) searchClear.style.opacity = '1';
+      accordionsContainer.style.display = 'none';
+      searchResults.hidden = false;
+
+      const matches = allSearchableCourses.filter(c =>
+        c.name.toLowerCase().includes(q) || c.category.toLowerCase().includes(q)
+      );
+
+      if (matches.length === 0) {
+        searchResults.innerHTML = `<div class="sr-empty"><span>🔍</span><p>No courses found for <strong>"${query}"</strong></p></div>`;
+        return;
+      }
+
+      searchResults.innerHTML = `
+        <div class="sr-header"><span class="sr-count">${matches.length} courses found</span><span class="sr-query">for "${query}"</span></div>
+        <div class="sr-grid">
+          ${matches.map(c => `
+            <a class="sr-card" href="${c.link}" target="_blank" rel="noopener">
+              <span class="sr-card-icon">${c.icon}</span>
+              <div class="sr-card-body">
+                <span class="sr-card-name">${c.name.replace(new RegExp(q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'), 'gi'), m => `<mark>${m}</mark>`)}</span>
+                <span class="sr-card-cat">${c.category}</span>
+              </div>
+              <span class="sr-card-price">${c.price}</span>
+            </a>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    if (searchInput) {
+      searchInput.addEventListener('input', () => doSearch(searchInput.value));
+      searchInput.addEventListener('keydown', e => { if (e.key === 'Escape') { searchInput.value = ''; doSearch(''); } });
+    }
+    if (searchClear) {
+      searchClear.style.opacity = '0';
+      searchClear.addEventListener('click', () => { if (searchInput) searchInput.value = ''; doSearch(''); searchInput?.focus(); });
     }
 
     // Render All 14 Separate Accordion Galleries with Smart Controls
@@ -556,21 +654,6 @@
             <span class="category-floating-kicker">${meta.icon} DISCIPLINE ${numStr} • ${allItems.length} PROGRAMS</span>
             <h3 class="category-floating-title">${meta.id}</h3>
           </div>
-          <div class="category-floating-controls">
-            ${totalPages > 1 ? `
-            <div class="cat-page-stepper">
-              <button class="cat-stepper-btn cat-prev-btn" title="Previous Courses" aria-label="Previous Courses">‹</button>
-              <span class="cat-page-indicator">1–${Math.min(pageSize, allItems.length)} of ${allItems.length}</span>
-              <button class="cat-stepper-btn cat-next-btn" title="Next Courses" aria-label="Next Courses">›</button>
-            </div>
-            <div class="cat-page-dots-wrap">
-              ${Array.from({ length: totalPages }, (_, p) => `<button class="cat-page-dot ${p === 0 ? 'cat-page-dot--active' : ''}" data-page="${p}" aria-label="Page ${p + 1}"></button>`).join('')}
-            </div>
-            ` : ''}
-            <button class="cat-view-toggle-btn" aria-label="Toggle all courses view">
-              <span class="toggle-icon">⊞</span> <span class="toggle-text">View All (${allItems.length})</span>
-            </button>
-          </div>
         </div>
         <div class="category-accordion-stage">
           ${totalPages > 1 ? `
@@ -586,22 +669,6 @@
             <span class="flank-arrow">›</span>
           </button>
           ` : ''}
-        </div>
-        <div id="cat-grid-${idx}" class="category-grid-drawer">
-          ${allItems.map(item => `
-            <a href="${item.link}" class="cat-grid-card">
-              <div class="cat-grid-card__thumb">
-                <img src="${item.image}" alt="${item.alt || item.label}" loading="lazy" />
-              </div>
-              <div class="cat-grid-card__body">
-                <h4 class="cat-grid-card__title">${item.label}</h4>
-                <div class="cat-grid-card__footer">
-                  <span class="cat-grid-card__price">${item.price || (item.rawCourse?.price ? '₹' + item.rawCourse.price : 'Certified')}</span>
-                  <span class="cat-grid-card__btn">Enroll Now →</span>
-                </div>
-              </div>
-            </a>
-          `).join('')}
         </div>
       `;
 

@@ -58,20 +58,40 @@
 <section class="all-categories-accordions-section" id="disciplineShowcase">
   <div class="categories-showcase-container">
     
-    <!-- Showcase Header & Quick Jump Bar -->
     <div class="showcase-top-header">
       <div class="showcase-title-block">
         <span class="showcase-kicker">ACCREDITED DISCIPLINE UNIVERSE</span>
         <h2 class="showcase-h2">The 14 Academic Disciplines</h2>
-        <p class="showcase-desc">
-          Browse each professional field through its dedicated 3D interactive course accordion. Hover or tap any panel to expand curriculum details, or click to enroll.
-        </p>
       </div>
 
-      <!-- Quick Jump Navigation Pills -->
-      <div class="category-quick-pills-bar" id="categoryQuickPillsBar" role="navigation" aria-label="Quick jump to discipline">
-        <!-- Injected via JS for all 14 categories -->
+      <!-- Smart Search + Category Dropdown Controls -->
+      <div class="courses-filter-bar" id="coursesFilterBar">
+        <!-- Search Input -->
+        <div class="courses-search-wrap" id="coursesSearchWrap">
+          <span class="courses-search-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </span>
+          <input type="text" id="courseSearchInput" class="courses-search-input" placeholder="Search courses, disciplines…" autocomplete="off" spellcheck="false" />
+          <button class="courses-search-clear" id="courseSearchClear" aria-label="Clear search" title="Clear">✕</button>
+        </div>
+
+        <!-- Category Dropdown -->
+        <div class="courses-cat-dropdown-wrap" id="coursesCatDropdownWrap">
+          <button class="courses-cat-dropdown-btn" id="coursesCatDropdownBtn" aria-haspopup="listbox" aria-expanded="false">
+            <span class="courses-cat-btn-icon" id="coursesCatBtnIcon">🗂️</span>
+            <span class="courses-cat-btn-text" id="coursesCatBtnText">All Disciplines</span>
+            <span class="courses-cat-chevron">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </button>
+          <ul class="courses-cat-dropdown-menu" id="coursesCatDropdownMenu" role="listbox">
+            <!-- Injected by JS -->
+          </ul>
+        </div>
       </div>
+
+      <!-- Live search results panel -->
+      <div class="courses-search-results" id="coursesSearchResults" hidden></div>
     </div>
 
     <!-- The 14 Separate Floating Category Accordions -->

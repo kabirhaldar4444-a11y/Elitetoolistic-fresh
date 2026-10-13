@@ -15,99 +15,267 @@
   <link rel="stylesheet" href="style.css"/>
   <link rel="stylesheet" href="cart.css"/>
   <style>
+    /* ════ Course Detail Hero — Premium White Clean Layout ════ */
     .course-detail-hero {
-      background: linear-gradient(135deg, rgba(12,27,51,0.92) 0%, rgba(12,27,51,0.98) 100%),
-                  url('https://www.pmiservices.org/assets/73_key-account-management-client-relations-frameworks-wLvpYflh.png') center/cover no-repeat;
-      color: var(--white);
-      padding: 5rem 5% 4rem;
-      border-bottom: 2px solid var(--border);
+      background: #ffffff;
+      border-bottom: 2px solid #e2e8f0;
       position: relative;
+      overflow: hidden;
+      padding: 0;
+      min-height: 520px;
+      display: flex;
+      flex-direction: column;
     }
-    .hero-nav-arrow {
+
+    /* Subtle top accent bar */
+    .course-detail-hero::before {
+      content: '';
       position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(255,255,255,0.15);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(255,255,255,0.3);
-      color: var(--white);
-      padding: 10px 18px;
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #006cfe 0%, #3b82f6 60%, #0f172a 100%);
+      z-index: 2;
+    }
+
+    /* Hero inner layout — split: text left, visual right */
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 0;
+      flex: 1;
+      max-width: 1400px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 56px 5% 48px;
+      align-items: center;
+    }
+
+    /* Left: text content */
+    .hero-text-col {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      padding-right: 48px;
+    }
+
+    .course-detail-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-mono, monospace);
+      font-size: 0.72rem;
       font-weight: 700;
+      letter-spacing: 1.2px;
       text-transform: uppercase;
-      text-decoration: none;
-      transition: var(--transition);
-      z-index: 10;
+      background: rgba(0, 108, 254, 0.08);
+      border: 1.5px solid rgba(0, 108, 254, 0.25);
+      color: #006cfe;
+      padding: 5px 14px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+      width: fit-content;
     }
-    .hero-nav-arrow:hover {
-      background: var(--blue-accent);
-      color: var(--navy-brand);
-      border-color: var(--blue-accent);
-    }
-    .arrow-left { left: 5%; }
-    .arrow-right { right: 5%; }
 
     .course-detail-hero h1 {
       font-family: var(--font-serif);
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 700;
-      line-height: 1.25;
-      margin-bottom: 1.25rem;
-      max-width: 900px;
-    }
-    .course-detail-hero .subtitle {
-      font-size: 1.15rem;
-      color: rgba(255,255,255,0.85);
-      line-height: 1.7;
-      max-width: 800px;
-      margin-bottom: 2rem;
-    }
-    .course-detail-hero-badge {
-      display: inline-block;
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      background: rgba(201,151,56,0.25);
-      border: 1px solid rgba(201,151,56,0.6);
-      color: #ffd885;
-      padding: 5px 12px;
-      margin-bottom: 1.5rem;
+      font-size: clamp(1.75rem, 3.5vw, 2.8rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      color: #0f172a;
+      max-width: 680px;
+      letter-spacing: -0.5px;
     }
 
+    .course-detail-hero .subtitle {
+      font-size: 1.05rem;
+      color: #475569;
+      line-height: 1.75;
+      max-width: 600px;
+      margin-bottom: 28px;
+      font-weight: 400;
+    }
+
+    /* Meta pills row */
+    .hero-meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+    .hero-meta-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #f8fafc;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-family: var(--font-sans, sans-serif);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #334155;
+    }
+    .hero-meta-pill .pill-icon { font-size: 0.95rem; }
+
+    /* CTA enroll button */
+    .hero-enroll-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #0f172a;
+      color: #ffffff !important;
+      font-family: var(--font-sans, sans-serif);
+      font-size: 0.92rem;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 14px 30px;
+      border-radius: 12px;
+      border: 2px solid #0f172a;
+      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+      width: fit-content;
+      margin-bottom: 20px;
+      letter-spacing: 0.3px;
+    }
+    .hero-enroll-cta:hover {
+      background: #006cfe;
+      border-color: #006cfe;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(0, 108, 254, 0.3);
+    }
+    .hero-enroll-cta .cta-arrow {
+      font-size: 1.1rem;
+      transition: transform 0.2s ease;
+    }
+    .hero-enroll-cta:hover .cta-arrow { transform: translateX(4px); }
+
+    /* Previous / Next nav links */
+    .hero-nav-arrows-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .hero-nav-arrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #f1f5f9;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 999px;
+      color: #475569;
+      padding: 7px 16px;
+      font-family: var(--font-mono, monospace);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .hero-nav-arrow:hover {
+      background: #0f172a;
+      border-color: #0f172a;
+      color: #ffffff;
+    }
+    .arrow-left, .arrow-right { position: static; transform: none; }
+
+    /* Right: visual column */
+    .hero-visual-col {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #f0f7ff 0%, #e8f2ff 60%, #f5f3ff 100%);
+      border-radius: 24px;
+      border: 1.5px solid #dbeafe;
+      min-height: 340px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px -12px rgba(0, 108, 254, 0.12), 0 4px 16px rgba(15, 23, 42, 0.06);
+    }
+
+    .hero-visual-col::before {
+      content: '';
+      position: absolute;
+      width: 280px; height: 280px;
+      background: radial-gradient(circle, rgba(0, 108, 254, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .hero-visual-col img.hero-course-img {
+      width: 90%;
+      max-height: 320px;
+      object-fit: contain;
+      position: relative;
+      z-index: 1;
+      filter: drop-shadow(0 16px 32px rgba(0, 108, 254, 0.15));
+      animation: floatIllus 5s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatIllus {
+      0%   { transform: translateY(0px); }
+      100% { transform: translateY(-14px); }
+    }
+
+    /* Price tag in visual */
+    .hero-price-tag {
+      position: absolute;
+      bottom: 22px;
+      right: 22px;
+      background: #0f172a;
+      color: #ffffff;
+      border-radius: 14px;
+      padding: 10px 18px;
+      font-family: var(--font-sans, sans-serif);
+      font-size: 1.15rem;
+      font-weight: 800;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.22);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 2px;
+    }
+    .hero-price-tag small {
+      font-size: 0.68rem;
+      font-weight: 500;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* ════ Content & Sidebar Sections ════ */
     .course-content-section {
       padding: 4rem 5%;
       display: grid;
       grid-template-columns: 2fr 1fr;
       gap: 3.5rem;
-      background: var(--surface);
-      border-bottom: 2px solid var(--border);
+      background: var(--surface, #f8fafc);
+      border-bottom: 2px solid var(--border, #e2e8f0);
+      max-width: 1400px;
+      margin: 0 auto;
+      width: 100%;
+      box-sizing: border-box;
     }
     .about-course h2 {
       font-family: var(--font-serif);
       font-size: 1.55rem;
       font-weight: 700;
       margin: 2.25rem 0 1rem;
-      color: var(--navy-brand);
+      color: var(--navy-brand, #0f172a);
     }
-    .about-course h2:first-of-type {
-      margin-top: 0;
-    }
+    .about-course h2:first-of-type { margin-top: 0; }
     .about-course p {
       font-size: 1rem;
-      color: var(--ink-muted);
+      color: var(--ink-muted, #475569);
       line-height: 1.8;
       margin-bottom: 1.25rem;
     }
-    .about-course ul {
-      margin-left: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
+    .about-course ul { margin-left: 1.5rem; margin-bottom: 1.5rem; }
     .about-course ul li {
       font-size: 0.98rem;
-      color: var(--ink-muted);
+      color: var(--ink-muted, #475569);
       line-height: 1.75;
       margin-bottom: 0.5rem;
     }
@@ -120,82 +288,82 @@
       top: 96px;
     }
     .info-box {
-      background: var(--bg);
+      background: var(--bg, #ffffff);
       padding: 2rem;
-      border: 1.5px solid var(--border);
+      border: 1.5px solid var(--border, #e2e8f0);
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
     }
     .info-box h3 {
       font-family: var(--font-serif);
       font-size: 1.2rem;
       font-weight: 700;
       margin-bottom: 0.6rem;
-      color: var(--black);
+      color: var(--black, #0f172a);
     }
     .info-box p {
       font-size: 0.92rem;
-      color: var(--ink-muted);
+      color: var(--ink-muted, #475569);
       line-height: 1.65;
     }
 
     .enroll-action {
       text-align: center;
       padding: 5rem 5%;
-      background: var(--bg-subtle);
-      border-bottom: 2px solid var(--border);
+      background: var(--bg-subtle, #f1f5f9);
+      border-bottom: 2px solid var(--border, #e2e8f0);
     }
     .enroll-btn-large {
       display: inline-flex;
       align-items: center;
       gap: 0.75rem;
       padding: 16px 36px;
-      background: var(--navy-brand);
-      color: var(--white);
-      font-family: var(--font-mono);
+      background: var(--navy-brand, #0f172a);
+      color: var(--white, #fff);
+      font-family: var(--font-mono, monospace);
       font-size: 0.95rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.5px;
       text-decoration: none;
-      transition: var(--transition);
+      transition: var(--transition, all 0.2s ease);
       cursor: pointer;
       border: none;
+      border-radius: 12px;
     }
     .enroll-btn-large:hover {
-      background: var(--blue-accent);
-      color: var(--navy-brand);
+      background: #006cfe;
     }
 
     .reviews-section {
       margin-top: 3.5rem;
-      border-top: 2px solid var(--border);
+      border-top: 2px solid var(--border, #e2e8f0);
       padding-top: 2.5rem;
     }
     .review-card {
-      background: var(--bg);
-      border: 1.5px solid var(--border);
+      background: var(--bg, #ffffff);
+      border: 1.5px solid var(--border, #e2e8f0);
       padding: 1.5rem;
       margin-bottom: 1.25rem;
+      border-radius: 12px;
     }
-    .review-stars {
-      color: #f59e0b;
-      margin-bottom: 0.5rem;
-      font-size: 0.9rem;
-    }
+    .review-stars { color: #f59e0b; margin-bottom: 0.5rem; font-size: 0.9rem; }
     .review-text {
       font-family: var(--font-serif);
       font-style: italic;
       font-size: 0.98rem;
-      color: var(--dark);
+      color: var(--dark, #0f172a);
       line-height: 1.65;
       margin-bottom: 0;
     }
 
     @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; padding: 40px 5%; gap: 32px; }
+      .hero-text-col { padding-right: 0; }
+      .hero-visual-col { min-height: 260px; }
       .course-content-section { grid-template-columns: 1fr; }
       .info-boxes { position: relative; top: 0; }
-      .hero-nav-arrow { position: static; transform: none; display: inline-block; margin: 10px 5px; }
-      .course-detail-hero h1 { max-width: 100%; }
-      .course-detail-hero .subtitle { max-width: 100%; }
+      .course-detail-hero h1 { font-size: clamp(1.5rem, 6vw, 2.2rem); }
     }
   </style>
   <link rel="icon" type="image/png" href="images/LOGO.png" />
@@ -222,13 +390,43 @@
 </nav>
 
 <header class="course-detail-hero">
-  <a href="customer-success-operations-account-retention-strategies.html" class="hero-nav-arrow arrow-left" aria-label="Previous Course">← Previous Course</a>
-  
-  <span class="course-detail-hero-badge">Certification Syllabus • Corporate Operations & Logistics</span>
-  <h1>Key Account Management & Client Relations Frameworks</h1>
-  <p class="subtitle">Accelerated, practical 30 Days vocational masterclass in Key Account Management & Client Relations Frameworks</p>
+  <div class="hero-inner">
+    <!-- Left: Text Content -->
+    <div class="hero-text-col">
+      <div class="hero-nav-arrows-row" style="margin-bottom: 18px;">
+        <a href="customer-success-operations-account-retention-strategies.html" class="hero-nav-arrow" aria-label="Previous Course">← Previous Course</a>
+        <a href="project-management-essentials-for-operational-teams.html" class="hero-nav-arrow" aria-label="Next Course">Next Course →</a>
+      </div>
+      <span class="course-detail-hero-badge">🤖 Certification Syllabus &bull; Corporate Operations & Logistics</span>
+      <h1>Key Account Management & Client Relations Frameworks</h1>
+      <p class="subtitle">Accelerated, practical 30 Days vocational masterclass in Key Account Management & Client Relations Frameworks</p>
+      
+      <div class="hero-meta-row">
+        <span class="hero-meta-pill"><span class="pill-icon">⏱️</span> 30 Days (Self-Paced)</span>
+        <span class="hero-meta-pill"><span class="pill-icon">🎓</span> Verified Certificate</span>
+        <span class="hero-meta-pill"><span class="pill-icon">💼</span> Advanced Level</span>
+        <span class="hero-meta-pill"><span class="pill-icon">🌐</span> 100% Online Access</span>
+      </div>
 
-  <a href="project-management-essentials-for-operational-teams.html" class="hero-nav-arrow arrow-right" aria-label="Next Course">Next Course →</a>
+      <div style="display: flex; gap: 14px; align-items: center; flex-wrap: wrap;">
+        <button class="hero-enroll-cta checkout-payalma-btn" style="cursor: pointer; border: none;">
+          Enroll Now &bull; ₹50,000 <span class="cta-arrow">→</span>
+        </button>
+        <button class="add-to-cart-btn" data-course-id="key-account-management-client-relations-frameworks.html" data-course-name="Key Account Management & Client Relations Frameworks" data-course-price="50,000" style="padding: 13px 22px; border-radius: 12px; border: 1.5px solid #cbd5e1; background: #fff; font-weight: 700; cursor: pointer; color: #0f172a; margin-bottom: 20px;">
+          + Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <!-- Right: Visual Card with Local Clipart -->
+    <div class="hero-visual-col">
+      <img src="images/cliparts/key-account-management-client-relations-frameworks.svg" alt="Key Account Management & Client Relations Frameworks" class="hero-course-img" onerror="this.onerror=null;this.src='images/illus_ai.png'" />
+      <div class="hero-price-tag">
+        <small>Tuition Investment</small>
+        <span>₹50,000</span>
+      </div>
+    </div>
+  </div>
 </header>
 
 <section class="course-content-section">
